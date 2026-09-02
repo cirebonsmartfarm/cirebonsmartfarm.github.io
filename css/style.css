@@ -3915,3 +3915,44 @@ img {
         padding: 0.7rem 0.5rem;
     }
 }
+
+/* Pemberitahuan bernada ajakan, bukan peringatan.
+   Isinya kabar baik dengan satu langkah lanjutan, jadi warnanya hijau
+   mengikuti sisa situs, bukan oranye seperti peringatan. */
+.notice-banner.ajakan {
+    background: #f2f8f1;
+    border-color: #cfe3d8;
+    border-left-color: var(--secondary-color);
+}
+
+.notice-banner.ajakan i { color: var(--secondary-color); }
+.notice-banner.ajakan h3 { color: var(--primary-color); }
+.notice-banner.ajakan p { color: #3f5c40; }
+
+.ajakan-aksi {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    margin-top: 1.1rem;
+}
+
+.ajakan-aksi .btn-primary {
+    padding: 0.75rem 1.4rem;
+    font-size: 0.95rem;
+}
+
+.ajakan-lewat {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.ajakan-lewat:hover { color: var(--primary-color); }
+
+@media (max-width: 600px) {
+    .ajakan-aksi { gap: 0.8rem; }
+    .ajakan-aksi .btn-primary { width: 100%; justify-content: center; }
+}
