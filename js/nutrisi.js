@@ -307,6 +307,7 @@
     el('n-status-teks').textContent = pesan;
     el('n-status').className = 'calc-badge ' + kelas;
 
+    isiKopCetakA();
     hitungKoreksi(ecAcuan, dosisAcuan);
   }
 
@@ -526,26 +527,11 @@
       '<tr><td colspan="3">Belum ada bahan yang perlu dibeli.</td></tr>';
   }
 
-  function isiKopCetak(volume, faktor, volStok, s, skor) {
-    var sel = el('r-resep');
-    var namaResep = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].text : '';
-    var asli = cariResep(sel.value);
-    var diubah = URUT_HARA.some(function (u) {
-      return Math.abs(num('r-' + u) - asli.hara[u]) > 0.01;
-    });
-
-    var tgl = new Date().toLocaleDateString('id-ID',
-      { day: 'numeric', month: 'long', year: 'numeric' });
-
-    el('cetak-judul').textContent = namaResep + (diubah ? ' (disesuaikan)' : '');
-    el('cetak-tanggal').textContent = tgl;
-
-    /* Hanya yang belum muncul di daftar hasil, supaya tidak mengulang. */
-    var baris = [
-      ['Faktor kepekatan', faktor + 'x'],
-      ['Konsentrasi resep', nf0.format(s.persen * 100) + ' persen']
-    ];
-    var dl = el('cetak-param');
+  /* Menulis daftar parameter ke sebuah <dl>. Memakai textContent, bukan
+     innerHTML, jadi tidak ada teks yang bisa berubah jadi markup. */
+  function tulisParam(idDl, baris) {
+    var dl = el(idDl);
+    if (!dl) return;
     dl.textContent = '';
     baris.forEach(function (b) {
       var div = document.createElement('div');
@@ -554,6 +540,48 @@
       var dd = document.createElement('dd'); dd.textContent = b[1];
       div.appendChild(dt); div.appendChild(dd); dl.appendChild(div);
     });
+  }
+
+  function tanggalHariIni() {
+    return new Date().toLocaleDateString('id-ID',
+      { day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
+  /* Kop cetak mode A. Yang dicantumkan hanya yang belum tampil di daftar
+     hasil, ditambah angka kalibrasi produk supaya lembarannya bisa dipakai
+     ulang tanpa membuka kalkulator lagi. */
+  function isiKopCetakA() {
+    var sel = el('n-tanaman');
+    var nama = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].text : '';
+    var skala = num('n-skala') || 500;
+
+    el('cetak-a-judul').textContent = nama;
+    el('cetak-a-tanggal').textContent = tanggalHariIni();
+
+    tulisParam('cetak-a-param', [
+      ['EC sasaran', rapi(num('n-ec-target')) + ' mS/cm'],
+      ['Skala TDS meter', 'skala ' + nf0.format(skala)],
+      ['Kalibrasi produk', rapi(num('n-dosis-acuan')) + ' ml/L pada EC ' +
+                           rapi(num('n-ec-acuan')) + ' mS/cm']
+    ]);
+  }
+
+  function isiKopCetak(volume, faktor, volStok, s, skor) {
+    var sel = el('r-resep');
+    var namaResep = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].text : '';
+    var asli = cariResep(sel.value);
+    var diubah = URUT_HARA.some(function (u) {
+      return Math.abs(num('r-' + u) - asli.hara[u]) > 0.01;
+    });
+
+    el('cetak-judul').textContent = namaResep + (diubah ? ' (disesuaikan)' : '');
+    el('cetak-tanggal').textContent = tanggalHariIni();
+
+    /* Hanya yang belum muncul di daftar hasil, supaya tidak mengulang. */
+    tulisParam('cetak-param', [
+      ['Faktor kepekatan', faktor + 'x'],
+      ['Konsentrasi resep', nf0.format(s.persen * 100) + ' persen']
+    ]);
   }
 
   function gambarRacikan(g, dapat, dapatMikro, s, volume, faktor, volStok, campuran, catatan) {
@@ -683,35 +711,37 @@
     var area = el('area-cetak');
     if (!area) return;
 
-    /* Yang ikut tercetak: kotak hasil, lalu bagian urutan meracik
-       beserta ilustrasinya sebagai lampiran di halaman berikutnya. */
-    var bagian = ['cetak-wrap', 'langkah-meracik']
-      .map(function (id) { return el(id); })
-      .filter(Boolean)
-      .map(function (n) { return { simpul: n, jangkar: document.createComment('posisi-' + n.id) }; });
+    /* Yang dicetak mengikuti tab yang sedang terbuka. Mode racik ikut
+       membawa lampiran urutan meracik beserta ilustrasinya. */
+    function bagianAktif() {
+      var racikTerbuka = !el('panel-racik').hidden;
+      var id = racikTerbuka ? ['cetak-wrap', 'langkah-meracik'] : ['cetak-wrap-a'];
+      return id.map(function (x) { return el(x); }).filter(Boolean);
+    }
 
-    var dipindah = false;
+    var dipindah = null;
 
     function pindahkan() {
       if (dipindah) return;
-      bagian.forEach(function (b) {
-        b.simpul.parentNode.insertBefore(b.jangkar, b.simpul);
-        area.appendChild(b.simpul);
+      dipindah = bagianAktif().map(function (n) {
+        var jangkar = document.createComment('posisi-' + n.id);
+        n.parentNode.insertBefore(jangkar, n);
+        area.appendChild(n);
+        return { simpul: n, jangkar: jangkar };
       });
       document.documentElement.classList.add('sedang-cetak');
-      dipindah = true;
     }
 
     function pulihkan() {
       if (!dipindah) return;
-      bagian.forEach(function (b) {
+      dipindah.forEach(function (b) {
         if (b.jangkar.parentNode) {
           b.jangkar.parentNode.insertBefore(b.simpul, b.jangkar);
           b.jangkar.parentNode.removeChild(b.jangkar);
         }
       });
       document.documentElement.classList.remove('sedang-cetak');
-      dipindah = false;
+      dipindah = null;
     }
 
     window.addEventListener('beforeprint', pindahkan);
@@ -725,10 +755,15 @@
       else if (mq.addListener) mq.addListener(kabar);
     }
 
-    el('r-cetak').addEventListener('click', function () {
+    function cetakSekarang() {
       pindahkan();
       window.print();
       pulihkan();          /* di Chrome, print() baru kembali setelah dialog ditutup */
+    }
+
+    ['n-cetak', 'r-cetak'].forEach(function (id) {
+      var b = el(id);
+      if (b) b.addEventListener('click', cetakSekarang);
     });
   })();
 

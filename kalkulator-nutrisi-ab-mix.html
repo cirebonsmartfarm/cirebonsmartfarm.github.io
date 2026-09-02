@@ -282,8 +282,24 @@
                             </div>
                         </form>
 
-                        <div class="calc-output">
-                            <h2 class="calc-title">Takaran Pengisian</h2>
+                        <div class="calc-output cetak-area" id="cetak-wrap-a">
+                            <div class="cetak-kop cetak-only">
+                                <img src="images/logo-csf.svg" alt="" width="56" height="56">
+                                <div class="cetak-nama">
+                                    <strong>Cirebon Smart Farm</strong>
+                                    <span>Takaran Nutrisi Hidroponik</span>
+                                </div>
+                                <div class="cetak-tanggal" id="cetak-a-tanggal"></div>
+                            </div>
+                            <h2 class="cetak-only cetak-judul" id="cetak-a-judul"></h2>
+                            <dl class="calc-results cetak-only" id="cetak-a-param"></dl>
+
+                            <div class="hasil-kop layar-only">
+                                <h2 class="calc-title">Takaran Pengisian</h2>
+                                <button type="button" class="btn-primary btn-cetak" id="n-cetak">
+                                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Simpan PDF
+                                </button>
+                            </div>
 
                             <div class="calc-badge" id="n-status">
                                 <span class="calc-badge-label">Kesesuaian EC</span>
@@ -307,6 +323,17 @@
 
                             <h3 class="calc-subtitle">Koreksi Larutan Berjalan</h3>
                             <dl class="calc-results" id="n-koreksi-hasil"></dl>
+
+                            <p class="calc-note layar-only">
+                                Tombol Simpan PDF membuka jendela cetak. Pilih tujuan
+                                <strong>Save as PDF</strong>, lalu berkasnya tersimpan di perangkat Anda
+                                sendiri. Tidak ada apa pun yang tersimpan di website ini.
+                            </p>
+
+                            <p class="cetak-only cetak-kaki">
+                                Dihitung dengan kalkulator gratis di
+                                cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -464,7 +491,7 @@
                             </details>
                         </form>
 
-                        <div class="calc-output" id="cetak-wrap">
+                        <div class="calc-output cetak-area" id="cetak-wrap">
                             <div class="cetak-kop cetak-only">
                                 <img src="images/logo-csf.svg" alt="" width="56" height="56">
                                 <div class="cetak-nama">
@@ -476,7 +503,12 @@
                             <h2 class="cetak-only cetak-judul" id="cetak-judul"></h2>
                             <dl class="calc-results cetak-only" id="cetak-param"></dl>
 
-                            <h2 class="calc-title layar-only">Hasil Racikan</h2>
+                            <div class="hasil-kop layar-only">
+                                <h2 class="calc-title">Hasil Racikan</h2>
+                                <button type="button" class="btn-primary btn-cetak" id="r-cetak">
+                                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Simpan PDF
+                                </button>
+                            </div>
 
                             <div class="calc-badge" id="r-skor-badge">
                                 <span class="calc-badge-label">Kecocokan dengan resep</span>
@@ -551,16 +583,11 @@
                                 yang tertulis di ringkasan.
                             </p>
 
-                            <div class="calc-actions layar-only">
-                                <button type="button" class="btn-primary" id="r-cetak">
-                                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Simpan sebagai PDF
-                                </button>
-                            </div>
                             <p class="calc-note layar-only">
-                                Tombol ini membuka jendela cetak. Pilih tujuan
-                                <strong>Save as PDF</strong> atau <strong>Simpan sebagai PDF</strong>,
-                                lalu berkasnya tersimpan di perangkat Anda sendiri. Tidak ada apa pun yang
-                                tersimpan di website ini.
+                                Tombol Simpan PDF membuka jendela cetak. Pilih tujuan
+                                <strong>Save as PDF</strong>, lalu berkasnya tersimpan di perangkat Anda
+                                sendiri. Berkasnya memuat takaran ini beserta urutan meracik dan
+                                gambarnya. Tidak ada apa pun yang tersimpan di website ini.
                             </p>
 
                             <p class="cetak-only cetak-kaki">

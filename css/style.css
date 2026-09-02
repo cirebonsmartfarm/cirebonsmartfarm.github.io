@@ -3298,7 +3298,7 @@ img {
         display: block !important;
     }
 
-    #cetak-wrap {
+    .cetak-area {
         position: static !important;
         top: auto !important;
         width: 100%;
@@ -3313,8 +3313,8 @@ img {
     }
 
     .layar-only,
-    #cetak-wrap .calc-note.layar-only,
-    #cetak-wrap .calc-actions {
+    .cetak-area .calc-note.layar-only,
+    .cetak-area .calc-actions {
         display: none !important;
     }
 
@@ -3370,8 +3370,8 @@ img {
         color: #6b7280;
     }
 
-    #cetak-wrap .calc-title,
-    #cetak-wrap .calc-subtitle {
+    .cetak-area .calc-title,
+    .cetak-area .calc-subtitle {
         font-size: 12pt;
         color: #2d5a27;
         margin: 14px 0 6px;
@@ -3381,7 +3381,7 @@ img {
         page-break-after: avoid;
     }
 
-    #cetak-wrap .calc-badge {
+    .cetak-area .calc-badge {
         border: 1px solid #d7e2cc;
         border-left: 4px solid #7fb069;
         box-shadow: none;
@@ -3391,10 +3391,10 @@ img {
         page-break-inside: avoid;
     }
 
-    #cetak-wrap .calc-badge strong { font-size: 15pt; }
-    #cetak-wrap .calc-badge-note { font-size: 9pt; }
+    .cetak-area .calc-badge strong { font-size: 15pt; }
+    .cetak-area .calc-badge-note { font-size: 9pt; }
 
-    #cetak-wrap .calc-row {
+    .cetak-area .calc-row {
         padding: 4px 0;
         border-bottom: 1px solid #eef4ef;
         font-size: 10pt;
@@ -3403,7 +3403,7 @@ img {
     /* Tabel panjang boleh terbelah antarhalaman, asalkan barisnya tetap utuh
        dan kepala tabelnya diulang. Memaksa tabel utuh justru membuat halaman
        setengah kosong karena tabel melompat bulat-bulat. */
-    #cetak-wrap .table-wrap {
+    .cetak-area .table-wrap {
         overflow: visible;
         box-shadow: none;
         border: 1px solid #d7e2cc;
@@ -3411,44 +3411,44 @@ img {
         page-break-inside: auto;
     }
 
-    #cetak-wrap thead {
+    .cetak-area thead {
         display: table-header-group;
     }
 
-    #cetak-wrap tr {
+    .cetak-area tr {
         break-inside: avoid;
         page-break-inside: avoid;
     }
 
-    #cetak-wrap table {
+    .cetak-area table {
         min-width: 0;
         width: 100%;
         font-size: 9.5pt;
     }
 
-    #cetak-wrap th,
-    #cetak-wrap td { padding: 5px 8px; }
+    .cetak-area th,
+    .cetak-area td { padding: 5px 8px; }
 
-    #cetak-wrap thead th {
+    .cetak-area thead th {
         background: #2d5a27 !important;
         color: #fff !important;
     }
 
-    #cetak-wrap tbody tr:nth-child(even) {
+    .cetak-area tbody tr:nth-child(even) {
         background: #f4f9f2 !important;
     }
 
-    #cetak-wrap .pupuk-rumus { font-size: 8pt; }
+    .cetak-area .pupuk-rumus { font-size: 8pt; }
 
-    #cetak-wrap .delta,
-    #cetak-wrap .tipe-tanda,
-    #cetak-wrap .tangki-tanda {
+    .cetak-area .delta,
+    .cetak-area .tipe-tanda,
+    .cetak-area .tangki-tanda {
         border: 1px solid #cfd9c8;
         color: #16210f !important;
         background: #f2f6ef !important;
     }
 
-    #cetak-wrap .notice-banner {
+    .cetak-area .notice-banner {
         border: 1px solid #d97706;
         background: #fffbeb !important;
         padding: 8px 12px;
@@ -3457,7 +3457,7 @@ img {
         page-break-inside: avoid;
     }
 
-    #cetak-wrap .calc-note {
+    .cetak-area .calc-note {
         font-size: 8.5pt;
         color: #4c5b45;
     }
@@ -3530,7 +3530,7 @@ img {
     }
 
     /* Jangan sisakan halaman kosong di ujung. */
-    #cetak-wrap > *:last-child,
+    .cetak-area > *:last-child,
     #area-cetak > *:last-child { margin-bottom: 0; }
 }
 
@@ -3955,4 +3955,42 @@ img {
 @media (max-width: 600px) {
     .ajakan-aksi { gap: 0.8rem; }
     .ajakan-aksi .btn-primary { width: 100%; justify-content: center; }
+}
+
+/* Kepala kotak hasil: judul di kiri, tombol simpan PDF di kanan.
+   Tombolnya ditaruh di atas supaya tidak perlu menggulir dulu. */
+.hasil-kop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e3eee5;
+}
+
+.hasil-kop .calc-title {
+    margin: 0;
+    padding: 0;
+    border: none;
+    flex: 1 1 auto;
+}
+
+.btn-cetak {
+    flex: none;
+    padding: 0.6rem 1.15rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .hasil-kop {
+        gap: 0.75rem;
+    }
+
+    .btn-cetak {
+        width: 100%;
+        justify-content: center;
+    }
 }
