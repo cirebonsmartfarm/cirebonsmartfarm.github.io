@@ -3,5 +3,6 @@ Allow: /
 
 # Berkas kerja, tidak perlu diindeks
 Disallow: /images/CREDITS.json
+Disallow: /media/ig/
 
 Sitemap: https://www.cirebonsmartfarm.com/sitemap.xml
