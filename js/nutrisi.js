@@ -824,16 +824,27 @@
      Tab
      ===================================================================== */
   var tombolTab = Array.prototype.slice.call(akar.querySelectorAll('.tab-btn'));
-  tombolTab.forEach(function (b) {
-    b.addEventListener('click', function () {
-      tombolTab.forEach(function (x) {
-        x.classList.toggle('aktif', x === b);
-        x.setAttribute('aria-selected', x === b ? 'true' : 'false');
-      });
-      akar.querySelectorAll('.tab-panel').forEach(function (p) {
-        p.hidden = (p.id !== b.dataset.panel);
-      });
+
+  /* Bagian langkah di bawah kalkulator ikut berganti bersama tabnya. Urutan
+     meracik hanya berlaku untuk racikan dari pupuk tunggal, dan cara memakai
+     hanya untuk pekatan jadi, jadi menampilkan keduanya sekaligus justru
+     membingungkan. */
+  function pilihTab(panelId) {
+    tombolTab.forEach(function (x) {
+      var aktif = x.dataset.panel === panelId;
+      x.classList.toggle('aktif', aktif);
+      x.setAttribute('aria-selected', aktif ? 'true' : 'false');
     });
+    akar.querySelectorAll('.tab-panel').forEach(function (p) {
+      p.hidden = (p.id !== panelId);
+    });
+    document.querySelectorAll('[data-untuk]').forEach(function (bagian) {
+      bagian.hidden = (bagian.dataset.untuk !== panelId);
+    });
+  }
+
+  tombolTab.forEach(function (b) {
+    b.addEventListener('click', function () { pilihTab(b.dataset.panel); });
   });
 
   /* =====================================================================
@@ -854,6 +865,7 @@
   });
 
   (function mulai() {
+    pilihTab('panel-siap');
     var t = tanamanA('selada');
     el('n-ec-target').value = ((t.ec[0] + t.ec[1]) / 2).toFixed(1);
     hitungSiapPakai();
