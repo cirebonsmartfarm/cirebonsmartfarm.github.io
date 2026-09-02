@@ -3264,11 +3264,14 @@ img {
 
 /* ==========================================================================
    Cetak resep jadi PDF.
-   Hanya kotak hasil yang ikut tercetak, lengkap dengan kop dan parameternya.
-   Tidak ada apa pun yang disimpan di peramban.
+   Kotak hasil dipindahkan ke #area-cetak lebih dulu oleh JavaScript, lalu
+   sisa isi body dimatikan dengan display: none. Memakai visibility akan
+   menyisakan ruang kosong dan berbuntut halaman kosong di PDF.
    ========================================================================== */
 
 .cetak-only { display: none; }
+
+#area-cetak { display: none; }
 
 @media print {
     @page {
@@ -3276,26 +3279,28 @@ img {
         margin: 14mm 12mm;
     }
 
-    html, body {
+    html,
+    body {
         background: #fff !important;
         color: #000;
         font-size: 11pt;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
     }
 
-    /* Sembunyikan semuanya, lalu munculkan kembali kotak hasil saja. */
-    body * {
-        visibility: hidden;
+    /* Hanya wadah cetak yang tersisa di tata letak. */
+    html.sedang-cetak body > *:not(#area-cetak) {
+        display: none !important;
     }
 
-    #cetak-wrap,
-    #cetak-wrap * {
-        visibility: visible;
+    html.sedang-cetak #area-cetak {
+        display: block !important;
     }
 
     #cetak-wrap {
-        position: absolute;
-        left: 0;
-        top: 0;
+        position: static !important;
+        top: auto !important;
         width: 100%;
         padding: 0;
         margin: 0;
@@ -3330,9 +3335,7 @@ img {
         flex: none;
     }
 
-    .cetak-nama {
-        flex: 1;
-    }
+    .cetak-nama { flex: 1; }
 
     .cetak-nama strong {
         display: block;
@@ -3367,7 +3370,6 @@ img {
         color: #6b7280;
     }
 
-    /* Ringkas supaya muat satu sampai dua halaman */
     #cetak-wrap .calc-title,
     #cetak-wrap .calc-subtitle {
         font-size: 12pt;
@@ -3376,6 +3378,7 @@ img {
         padding: 0;
         border: none;
         break-after: avoid;
+        page-break-after: avoid;
     }
 
     #cetak-wrap .calc-badge {
@@ -3385,6 +3388,7 @@ img {
         padding: 8px 12px;
         margin-bottom: 12px;
         break-inside: avoid;
+        page-break-inside: avoid;
     }
 
     #cetak-wrap .calc-badge strong { font-size: 15pt; }
@@ -3396,11 +3400,24 @@ img {
         font-size: 10pt;
     }
 
+    /* Tabel panjang boleh terbelah antarhalaman, asalkan barisnya tetap utuh
+       dan kepala tabelnya diulang. Memaksa tabel utuh justru membuat halaman
+       setengah kosong karena tabel melompat bulat-bulat. */
     #cetak-wrap .table-wrap {
         overflow: visible;
         box-shadow: none;
         border: 1px solid #d7e2cc;
+        break-inside: auto;
+        page-break-inside: auto;
+    }
+
+    #cetak-wrap thead {
+        display: table-header-group;
+    }
+
+    #cetak-wrap tr {
         break-inside: avoid;
+        page-break-inside: avoid;
     }
 
     #cetak-wrap table {
@@ -3410,9 +3427,7 @@ img {
     }
 
     #cetak-wrap th,
-    #cetak-wrap td {
-        padding: 5px 8px;
-    }
+    #cetak-wrap td { padding: 5px 8px; }
 
     #cetak-wrap thead th {
         background: #2d5a27 !important;
@@ -3439,13 +3454,244 @@ img {
         padding: 8px 12px;
         font-size: 9pt;
         break-inside: avoid;
+        page-break-inside: avoid;
     }
 
     #cetak-wrap .calc-note {
         font-size: 8.5pt;
         color: #4c5b45;
     }
+
+    /* Lampiran: urutan meracik beserta ilustrasinya, mulai halaman baru. */
+    #langkah-meracik {
+        padding: 0 !important;
+        margin: 0 !important;
+        background: #fff !important;
+        margin-top: 18px !important;
+        break-inside: auto;
+    }
+
+    #langkah-meracik .container {
+        max-width: none;
+        padding: 0;
+    }
+
+    #langkah-meracik .section-header {
+        text-align: left;
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #2d5a27;
+    }
+
+    #langkah-meracik .section-header h2 {
+        font-size: 14pt;
+        color: #2d5a27;
+        margin: 0;
+    }
+
+    #langkah-meracik .section-header p {
+        font-size: 9.5pt;
+        color: #4c5b45;
+        margin: 3px 0 0;
+        max-width: none;
+    }
+
+    #langkah-meracik .steps-list { gap: 8px; }
+
+    #langkah-meracik .steps-list li {
+        grid-template-columns: 1fr 168px;
+        gap: 12px;
+        padding: 8px 10px 8px 40px;
+        border: 1px solid #d7e2cc;
+        box-shadow: none;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    #langkah-meracik .steps-list li::before {
+        font-size: 11pt;
+        left: 10px;
+        top: 9px;
+    }
+
+    #langkah-meracik .steps-list h3 {
+        font-size: 10.5pt;
+        margin-bottom: 2px;
+    }
+
+    #langkah-meracik .steps-list p {
+        font-size: 8.5pt;
+        line-height: 1.45;
+    }
+
+    #langkah-meracik .step-gambar {
+        width: 168px;
+        border: 1px solid #e3eee5;
+    }
+
+    /* Jangan sisakan halaman kosong di ujung. */
+    #cetak-wrap > *:last-child,
+    #area-cetak > *:last-child { margin-bottom: 0; }
 }
+
+/* Bagian lipat, simpan resep, dan kisi kadar pupuk */
+.lipat {
+    border: 1px solid #e3eee5;
+    border-radius: var(--border-radius);
+    padding: 0.85rem 1.1rem;
+    margin-bottom: 1.1rem;
+    background: var(--light-bg);
+}
+
+.lipat > summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    list-style: none;
+}
+
+.lipat > summary::-webkit-details-marker { display: none; }
+
+.lipat > summary::before {
+    content: "\f067";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 0.72rem;
+    margin-right: 0.55rem;
+    color: var(--accent-color);
+}
+
+.lipat[open] > summary::before { content: "\f068"; }
+
+.lipat-catatan {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    margin: 0.9rem 0 0.75rem;
+}
+
+.kadar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.kadar-grid > div {
+    background: var(--white);
+    border: 1px solid #e3eee5;
+    border-radius: var(--border-radius);
+    padding: 0.7rem 0.85rem;
+}
+
+.kadar-grid span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.45rem;
+}
+
+.kadar-grid label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 0.35rem;
+}
+
+.kadar-grid input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.4rem 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font: inherit;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.simpan-resep {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.simpan-resep input[type="text"] {
+    flex: 1 1 160px;
+    min-width: 0;
+    padding: 0.65rem 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: var(--border-radius);
+    font: inherit;
+    font-size: 0.95rem;
+}
+
+.simpan-resep .btn-secondary {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    flex: none;
+}
+
+.simpan-resep .btn-secondary.hapus {
+    color: #b91c1c;
+    border-color: #f3c9c9;
+}
+
+.simpan-resep .btn-secondary.hapus:hover {
+    background: #fbe4e4;
+    color: #7f1d1d;
+}
+
+.catatan-simpan {
+    display: block;
+    font-size: 0.83rem;
+    color: var(--text-light);
+    margin-bottom: 1.1rem;
+}
+
+.tipe-tanda {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.tipe-tanda.a { color: #1f5b2a; background: #e4f2e2; }
+.tipe-tanda.b { color: #1f5b70; background: #e4f0f4; }
+
+.data-table tr.baris-total td {
+    background: var(--light-bg);
+    font-weight: 700;
+    color: var(--primary-color);
+    border-top: 2px solid #dfeade;
+}
+
+@media (max-width: 600px) {
+    .kadar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .simpan-resep {
+        gap: 0.5rem;
+    }
+
+    .simpan-resep input[type="text"] {
+        flex: 1 1 100%;
+    }
+
+    .data-table.racik tr.baris-total {
+        background: var(--light-bg);
+    }
+}
+
 
 /* Langkah meracik dengan ilustrasi di sampingnya */
 .steps-list li:has(.step-gambar) {

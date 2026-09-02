@@ -531,13 +531,10 @@
     el('cetak-judul').textContent = namaResep + (diubah ? ' (disesuaikan)' : '');
     el('cetak-tanggal').textContent = tgl;
 
+    /* Hanya yang belum muncul di daftar hasil, supaya tidak mengulang. */
     var baris = [
-      ['Volume tiap tangki pekatan', nf1.format(volStok) + ' liter'],
       ['Faktor kepekatan', faktor + 'x'],
-      ['Cukup untuk larutan kerja', nf0.format(volume) + ' liter'],
-      ['Dosis pakai', nf1.format(1000 / faktor) + ' ml per liter air'],
-      ['Konsentrasi resep', nf0.format(s.persen * 100) + ' persen'],
-      ['Kecocokan dengan resep', nf2.format(skor) + ' persen']
+      ['Konsentrasi resep', nf0.format(s.persen * 100) + ' persen']
     ];
     var dl = el('cetak-param');
     dl.textContent = '';
@@ -669,7 +666,62 @@
 
   el('r-resep').addEventListener('change', muatResep);
 
-  el('r-cetak').addEventListener('click', function () { window.print(); });
+  /* Saat mencetak, kotak hasil dipindahkan sementara ke wadah di ujung body.
+     Sisa isi halaman lalu dimatikan lewat display: none, bukan sekadar
+     disembunyikan, supaya dokumen tidak menyisakan halaman kosong.
+     Dipasang pada beforeprint agar Ctrl+P ikut tertangani, bukan hanya tombol. */
+  (function siapkanCetak() {
+    var area = el('area-cetak');
+    if (!area) return;
+
+    /* Yang ikut tercetak: kotak hasil, lalu bagian urutan meracik
+       beserta ilustrasinya sebagai lampiran di halaman berikutnya. */
+    var bagian = ['cetak-wrap', 'langkah-meracik']
+      .map(function (id) { return el(id); })
+      .filter(Boolean)
+      .map(function (n) { return { simpul: n, jangkar: document.createComment('posisi-' + n.id) }; });
+
+    var dipindah = false;
+
+    function pindahkan() {
+      if (dipindah) return;
+      bagian.forEach(function (b) {
+        b.simpul.parentNode.insertBefore(b.jangkar, b.simpul);
+        area.appendChild(b.simpul);
+      });
+      document.documentElement.classList.add('sedang-cetak');
+      dipindah = true;
+    }
+
+    function pulihkan() {
+      if (!dipindah) return;
+      bagian.forEach(function (b) {
+        if (b.jangkar.parentNode) {
+          b.jangkar.parentNode.insertBefore(b.simpul, b.jangkar);
+          b.jangkar.parentNode.removeChild(b.jangkar);
+        }
+      });
+      document.documentElement.classList.remove('sedang-cetak');
+      dipindah = false;
+    }
+
+    window.addEventListener('beforeprint', pindahkan);
+    window.addEventListener('afterprint', pulihkan);
+
+    /* Sebagian peramban lama hanya memberi kabar lewat matchMedia. */
+    if (window.matchMedia) {
+      var mq = window.matchMedia('print');
+      var kabar = function (e) { if (e.matches) { pindahkan(); } else { pulihkan(); } };
+      if (mq.addEventListener) mq.addEventListener('change', kabar);
+      else if (mq.addListener) mq.addListener(kabar);
+    }
+
+    el('r-cetak').addEventListener('click', function () {
+      pindahkan();
+      window.print();
+      pulihkan();          /* di Chrome, print() baru kembali setelah dialog ditutup */
+    });
+  })();
 
   el('r-preset').addEventListener('change', function () { terapkanPreset(this.value); });
 
