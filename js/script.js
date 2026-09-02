@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initMobileOptimizations();
     initCurrentYear();
+    initMenuKalkulator();
     initBiofloc();
     initSalinKutipan();
 });
@@ -138,6 +139,53 @@ function initSalinKutipan() {
             }
             btn.innerHTML = '<i class="fas fa-check"></i> Tersalin';
             setTimeout(() => { btn.innerHTML = semula; }, 1800);
+        });
+    });
+}
+
+
+// Menu Kalkulator pada navigasi.
+// Di layar lebar panel terbuka lewat hover, yang diurus CSS. Fungsi ini
+// mengurus klik dan sentuh, karena perangkat sentuh tidak punya hover.
+function initMenuKalkulator() {
+    const bungkus = document.getElementById('menu-kalkulator');
+    if (!bungkus) return;
+
+    const tombol = bungkus.querySelector('.nav-sub-tombol');
+    if (!tombol) return;
+
+    function setel(terbuka) {
+        bungkus.classList.toggle('terbuka', terbuka);
+        tombol.setAttribute('aria-expanded', terbuka ? 'true' : 'false');
+    }
+
+    tombol.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setel(!bungkus.classList.contains('terbuka'));
+    });
+
+    // Menutup saat menyentuh di luar menu.
+    document.addEventListener('click', (e) => {
+        if (!bungkus.contains(e.target)) setel(false);
+    });
+
+    // Menutup dengan tombol Escape, lalu fokus kembali ke tombolnya.
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && bungkus.classList.contains('terbuka')) {
+            setel(false);
+            tombol.focus();
+        }
+    });
+
+    // Setelah memilih salah satu kalkulator, menu mobile ikut ditutup.
+    bungkus.querySelectorAll('.nav-sub-link').forEach((tautan) => {
+        tautan.addEventListener('click', () => {
+            setel(false);
+            const menu = document.getElementById('nav-menu');
+            const toggle = document.getElementById('nav-toggle');
+            if (menu) menu.classList.remove('active');
+            if (toggle) toggle.classList.remove('active');
         });
     });
 }

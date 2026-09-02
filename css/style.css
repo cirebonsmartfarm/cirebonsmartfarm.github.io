@@ -3730,3 +3730,188 @@ img {
         margin: 1rem auto 0;
     }
 }
+
+/* ==========================================================================
+   Menu Kalkulator pada navigasi.
+   Dua alat gratis sebelumnya hanya bisa ditemukan lewat footer.
+   ========================================================================== */
+
+.nav-punya-sub {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-sub-tombol {
+    font: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background: none;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: var(--transition);
+}
+
+.nav-sub-tombol i {
+    font-size: 0.7rem;
+    transition: transform 0.25s ease;
+}
+
+.nav-sub-tombol:hover,
+.nav-sub-tombol.aktif {
+    color: var(--primary-color);
+}
+
+.nav-punya-sub.terbuka .nav-sub-tombol i {
+    transform: rotate(180deg);
+}
+
+.nav-sub {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 320px;
+    background: var(--white);
+    border: 1px solid #e3eee5;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    padding: 0.5rem;
+    margin-top: 0.6rem;
+    z-index: 1200;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+/* jembatan tak terlihat supaya kursor tidak terputus saat turun ke panel */
+.nav-sub::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -0.6rem;
+    height: 0.6rem;
+}
+
+.nav-punya-sub.terbuka .nav-sub {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-sub-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 0.8rem 0.9rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.nav-sub-link:hover {
+    background: var(--light-bg);
+}
+
+.nav-sub-link i {
+    color: var(--accent-color);
+    font-size: 1.05rem;
+    margin-top: 0.2rem;
+    flex: none;
+    width: 20px;
+    text-align: center;
+}
+
+.nav-sub-link span {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.45;
+}
+
+.nav-sub-link strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.1rem;
+}
+
+.nav-sub-link:hover strong {
+    color: var(--primary-color);
+}
+
+@media (hover: hover) and (min-width: 769px) {
+    .nav-punya-sub:hover .nav-sub,
+    .nav-punya-sub:focus-within .nav-sub {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .nav-punya-sub:hover .nav-sub-tombol i {
+        transform: rotate(180deg);
+    }
+}
+
+@media (max-width: 1080px) {
+    .nav-sub-tombol {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-punya-sub {
+        position: static;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-sub-tombol {
+        justify-content: center;
+        padding: 0.9rem 1rem;
+        font-size: 1.05rem;
+        width: 100%;
+    }
+
+    .nav-sub {
+        position: static;
+        transform: none;
+        min-width: 0;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: var(--light-bg);
+        padding: 0.25rem 0.75rem 0.75rem;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: none;
+    }
+
+    .nav-sub::before { display: none; }
+
+    .nav-punya-sub.terbuka .nav-sub {
+        display: block;
+        transform: none;
+    }
+
+    .nav-sub-link {
+        text-align: left;
+        padding: 0.7rem 0.5rem;
+    }
+}
