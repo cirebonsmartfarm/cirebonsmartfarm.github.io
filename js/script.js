@@ -366,9 +366,11 @@ function initScrollAnimations() {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-in');
                 
-                // Trigger counter animation if element has counter
+                // Angka statistik dihitung sekali saja, lalu berhenti diamati
+                // supaya tidak mengulang dari nol tiap kali digulir kembali.
                 if (entry.target.classList.contains('animate-counter')) {
                     animateCounter(entry.target);
+                    observer.unobserve(entry.target);
                 }
             }
         });
@@ -381,23 +383,46 @@ function initScrollAnimations() {
 
 // Counter animations for statistics
 function initCounterAnimations() {
-    function animateCounter(element) {
-        const target = parseInt(element.dataset.target);
-        const duration = 2000; // 2 seconds
-        const step = target / (duration / 16); // 60fps
-        let current = 0;
+    const angka = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 });
 
-        const timer = setInterval(() => {
-            current += step;
-            if (current >= target) {
-                current = target;
-                clearInterval(timer);
+    function animateCounter(element) {
+        // data-target ada di <h3>, sedangkan yang diamati adalah pembungkusnya.
+        // Menulis ke pembungkus akan menimpa labelnya juga, jadi cari sasarannya.
+        const sasaran = element.matches('[data-target]')
+            ? element
+            : element.querySelector('[data-target]');
+        if (!sasaran || sasaran.dataset.selesai) return;
+
+        const tujuan = parseFloat(sasaran.dataset.target);
+        if (!isFinite(tujuan)) return;          // tanpa penjaga ini muncul NaN
+
+        sasaran.dataset.selesai = '1';
+
+        const diam = window.matchMedia
+            && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (diam) {
+            sasaran.textContent = angka.format(tujuan);
+            return;
+        }
+
+        const durasi = 1600;
+        const mulai = performance.now();
+
+        function langkah(saat) {
+            const bagian = Math.min((saat - mulai) / durasi, 1);
+            // melambat di ujung, terasa lebih halus daripada laju rata
+            const mulus = 1 - Math.pow(1 - bagian, 3);
+            sasaran.textContent = angka.format(Math.round(tujuan * mulus));
+            if (bagian < 1) {
+                requestAnimationFrame(langkah);
+            } else {
+                sasaran.textContent = angka.format(tujuan);
             }
-            element.textContent = Math.floor(current);
-        }, 16);
+        }
+        requestAnimationFrame(langkah);
     }
 
-    // This function is called from scroll animations when counters come into view
+    // Dipanggil dari initScrollAnimations saat angkanya masuk layar.
     window.animateCounter = animateCounter;
 }
 
