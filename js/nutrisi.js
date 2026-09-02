@@ -184,9 +184,21 @@
   /* ---------------------------------------------------------------------
      Bantuan format
      --------------------------------------------------------------------- */
-  var nf1 = new Intl.NumberFormat('id-ID', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
-  var nf2 = new Intl.NumberFormat('id-ID', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   var nf0 = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 });
+  var nfSatu = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 1 });
+  var nfDua = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 2 });
+  var nfTiga = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 3 });
+
+  /* Satu desimal saja, dan nol di belakang koma dibuang: 50,00 jadi 50,
+     44,74 jadi 44,7. Angka di bawah 1 dikecualikan, karena hara mikro seperti
+     molibdenum 0,05 ppm akan berubah jadi 0,1 ppm kalau ikut dibulatkan. */
+  function rapi(v) {
+    if (!isFinite(v)) return '0';
+    var a = Math.abs(v);
+    if (a === 0 || a >= 1) return nfSatu.format(v);
+    if (a >= 0.1) return nfDua.format(v);
+    return nfTiga.format(v);
+  }
 
   function el(id) { return document.getElementById(id); }
   function num(id) {
@@ -198,13 +210,10 @@
   function gram(g) {
     if (!g || g <= 0) return '0 g';
     if (g < 1) return nf0.format(g * 1000) + ' mg';
-    if (g < 10) return nf2.format(g) + ' g';
-    return nf2.format(g) + ' g';
+    return rapi(g) + ' g';
   }
   function ppm(v) {
-    if (v >= 10) return nf0.format(v);
-    if (v >= 1) return nf2.format(v);
-    return nf1.format(v * 1000) / 1000 ? nf2.format(v) : nf2.format(v);
+    return v >= 10 ? nf0.format(v) : rapi(v);
   }
 
   function semuaResep() {
@@ -271,15 +280,15 @@
     var totalA = mlPerLiter * volume;
 
     el('n-target-info').textContent =
-      'Rentang EC ' + nf1.format(t.ec[0]) + ' - ' + nf1.format(t.ec[1]) + ' mS/cm, ' +
-      'pH ' + nf1.format(t.ph[0]) + ' - ' + nf1.format(t.ph[1]);
+      'Rentang EC ' + rapi(t.ec[0]) + ' - ' + rapi(t.ec[1]) + ' mS/cm, ' +
+      'pH ' + rapi(t.ph[0]) + ' - ' + rapi(t.ph[1]);
 
-    el('n-out-ml').textContent = nf2.format(mlPerLiter) + ' ml/L';
+    el('n-out-ml').textContent = rapi(mlPerLiter) + ' ml/L';
     el('n-out-a').textContent = totalA >= 1000
-      ? nf2.format(totalA / 1000) + ' liter' : nf0.format(totalA) + ' ml';
+      ? rapi(totalA / 1000) + ' liter' : nf0.format(totalA) + ' ml';
     el('n-out-b').textContent = el('n-out-a').textContent;
     el('n-out-ppm').textContent = nf0.format(ecTarget * skala) + ' ppm';
-    el('n-out-ph').textContent = nf1.format(t.ph[0]) + ' - ' + nf1.format(t.ph[1]);
+    el('n-out-ph').textContent = rapi(t.ph[0]) + ' - ' + rapi(t.ph[1]);
     el('n-out-volume').textContent = nf0.format(volume) + ' liter';
 
     var pesan, kelas;
@@ -315,14 +324,14 @@
     if (beda > 0.02) {
       var mlTambah = (beda / ecAcuan) * dosisAcuan * volume;
       baris.innerHTML =
-        '<div class="calc-row"><dt>Selisih EC</dt><dd>+' + nf2.format(beda) + ' mS/cm</dd></div>' +
+        '<div class="calc-row"><dt>Selisih EC</dt><dd>+' + rapi(beda) + ' mS/cm</dd></div>' +
         '<div class="calc-row calc-row-strong"><dt>Tambah pekatan A</dt><dd>' + nf0.format(mlTambah) + ' ml</dd></div>' +
         '<div class="calc-row calc-row-strong"><dt>Tambah pekatan B</dt><dd>' + nf0.format(mlTambah) + ' ml</dd></div>' +
         '<p class="calc-note">Tuang A dulu, aduk, baru B. Jangan pernah mencampur A dan B dalam keadaan pekat.</p>';
     } else if (beda < -0.02) {
       var airTambah = volume * (ecSekarang / ecMau - 1);
       baris.innerHTML =
-        '<div class="calc-row"><dt>Selisih EC</dt><dd>' + nf2.format(beda) + ' mS/cm</dd></div>' +
+        '<div class="calc-row"><dt>Selisih EC</dt><dd>' + rapi(beda) + ' mS/cm</dd></div>' +
         '<div class="calc-row calc-row-strong"><dt>Tambah air tawar</dt><dd>' + nf0.format(airTambah) + ' liter</dd></div>' +
         '<p class="calc-note">EC yang terlalu tinggi hanya bisa diturunkan dengan air, bukan dengan pupuk. ' +
         'Volume tandon akan naik jadi ' + nf0.format(volume + airTambah) + ' liter.</p>';
@@ -343,8 +352,8 @@
     var mk = r.mikro || MIKRO_BAWAAN;
     URUT_MIKRO.forEach(function (u) { el('r-m-' + u).value = mk[u]; });
     el('r-target-info').textContent = r.ec
-      ? 'Acuan EC ' + nf1.format(r.ec[0]) + ' - ' + nf1.format(r.ec[1]) + ' mS/cm, pH ' +
-        nf1.format(r.ph[0]) + ' - ' + nf1.format(r.ph[1])
+      ? 'Acuan EC ' + rapi(r.ec[0]) + ' - ' + rapi(r.ec[1]) + ' mS/cm, pH ' +
+        rapi(r.ph[0]) + ' - ' + rapi(r.ph[1])
       : '';
     hitungRacikan();
   }
@@ -550,8 +559,8 @@
   function gambarRacikan(g, dapat, dapatMikro, s, volume, faktor, volStok, campuran, catatan) {
     var mlPerLiter = faktor > 0 ? 1000 / faktor : 0;
 
-    el('r-out-dosis').textContent = nf1.format(mlPerLiter) + ' ml/L';
-    el('r-out-stok').textContent = nf1.format(volStok) + ' L per tangki';
+    el('r-out-dosis').textContent = rapi(mlPerLiter) + ' ml/L';
+    el('r-out-stok').textContent = rapi(volStok) + ' L per tangki';
     el('r-out-cukup').textContent = nf0.format(volume) + ' liter larutan kerja';
 
     /* Tabel takaran per tangki. Angka gram adalah untuk satu tangki pekatan. */
@@ -573,7 +582,7 @@
       if (campuran && tangki === 'B') {
         total += campuran.gram;
         var isi = URUT_MIKRO.filter(function (u) { return campuran.pct[u] > 0; })
-          .map(function (u) { return u + ' ' + nf2.format(campuran.pct[u]) + '%'; }).join(' &middot; ');
+          .map(function (u) { return u + ' ' + rapi(campuran.pct[u]) + '%'; }).join(' &middot; ');
         baris +=
           '<tr>' +
             '<td data-label="Pupuk"><strong>Campuran mikro siap pakai</strong>' +
@@ -616,7 +625,7 @@
       else kelas = Math.abs(persen) <= 5 ? 'pas' : (Math.abs(persen) <= 15 ? 'dekat' : 'jauh');
 
       var tanda = beda >= 0 ? '+' : '';
-      var fmt = target >= 10 ? nf0 : nf2;
+      var fmt = { format: function (x) { return x >= 10 ? nf0.format(x) : rapi(x); } };
       cek +=
         '<tr' + (kelasBaris ? ' class="' + kelasBaris + '"' : '') + '>' +
           '<td data-label="Unsur"><strong>' + u + '</strong>' +
@@ -624,7 +633,7 @@
           '<td data-label="Sasaran">' + fmt.format(target) + '</td>' +
           '<td data-label="Hasil">' + fmt.format(hasil) + '</td>' +
           '<td data-label="Selisih"><span class="delta ' + kelas + '">' +
-            tanda + nf1.format(persen) + '%</span></td>' +
+            tanda + rapi(persen) + '%</span></td>' +
         '</tr>';
     }
 
@@ -641,7 +650,7 @@
     el('r-tabel-cek').innerHTML = cek;
 
     var rata = skor.reduce(function (a, b) { return a + b; }, 0) / skor.length;
-    el('r-out-skor').textContent = nf2.format(rata) + '%';
+    el('r-out-skor').textContent = rapi(rata) + '%';
     var badge = el('r-skor-badge');
     badge.className = 'calc-badge ' + (rata >= 97 ? 'is-ok' : rata >= 90 ? '' : rata >= 75 ? 'is-warn' : 'is-danger');
     el('r-skor-teks').textContent =
@@ -740,7 +749,7 @@
     Object.keys(PUPUK).forEach(function (kode) {
       var p = PUPUK[kode];
       var unsur = Object.keys(p.unsur).map(function (u) {
-        return u + ' ' + nf1.format(p.unsur[u]) + '%';
+        return u + ' ' + rapi(p.unsur[u]) + '%';
       }).join(' &middot; ');
       html +=
         '<tr>' +
@@ -763,10 +772,10 @@
       html +=
         '<tr>' +
           '<td data-label="Tanaman"><strong>' + p.nama + '</strong></td>' +
-          '<td data-label="EC">' + nf1.format(p.ec[0]) + ' - ' + nf1.format(p.ec[1]) + '</td>' +
+          '<td data-label="EC">' + rapi(p.ec[0]) + ' - ' + rapi(p.ec[1]) + '</td>' +
           '<td data-label="PPM (skala 500)">' + nf0.format(p.ec[0] * 500) + ' - ' + nf0.format(p.ec[1] * 500) + '</td>' +
           '<td data-label="PPM (skala 700)">' + nf0.format(p.ec[0] * 700) + ' - ' + nf0.format(p.ec[1] * 700) + '</td>' +
-          '<td data-label="pH">' + nf1.format(p.ph[0]) + ' - ' + nf1.format(p.ph[1]) + '</td>' +
+          '<td data-label="pH">' + rapi(p.ph[0]) + ' - ' + rapi(p.ph[1]) + '</td>' +
         '</tr>';
     });
     t.innerHTML = html;

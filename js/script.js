@@ -36,7 +36,9 @@ function initBiofloc() {
     if (!form) return;
 
     const angka = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 });
-    const desimal = new Intl.NumberFormat('id-ID', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    /* Satu desimal, dan nol di belakang koma dibuang. Sama seperti
+       kalkulator nutrisi, supaya angkanya konsisten di seluruh situs. */
+    const desimal = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 1 });
 
     const rupiah = (n) => 'Rp ' + angka.format(Math.round(n));
     const el = (id) => document.getElementById(id);
