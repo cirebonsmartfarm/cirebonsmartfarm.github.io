@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initMobileOptimizations();
     initCurrentYear();
+    initBiofloc();
 });
 
 
@@ -21,6 +22,112 @@ function initCurrentYear() {
     const year = new Date().getFullYear();
     document.querySelectorAll('.js-year').forEach(el => {
         el.textContent = year;
+    });
+}
+
+
+// Kalkulator kolam bioflok.
+// Semua hitungan berjalan di peramban pengunjung, tidak ada data yang dikirim
+// atau disimpan. Fungsi ini berhenti sendiri di halaman yang tidak memuatnya.
+function initBiofloc() {
+    const form = document.getElementById('biofloc-calc');
+    if (!form) return;
+
+    const angka = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 });
+    const desimal = new Intl.NumberFormat('id-ID', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+    const rupiah = (n) => 'Rp ' + angka.format(Math.round(n));
+    const el = (id) => document.getElementById(id);
+    const val = (id) => {
+        const n = parseFloat(el(id).value);
+        return isFinite(n) && n >= 0 ? n : 0;
+    };
+
+    // Kepadatan biomassa saat panen menentukan seberapa berat kerja aerasi.
+    const bandDensity = (kgPerM3) => {
+        if (kgPerM3 <= 0) return { teks: 'Isi angkanya dulu', kelas: '' };
+        if (kgPerM3 < 15) return { teks: 'Masih longgar, kolam belum terpakai penuh', kelas: 'is-low' };
+        if (kgPerM3 <= 35) return { teks: 'Wajar untuk bioflok terpal yang aerasinya jalan 24 jam', kelas: 'is-ok' };
+        if (kgPerM3 <= 50) return { teks: 'Padat. Aerasi, pengukuran harian, dan listrik cadangan harus siap', kelas: 'is-warn' };
+        return { teks: 'Terlalu padat untuk kolam terpal biasa. Kurangi tebar atau tambah kolam', kelas: 'is-danger' };
+    };
+
+    function hitung() {
+        const diameter = val('diameter');
+        const tinggiAir = val('tinggiAir');
+        const jumlahKolam = Math.max(1, Math.round(val('jumlahKolam')));
+        const padatTebar = val('padatTebar');
+        const bobotPanen = val('bobotPanen');
+        const sr = Math.min(100, val('sr')) / 100;
+        const fcr = val('fcr');
+        const hargaPakan = val('hargaPakan');
+        const hargaBenih = val('hargaBenih');
+        const hargaJual = val('hargaJual');
+        const rasioMolase = val('rasioMolase');
+
+        const jari = diameter / 2;
+        const volume = Math.PI * jari * jari * tinggiAir;
+        const volumeTotal = volume * jumlahKolam;
+
+        const benih = volumeTotal * padatTebar;
+        const hidup = benih * sr;
+        const panenKg = (hidup * bobotPanen) / 1000;
+        const kepadatan = volumeTotal > 0 ? panenKg / volumeTotal : 0;
+
+        const pakanKg = panenKg * fcr;
+        const molaseKg = pakanKg * rasioMolase;
+        const titikAerasi = volume > 0 ? Math.max(4, Math.ceil(volume)) : 0;
+
+        const biayaBenih = benih * hargaBenih;
+        const biayaPakan = pakanKg * hargaPakan;
+        const omzet = panenKg * hargaJual;
+        const selisih = omzet - biayaBenih - biayaPakan;
+
+        el('outVolume').textContent = desimal.format(volume) + ' m³';
+        el('outVolumeTotal').textContent = desimal.format(volumeTotal) + ' m³ (' + jumlahKolam + ' kolam)';
+        el('outBenih').textContent = angka.format(Math.round(benih)) + ' ekor';
+        el('outHidup').textContent = angka.format(Math.round(hidup)) + ' ekor';
+        el('outPanen').textContent = angka.format(Math.round(panenKg)) + ' kg';
+        el('outPakan').textContent = angka.format(Math.round(pakanKg)) + ' kg';
+        el('outMolase').textContent = angka.format(Math.round(molaseKg)) + ' kg';
+        el('outAerasi').textContent = titikAerasi + ' titik per kolam';
+
+        el('outBiayaBenih').textContent = rupiah(biayaBenih);
+        el('outBiayaPakan').textContent = rupiah(biayaPakan);
+        el('outOmzet').textContent = rupiah(omzet);
+        el('outSelisih').textContent = rupiah(selisih);
+
+        const band = bandDensity(kepadatan);
+        el('outDensity').textContent = desimal.format(kepadatan) + ' kg/m³';
+        el('outDensityNote').textContent = band.teks;
+        el('outDensityBadge').className = 'calc-badge ' + band.kelas;
+    }
+
+    form.addEventListener('input', hitung);
+    form.addEventListener('change', hitung);
+    form.addEventListener('reset', () => setTimeout(hitung, 0));
+    hitung();
+
+    // Tombol salin pada blok kutipan.
+    document.querySelectorAll('.cite-copy').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+            const target = document.getElementById(btn.dataset.copy);
+            if (!target) return;
+            const teks = target.textContent;
+            const semula = btn.innerHTML;
+            try {
+                await navigator.clipboard.writeText(teks);
+            } catch (e) {
+                const tmp = document.createElement('textarea');
+                tmp.value = teks;
+                document.body.appendChild(tmp);
+                tmp.select();
+                try { document.execCommand('copy'); } catch (err) { /* diabaikan */ }
+                document.body.removeChild(tmp);
+            }
+            btn.innerHTML = '<i class="fas fa-check"></i> Tersalin';
+            setTimeout(() => { btn.innerHTML = semula; }, 1800);
+        });
     });
 }
 

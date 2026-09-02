@@ -2645,3 +2645,285 @@ img {
         accent-color: var(--primary-color);
     }
 }
+
+/* ==========================================================================
+   Kalkulator kolam bioflok
+   ========================================================================== */
+
+.calc-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.calc-title {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    margin: 1.75rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e3eee5;
+}
+
+.calc-title:first-child {
+    margin-top: 0;
+}
+
+.calc-subtitle {
+    font-size: 1.05rem;
+    color: var(--primary-color);
+    margin: 2rem 0 0.75rem;
+}
+
+.calc-form {
+    background: var(--white);
+    border: 1px solid #e3eee5;
+    border-radius: var(--border-radius);
+    padding: 1.75rem;
+    box-shadow: var(--shadow);
+}
+
+.calc-field {
+    margin-bottom: 1.1rem;
+}
+
+.calc-field label {
+    display: block;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.4rem;
+}
+
+.calc-field input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.calc-field input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(45, 90, 39, 0.1);
+}
+
+.calc-field small {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.calc-actions {
+    margin-top: 1.5rem;
+}
+
+.calc-output {
+    background: var(--light-bg);
+    border: 1px solid #d7e8dc;
+    border-radius: var(--border-radius);
+    padding: 1.75rem;
+    position: sticky;
+    top: 100px;
+}
+
+.calc-badge {
+    background: var(--white);
+    border-left: 6px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.calc-badge-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-light);
+}
+
+.calc-badge strong {
+    display: block;
+    font-size: 1.7rem;
+    color: var(--primary-color);
+    line-height: 1.2;
+    margin: 0.15rem 0 0.3rem;
+}
+
+.calc-badge-note {
+    display: block;
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.calc-badge.is-low {
+    border-left-color: #9ca3af;
+}
+
+.calc-badge.is-ok {
+    border-left-color: var(--accent-color);
+}
+
+.calc-badge.is-warn {
+    border-left-color: #d97706;
+}
+
+.calc-badge.is-warn strong,
+.calc-badge.is-danger strong {
+    color: #b45309;
+}
+
+.calc-badge.is-danger {
+    border-left-color: #dc2626;
+}
+
+.calc-badge.is-danger strong {
+    color: #b91c1c;
+}
+
+.calc-results {
+    margin: 0;
+}
+
+.calc-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #dfeade;
+}
+
+.calc-row:last-child {
+    border-bottom: none;
+}
+
+.calc-row dt {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.calc-row dd {
+    margin: 0;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: right;
+    white-space: nowrap;
+}
+
+.calc-row-strong dt {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.calc-row-strong dd {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.calc-note {
+    margin: 1.5rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.calc-note i {
+    color: var(--accent-color);
+    margin-right: 0.35rem;
+}
+
+/* Blok kutipan yang bisa disalin */
+.cite-box {
+    background: var(--white);
+    border: 1px solid #e3eee5;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.1rem;
+    overflow: hidden;
+}
+
+.cite-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.7rem 1rem;
+    background: var(--light-bg);
+    border-bottom: 1px solid #e3eee5;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.cite-copy {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.cite-copy:hover {
+    background: var(--secondary-color);
+}
+
+.cite-box code {
+    display: block;
+    padding: 1rem;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+@media (max-width: 900px) {
+    .calc-wrap {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .calc-output {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .calc-form,
+    .calc-output {
+        padding: 1.25rem;
+    }
+
+    .calc-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.15rem;
+    }
+
+    .calc-row dd {
+        text-align: left;
+        font-size: 1.05rem;
+    }
+
+    .calc-badge strong {
+        font-size: 1.5rem;
+    }
+
+    .cite-head {
+        flex-wrap: wrap;
+    }
+}

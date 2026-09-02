@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kolam Bioflok - Hitung Volume, Padat Tebar, Pakan, dan Panen Ikan Nila | Cirebon Smart Farm</title>
+    <meta name="description" content="Kalkulator gratis untuk kolam bioflok. Hitung volume air, jumlah benih, kebutuhan pakan dan molase, perkiraan panen, serta kepadatan akhir ikan nila. Tanpa daftar, langsung pakai.">
+    <meta name="keywords" content="kalkulator bioflok, hitung volume kolam bioflok, padat tebar ikan nila, kebutuhan pakan bioflok, rumus kolam terpal bundar, kalkulator budidaya ikan, hitung molase bioflok, estimasi panen nila">
+    <meta name="author" content="Cirebon Smart Farm">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#2d5a27">
+    <meta name="geo.region" content="ID-JB">
+    <meta name="geo.placename" content="Cirebon, Jawa Barat">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cirebon Smart Farm">
+    <meta property="og:title" content="Kalkulator Kolam Bioflok - Gratis, Tanpa Daftar">
+    <meta property="og:description" content="Hitung volume air, jumlah benih, kebutuhan pakan dan molase, serta perkiraan panen kolam bioflok ikan nila.">
+    <meta property="og:url" content="https://www.cirebonsmartfarm.com/kalkulator-bioflok.html">
+    <meta property="og:image" content="https://www.cirebonsmartfarm.com/images/bioflok-panen-nila.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="853">
+    <meta property="og:image:alt" content="Kolam bioflok terpal bundar untuk budidaya ikan nila">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kalkulator Kolam Bioflok - Gratis, Tanpa Daftar">
+    <meta name="twitter:description" content="Hitung volume, padat tebar, pakan, molase, dan perkiraan panen kolam bioflok ikan nila.">
+    <meta name="twitter:image" content="https://www.cirebonsmartfarm.com/images/bioflok-panen-nila.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.cirebonsmartfarm.com/kalkulator-bioflok.html">
+
+    <!-- Ikon Situs -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://www.cirebonsmartfarm.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Budidaya Ikan Nila Bioflok", "item": "https://www.cirebonsmartfarm.com/budidaya-ikan-bioflok.html" },
+                    { "@type": "ListItem", "position": 3, "name": "Kalkulator Kolam Bioflok", "item": "https://www.cirebonsmartfarm.com/kalkulator-bioflok.html" }
+                ]
+            },
+            {
+                "@type": "WebApplication",
+                "name": "Kalkulator Kolam Bioflok",
+                "url": "https://www.cirebonsmartfarm.com/kalkulator-bioflok.html",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "Semua peramban modern",
+                "inLanguage": "id-ID",
+                "description": "Kalkulator untuk menghitung volume air kolam bioflok bundar, jumlah benih berdasarkan padat tebar, kebutuhan pakan dan molase, perkiraan hasil panen, serta kepadatan akhir ikan.",
+                "browserRequirements": "Membutuhkan JavaScript",
+                "isAccessibleForFree": true,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "IDR"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Cirebon Smart Farm",
+                    "url": "https://www.cirebonsmartfarm.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.cirebonsmartfarm.com/images/logo.png",
+                        "width": 512,
+                        "height": 512
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Bagaimana cara menghitung volume air kolam bioflok bundar?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Volume air kolam bundar dihitung dengan rumus phi dikali jari-jari kuadrat dikali tinggi air. Jari-jari adalah setengah diameter. Untuk kolam diameter 3 meter dengan tinggi air 0,8 meter, volumenya sekitar 5,65 meter kubik. Yang dipakai adalah tinggi air, bukan tinggi dinding kolam." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Berapa jumlah benih untuk kolam bioflok diameter 3 meter?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Dengan volume air sekitar 5,65 meter kubik dan padat tebar 100 sampai 150 ekor per meter kubik, kolam diameter 3 meter dengan tinggi air 0,8 meter menampung sekitar 565 sampai 850 ekor benih ikan nila. Angka ini hanya aman bila aerasi berjalan 24 jam." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Bagaimana cara menghitung kebutuhan pakan bioflok?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Kebutuhan pakan sepanjang satu siklus diperkirakan dari bobot panen dikali nilai FCR atau rasio konversi pakan. Bila panen 200 kilogram dengan FCR 1,3, maka pakan yang dibutuhkan sekitar 260 kilogram. Pada sistem bioflok yang sehat, FCR biasanya lebih rendah daripada kolam biasa karena ikan juga memakan flok." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Berapa banyak molase yang dibutuhkan kolam bioflok?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Sumber karbon seperti molase umumnya diberikan sekitar setengah dari berat pakan harian untuk menjaga rasio karbon terhadap nitrogen di kisaran 15 sampai 20 banding 1. Takaran pastinya menyesuaikan kadar protein pakan dan hasil pengukuran amonia di kolam." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Berapa kepadatan akhir ikan yang masih aman di kolam bioflok?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Kepadatan biomassa saat panen pada kolam terpal bioflok umumnya berada di kisaran 15 sampai 35 kilogram per meter kubik. Di atas 35 kilogram per meter kubik, kebutuhan oksigen naik tajam sehingga aerasi, pengukuran harian, dan listrik cadangan harus benar-benar siap." }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#konten">Lompat ke konten utama</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Cirebon Smart Farm, kembali ke beranda">
+                <img src="images/logo.png" alt="Logo Cirebon Smart Farm" width="38" height="38">
+                <h2>Cirebon Smart Farm</h2>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="about.html" class="nav-link">Tentang</a>
+                <a href="product.html" class="nav-link">Produk</a>
+                <a href="budidaya-ikan-bioflok.html" class="nav-link active">Bioflok</a>
+                <a href="contact.html" class="nav-link">Kontak</a>
+                <a href="sitemap.html" class="nav-link">Sitemap</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header with-photo">
+        <div class="container">
+            <h1>Kalkulator Kolam Bioflok</h1>
+            <p>Hitung volume, jumlah benih, pakan, dan perkiraan panen. Gratis, tanpa daftar.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Beranda</a> <span>/</span>
+                <a href="budidaya-ikan-bioflok.html">Bioflok</a> <span>/</span> <span>Kalkulator</span>
+            </div>
+        </div>
+    </section>
+
+    <main id="konten">
+
+    <!-- Kalkulator -->
+    <section class="content-block">
+        <div class="container">
+            <p class="content-lead">
+                Isi ukuran kolam dan target panen Anda, lalu angkanya dihitung otomatis. Kalkulator ini
+                kami buka bebas untuk siapa saja yang sedang merencanakan kolam bioflok, termasuk
+                pembudidaya di luar Cirebon. Semua perhitungan berjalan di peramban Anda sendiri dan
+                tidak ada data yang kami simpan.
+            </p>
+
+            <div class="calc-wrap">
+                <form class="calc-form" id="biofloc-calc" novalidate>
+                    <h2 class="calc-title">Ukuran Kolam</h2>
+
+                    <div class="calc-field">
+                        <label for="diameter">Diameter kolam (meter)</label>
+                        <input type="number" id="diameter" value="3" min="0.5" max="20" step="0.1" inputmode="decimal">
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="tinggiAir">Tinggi air (meter)</label>
+                        <input type="number" id="tinggiAir" value="0.8" min="0.2" max="3" step="0.05" inputmode="decimal">
+                        <small>Tinggi permukaan air, bukan tinggi dinding kolam.</small>
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="jumlahKolam">Jumlah kolam</label>
+                        <input type="number" id="jumlahKolam" value="1" min="1" max="200" step="1" inputmode="numeric">
+                    </div>
+
+                    <h2 class="calc-title">Target Budidaya</h2>
+
+                    <div class="calc-field">
+                        <label for="padatTebar">Padat tebar (ekor per m<sup>3</sup>)</label>
+                        <input type="number" id="padatTebar" value="125" min="10" max="400" step="5" inputmode="numeric">
+                        <small>Acuan umum bioflok ikan nila: 100 - 150 ekor per m<sup>3</sup>.</small>
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="bobotPanen">Bobot panen per ekor (gram)</label>
+                        <input type="number" id="bobotPanen" value="300" min="50" max="1500" step="10" inputmode="numeric">
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="sr">Tingkat hidup / SR (persen)</label>
+                        <input type="number" id="sr" value="85" min="30" max="100" step="1" inputmode="numeric">
+                        <small>Berapa persen benih yang diperkirakan bertahan sampai panen.</small>
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="fcr">FCR (rasio konversi pakan)</label>
+                        <input type="number" id="fcr" value="1.3" min="0.6" max="3" step="0.05" inputmode="decimal">
+                        <small>Kilogram pakan untuk menghasilkan 1 kg ikan.</small>
+                    </div>
+
+                    <h2 class="calc-title">Biaya &amp; Harga</h2>
+
+                    <div class="calc-field">
+                        <label for="hargaPakan">Harga pakan (Rp per kg)</label>
+                        <input type="number" id="hargaPakan" value="13000" min="0" step="500" inputmode="numeric">
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="hargaBenih">Harga benih (Rp per ekor)</label>
+                        <input type="number" id="hargaBenih" value="500" min="0" step="50" inputmode="numeric">
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="hargaJual">Harga jual ikan (Rp per kg)</label>
+                        <input type="number" id="hargaJual" value="30000" min="0" step="1000" inputmode="numeric">
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="rasioMolase">Molase terhadap pakan</label>
+                        <input type="number" id="rasioMolase" value="0.5" min="0" max="2" step="0.05" inputmode="decimal">
+                        <small>Umumnya sekitar 0,5 kg molase per 1 kg pakan.</small>
+                    </div>
+
+                    <div class="calc-actions">
+                        <button type="reset" class="btn-secondary" id="calcReset">
+                            <i class="fas fa-rotate-left" aria-hidden="true"></i> Kembalikan Nilai Awal
+                        </button>
+                    </div>
+                </form>
+
+                <div class="calc-output" id="calcOutput" aria-live="polite">
+                    <h2 class="calc-title">Hasil Perhitungan</h2>
+
+                    <div class="calc-badge" id="outDensityBadge">
+                        <span class="calc-badge-label">Kepadatan saat panen</span>
+                        <strong id="outDensity">-</strong>
+                        <span class="calc-badge-note" id="outDensityNote">-</span>
+                    </div>
+
+                    <dl class="calc-results">
+                        <div class="calc-row">
+                            <dt>Volume air per kolam</dt>
+                            <dd id="outVolume">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Total volume air</dt>
+                            <dd id="outVolumeTotal">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Jumlah benih ditebar</dt>
+                            <dd id="outBenih">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Ikan bertahan sampai panen</dt>
+                            <dd id="outHidup">-</dd>
+                        </div>
+                        <div class="calc-row calc-row-strong">
+                            <dt>Perkiraan hasil panen</dt>
+                            <dd id="outPanen">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Kebutuhan pakan</dt>
+                            <dd id="outPakan">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Kebutuhan molase</dt>
+                            <dd id="outMolase">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Titik aerasi disarankan</dt>
+                            <dd id="outAerasi">-</dd>
+                        </div>
+                    </dl>
+
+                    <h3 class="calc-subtitle">Hitungan Kasar Biaya</h3>
+                    <dl class="calc-results">
+                        <div class="calc-row">
+                            <dt>Biaya benih</dt>
+                            <dd id="outBiayaBenih">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Biaya pakan</dt>
+                            <dd id="outBiayaPakan">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Perkiraan omzet</dt>
+                            <dd id="outOmzet">-</dd>
+                        </div>
+                        <div class="calc-row calc-row-strong">
+                            <dt>Selisih omzet dikurangi benih &amp; pakan</dt>
+                            <dd id="outSelisih">-</dd>
+                        </div>
+                    </dl>
+
+                    <p class="calc-note">
+                        <i class="fas fa-circle-info" aria-hidden="true"></i>
+                        Selisih di atas <strong>belum</strong> memperhitungkan listrik, penyusutan kolam dan
+                        blower, tenaga kerja, probiotik, obat, maupun transportasi. Anggap angka ini sebagai
+                        batas atas, bukan keuntungan bersih.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara membaca -->
+    <section class="content-block alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cara Membaca Hasilnya</h2>
+                <p>Rumus yang dipakai kalkulator ini, supaya Anda bisa memeriksanya sendiri</p>
+            </div>
+
+            <div class="table-wrap">
+                <table class="data-table">
+                    <caption>Rumus di balik setiap angka</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Hasil</th>
+                            <th scope="col">Rumus</th>
+                            <th scope="col">Catatan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Hasil"><strong>Volume air</strong></td>
+                            <td data-label="Rumus">3,14159 x (diameter / 2)<sup>2</sup> x tinggi air</td>
+                            <td data-label="Catatan">Memakai tinggi air, bukan tinggi dinding kolam</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Hasil"><strong>Jumlah benih</strong></td>
+                            <td data-label="Rumus">volume air x padat tebar</td>
+                            <td data-label="Catatan">Padat tebar tinggi hanya aman dengan aerasi 24 jam</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Hasil"><strong>Ikan saat panen</strong></td>
+                            <td data-label="Rumus">jumlah benih x SR</td>
+                            <td data-label="Catatan">SR wajar untuk nila bioflok berkisar 80 - 90 persen</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Hasil"><strong>Hasil panen</strong></td>
+                            <td data-label="Rumus">ikan saat panen x bobot per ekor</td>
+                            <td data-label="Catatan">Bobot konsumsi nila umumnya 250 - 350 gram</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Hasil"><strong>Kepadatan panen</strong></td>
+                            <td data-label="Rumus">hasil panen / volume air</td>
+                            <td data-label="Catatan">Angka paling penting untuk menilai kesanggupan aerasi</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Hasil"><strong>Kebutuhan pakan</strong></td>
+                            <td data-label="Rumus">hasil panen x FCR</td>
+                            <td data-label="Catatan">FCR bioflok yang sehat biasanya 1,1 - 1,4</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Hasil"><strong>Kebutuhan molase</strong></td>
+                            <td data-label="Rumus">kebutuhan pakan x rasio molase</td>
+                            <td data-label="Catatan">Untuk menjaga rasio C:N di kisaran 15 - 20 banding 1</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Hasil"><strong>Titik aerasi</strong></td>
+                            <td data-label="Rumus">1 titik per m<sup>3</sup>, paling sedikit 4 per kolam</td>
+                            <td data-label="Catatan">Acuan kasar, sesuaikan dengan daya blower Anda</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="notice-banner">
+                <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+                <div>
+                    <h3>Ini Alat Perencanaan, Bukan Jaminan</h3>
+                    <p>
+                        Hasil sebenarnya dipengaruhi mutu benih, suhu air harian, mutu pakan, kestabilan flok,
+                        dan kedisiplinan pencatatan. Pakai angka di sini untuk menyusun rencana dan anggaran
+                        awal, lalu koreksi terus dengan data dari kolam Anda sendiri.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tautkan halaman ini -->
+    <section class="content-block">
+        <div class="container">
+            <div class="section-header">
+                <h2>Boleh Dipakai dan Dibagikan</h2>
+                <p>Kalkulator ini gratis. Kalau membantu, cukup sertakan tautan sumbernya</p>
+            </div>
+
+            <div class="split">
+                <div>
+                    <p>
+                        Silakan pakai kalkulator ini untuk mengajar, menyusun proposal, menulis artikel, atau
+                        melatih kelompok pembudidaya. Anda tidak perlu meminta izin. Kami hanya berharap
+                        pembaca Anda bisa menemukan sumber aslinya, jadi sertakan tautan balik ke halaman ini.
+                    </p>
+                    <p>
+                        Salin salah satu potongan di samping, tempelkan di artikel, materi pelatihan, atau
+                        deskripsi unggahan Anda.
+                    </p>
+                    <div class="contact-action">
+                        <a href="budidaya-ikan-bioflok.html" class="btn-primary">
+                            <i class="fas fa-book-open" aria-hidden="true"></i> Baca Panduan Bioflok Lengkap
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="cite-box">
+                        <div class="cite-head">
+                            <span>Tautan biasa</span>
+                            <button type="button" class="cite-copy" data-copy="cite-plain">
+                                <i class="fas fa-copy" aria-hidden="true"></i> Salin
+                            </button>
+                        </div>
+                        <code id="cite-plain">Kalkulator Kolam Bioflok - Cirebon Smart Farm
+https://www.cirebonsmartfarm.com/kalkulator-bioflok.html</code>
+                    </div>
+
+                    <div class="cite-box">
+                        <div class="cite-head">
+                            <span>Kode HTML</span>
+                            <button type="button" class="cite-copy" data-copy="cite-html">
+                                <i class="fas fa-copy" aria-hidden="true"></i> Salin
+                            </button>
+                        </div>
+                        <code id="cite-html">&lt;a href="https://www.cirebonsmartfarm.com/kalkulator-bioflok.html"&gt;Kalkulator Kolam Bioflok&lt;/a&gt; oleh Cirebon Smart Farm</code>
+                    </div>
+
+                    <div class="cite-box">
+                        <div class="cite-head">
+                            <span>Kutipan untuk karya tulis</span>
+                            <button type="button" class="cite-copy" data-copy="cite-apa">
+                                <i class="fas fa-copy" aria-hidden="true"></i> Salin
+                            </button>
+                        </div>
+                        <code id="cite-apa">Cirebon Smart Farm. (2026). Kalkulator Kolam Bioflok. Diakses dari https://www.cirebonsmartfarm.com/kalkulator-bioflok.html</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pertanyaan Seputar Perhitungan</h2>
+                <p>Hal yang paling sering ditanyakan saat merencanakan kolam</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana cara menghitung volume air kolam bioflok bundar?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Volume air kolam bundar dihitung dengan rumus phi dikali jari-jari kuadrat dikali
+                            tinggi air. Jari-jari adalah setengah diameter. Untuk kolam diameter 3 meter
+                            dengan tinggi air 0,8 meter, volumenya sekitar 5,65 meter kubik. Yang dipakai
+                            adalah tinggi air, bukan tinggi dinding kolam.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa jumlah benih untuk kolam diameter 3 meter?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Dengan volume air sekitar 5,65 meter kubik dan padat tebar 100 sampai 150 ekor per
+                            meter kubik, kolam tersebut menampung sekitar 565 sampai 850 ekor benih ikan nila.
+                            Angka ini hanya aman bila aerasi berjalan 24 jam penuh dan ada listrik cadangan.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana cara menghitung kebutuhan pakan?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Kebutuhan pakan sepanjang satu siklus diperkirakan dari bobot panen dikali nilai
+                            FCR. Bila panen 200 kilogram dengan FCR 1,3, pakan yang dibutuhkan sekitar 260
+                            kilogram. Pada bioflok yang sehat, FCR biasanya lebih rendah daripada kolam biasa
+                            karena ikan juga memakan flok.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa banyak molase yang dibutuhkan?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Sumber karbon seperti molase umumnya diberikan sekitar setengah dari berat pakan
+                            untuk menjaga rasio karbon terhadap nitrogen di kisaran 15 sampai 20 banding 1.
+                            Takaran pastinya menyesuaikan kadar protein pakan dan hasil pengukuran amonia di
+                            kolam.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa kepadatan akhir yang masih aman?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Kepadatan biomassa saat panen pada kolam terpal bioflok umumnya berada di kisaran
+                            15 sampai 35 kilogram per meter kubik. Di atas 35 kilogram per meter kubik,
+                            kebutuhan oksigen naik tajam sehingga aerasi, pengukuran harian, dan listrik
+                            cadangan harus benar-benar siap.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah data yang saya isi tersimpan?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Tidak. Seluruh perhitungan berjalan di peramban Anda sendiri. Website ini halaman
+                            statis tanpa basis data, jadi tidak ada angka yang dikirim atau disimpan di mana
+                            pun.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tautan terkait -->
+    <section class="content-block alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lanjutkan ke Sini</h2>
+                <p>Setelah angkanya masuk akal, ini langkah berikutnya</p>
+            </div>
+            <div class="link-cards">
+                <a href="budidaya-ikan-bioflok.html" class="link-card">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <h3>Panduan Bioflok Lengkap</h3>
+                    <p>Cara kerja siklus nitrogen, daftar peralatan, dan tujuh tahapan menyiapkan kolam.</p>
+                </a>
+                <a href="product.html" class="link-card">
+                    <i class="fas fa-seedling" aria-hidden="true"></i>
+                    <h3>Produk Kami</h3>
+                    <p>Hami melon dan selada hidroponik yang sudah berjalan dan bisa dipesan hari ini.</p>
+                </a>
+                <a href="about.html" class="link-card">
+                    <i class="fas fa-tractor" aria-hidden="true"></i>
+                    <h3>Tentang Kebun Kami</h3>
+                    <p>Kenapa setiap parameter kami ukur, dan bagaimana itu mengubah kepastian panen.</p>
+                </a>
+                <a href="contact.html" class="link-card">
+                    <i class="fas fa-comments" aria-hidden="true"></i>
+                    <h3>Diskusi dengan Kami</h3>
+                    <p>Punya pertanyaan soal angka di atas, atau ingin membangun kolam sendiri?</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Cirebon Smart Farm</h3>
+                    <p>Pelopor teknologi hidroponik modern di Cirebon dengan komitmen menghasilkan produk pertanian berkualitas premium melalui inovasi dan keberlanjutan.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/cirebonsmartfarm/" target="_blank" rel="noopener" aria-label="Instagram Cirebon Smart Farm">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61578927462988" target="_blank" rel="noopener" aria-label="Facebook Cirebon Smart Farm">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:cirebonsmartfarm@gmail.com" aria-label="Email Cirebon Smart Farm">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="product.html">Produk</a></li>
+                        <li><a href="budidaya-ikan-bioflok.html">Budidaya Ikan Bioflok</a></li>
+                        <li><a href="kalkulator-bioflok.html">Kalkulator Bioflok</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Produk Kami</h4>
+                    <ul>
+                        <li><a href="product.html#melon">Hami Melon Premium</a></li>
+                        <li><a href="product.html#lettuce">Selada Hidroponik</a></li>
+                        <li><a href="budidaya-ikan-bioflok.html">Ikan Nila Bioflok</a></li>
+                        <li><a href="product.html#technology">Teknologi Greenhouse</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak Info</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> cirebonsmartfarm@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Cirebon, Jawa Barat</li>
+                        <li><i class="fas fa-clock" aria-hidden="true"></i> Senin - Sabtu: 08:00 - 17:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="js-year">2026</span> Cirebon Smart Farm. Semua hak dilindungi. | Teknologi Hidroponik Modern di Cirebon</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
