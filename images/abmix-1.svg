@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="a1j a1d">
+  <title id="a1j">Isi tandon dengan air lebih dulu</title>
+  <desc id="a1d">Tandon diisi air sampai volume yang direncanakan, karena volume itulah
+    yang menjadi dasar takaran pekatan.</desc>
+  <defs>
+    <linearGradient id="airA1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd0e4"/><stop offset="1" stop-color="#4e9cb8"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="300" rx="14" fill="#f4f9f2"/>
+  <text x="210" y="38" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#2d5a27" text-anchor="middle">Air dulu, baru pekatan</text>
+
+  <path d="M210 58 V120" stroke="#8fd0e4" stroke-width="13" stroke-linecap="round" opacity=".85"/>
+  <g fill="#8fd0e4" opacity=".7"><circle cx="199" cy="92" r="4"/><circle cx="221" cy="108" r="3"/></g>
+
+  <path d="M104 124 H316 L300 258 a10 10 0 0 1 -10 9 H130 a10 10 0 0 1 -10 -9 Z" fill="#e6ece8"/>
+  <path d="M112 168 H308 L297 252 a8 8 0 0 1 -8 7 H131 a8 8 0 0 1 -8 -7 Z" fill="url(#airA1)"/>
+  <path d="M112 168 q19 -9 38 0 t38 0 t38 0 t38 0 t38 0" fill="none" stroke="#cdeaf4" stroke-width="5" stroke-linecap="round"/>
+  <path d="M104 124 H316 L300 258 a10 10 0 0 1 -10 9 H130 a10 10 0 0 1 -10 -9 Z" fill="none" stroke="#31414a" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="96" y="112" width="228" height="18" rx="9" fill="#31414a"/>
+
+  <path d="M116 168 H312" stroke="#e0552b" stroke-width="4" stroke-linecap="round"/>
+  <rect x="318" y="154" width="86" height="30" rx="8" fill="#e0552b"/>
+  <text x="361" y="175" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">200 L</text>
+
+  <text x="210" y="288" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Volume air inilah dasar semua takaran</text>
+</svg>

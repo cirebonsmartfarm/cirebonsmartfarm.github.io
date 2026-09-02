@@ -3463,6 +3463,7 @@ img {
     }
 
     /* Lampiran: urutan meracik beserta ilustrasinya, mulai halaman baru. */
+    #langkah-abmix,
     #langkah-meracik {
         padding: 0 !important;
         margin: 0 !important;
@@ -3471,11 +3472,13 @@ img {
         break-inside: auto;
     }
 
+    #langkah-abmix .container,
     #langkah-meracik .container {
         max-width: none;
         padding: 0;
     }
 
+    #langkah-abmix .section-header,
     #langkah-meracik .section-header {
         text-align: left;
         margin-bottom: 10px;
@@ -3483,12 +3486,14 @@ img {
         border-bottom: 2px solid #2d5a27;
     }
 
+    #langkah-abmix .section-header h2,
     #langkah-meracik .section-header h2 {
         font-size: 14pt;
         color: #2d5a27;
         margin: 0;
     }
 
+    #langkah-abmix .section-header p,
     #langkah-meracik .section-header p {
         font-size: 9.5pt;
         color: #4c5b45;
@@ -3496,8 +3501,10 @@ img {
         max-width: none;
     }
 
+    #langkah-abmix .steps-list,
     #langkah-meracik .steps-list { gap: 8px; }
 
+    #langkah-abmix .steps-list li,
     #langkah-meracik .steps-list li {
         grid-template-columns: 1fr 168px;
         gap: 12px;
@@ -3508,22 +3515,26 @@ img {
         page-break-inside: avoid;
     }
 
+    #langkah-abmix .steps-list li::before,
     #langkah-meracik .steps-list li::before {
         font-size: 11pt;
         left: 10px;
         top: 9px;
     }
 
+    #langkah-abmix .steps-list h3,
     #langkah-meracik .steps-list h3 {
         font-size: 10.5pt;
         margin-bottom: 2px;
     }
 
+    #langkah-abmix .steps-list p,
     #langkah-meracik .steps-list p {
         font-size: 8.5pt;
         line-height: 1.45;
     }
 
+    #langkah-abmix .step-gambar,
     #langkah-meracik .step-gambar {
         width: 168px;
         border: 1px solid #e3eee5;

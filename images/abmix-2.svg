@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="a2j a2d">
+  <title id="a2j">Tuang pekatan A, lalu aduk</title>
+  <desc id="a2d">Pekatan A dituang ke dalam tandon berisi air, lalu diaduk sampai benar-benar
+    tercampur sebelum melanjutkan.</desc>
+  <defs>
+    <linearGradient id="airA2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd0e4"/><stop offset="1" stop-color="#4e9cb8"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="300" rx="14" fill="#f4f9f2"/>
+  <text x="210" y="38" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#2d5a27" text-anchor="middle">Pekatan A dulu, aduk rata</text>
+
+  <g transform="translate(74 58) rotate(28 30 50)">
+    <rect x="14" y="0" width="16" height="14" rx="4" fill="#31414a"/>
+    <path d="M6 14 H38 a8 8 0 0 1 8 8 V80 a8 8 0 0 1 -8 8 H6 a8 8 0 0 1 -8 -8 V22 a8 8 0 0 1 8 -8 Z" fill="#2d5a27"/>
+    <text x="22" y="60" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">A</text>
+  </g>
+  <path d="M138 124 q10 22 18 40" stroke="#7fb069" stroke-width="9" stroke-linecap="round" fill="none" opacity=".85"/>
+
+  <path d="M104 152 H316 L300 262 a10 10 0 0 1 -10 9 H130 a10 10 0 0 1 -10 -9 Z" fill="#e6ece8"/>
+  <path d="M112 178 H308 L297 256 a8 8 0 0 1 -8 7 H131 a8 8 0 0 1 -8 -7 Z" fill="url(#airA2)"/>
+  <path d="M104 152 H316 L300 262 a10 10 0 0 1 -10 9 H130 a10 10 0 0 1 -10 -9 Z" fill="none" stroke="#31414a" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="96" y="140" width="228" height="18" rx="9" fill="#31414a"/>
+
+  <g fill="none" stroke="#cdeaf4" stroke-width="5" stroke-linecap="round" opacity=".9">
+    <path d="M150 210 q45 -22 90 0"/>
+    <path d="M162 234 q42 -20 84 0"/>
+  </g>
+  <path d="M290 120 L246 228" stroke="#8a6a4a" stroke-width="9" stroke-linecap="round"/>
+  <path d="M290 120 L246 228" stroke="#a9855e" stroke-width="4" stroke-linecap="round"/>
+
+  <text x="210" y="290" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Tunggu sampai tercampur, jangan buru-buru</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="a5j a5d">
+  <title id="a5j">Periksa tiap hari, tambah air bila EC naik</title>
+  <desc id="a5d">Air tandon menguap sehingga larutan mengental dan EC naik. Yang ditambahkan
+    adalah air tawar, bukan pupuk.</desc>
+  <defs>
+    <linearGradient id="airA5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd0e4"/><stop offset="1" stop-color="#4e9cb8"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="300" rx="14" fill="#f4f9f2"/>
+  <text x="210" y="36" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#2d5a27" text-anchor="middle">EC naik? Tambah air, bukan pupuk</text>
+
+  <g transform="translate(58 62)">
+    <circle r="24" cx="24" cy="24" fill="#f2c14e"/>
+    <g stroke="#f2c14e" stroke-width="5" stroke-linecap="round">
+      <path d="M24 -10 V-2"/><path d="M24 50 V58"/><path d="M-10 24 H-2"/><path d="M50 24 H58"/>
+      <path d="M2 2 L8 8"/><path d="M40 40 L46 46"/><path d="M46 2 L40 8"/><path d="M8 40 L2 46"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#bcd7c6" stroke-width="5" stroke-linecap="round">
+    <path d="M172 132 q10 -18 0 -34"/>
+    <path d="M206 126 q10 -18 0 -34"/>
+    <path d="M240 132 q10 -18 0 -34"/>
+  </g>
+
+  <path d="M110 150 H310 L295 258 a10 10 0 0 1 -10 9 H135 a10 10 0 0 1 -10 -9 Z" fill="#e6ece8"/>
+  <path d="M118 194 H302 L292 252 a8 8 0 0 1 -8 7 H136 a8 8 0 0 1 -8 -7 Z" fill="url(#airA5)"/>
+  <path d="M110 150 H310 L295 258 a10 10 0 0 1 -10 9 H135 a10 10 0 0 1 -10 -9 Z" fill="none" stroke="#31414a" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="102" y="138" width="216" height="18" rx="9" fill="#31414a"/>
+
+  <g stroke="#e0552b" stroke-width="4" stroke-dasharray="9 7" stroke-linecap="round">
+    <path d="M122 172 H298"/>
+  </g>
+  <path d="M330 186 V200 M330 176 l-7 9 h14 Z" fill="#e0552b" stroke="#e0552b" stroke-width="4" stroke-linecap="round"/>
+  <text x="356" y="200" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#e0552b">EC</text>
+
+  <path d="M210 96 V128" stroke="#8fd0e4" stroke-width="11" stroke-linecap="round" opacity=".9"/>
+
+  <text x="210" y="290" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Air menguap, larutan mengental sendiri</text>
+</svg>

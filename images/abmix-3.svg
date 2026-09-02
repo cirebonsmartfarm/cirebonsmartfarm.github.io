@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="a3j a3d">
+  <title id="a3j">Baru tuang pekatan B</title>
+  <desc id="a3d">Pekatan B dituang setelah A tercampur rata. A dan B tidak boleh dicampur
+    dalam wadah kecil karena kalsium akan bertemu sulfat dan mengendap.</desc>
+  <defs>
+    <linearGradient id="airA3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd0e4"/><stop offset="1" stop-color="#4e9cb8"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="300" rx="14" fill="#f4f9f2"/>
+  <text x="210" y="36" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#2d5a27" text-anchor="middle">Setelah A rata, baru B</text>
+
+  <g transform="translate(302 54) rotate(-28 24 50)">
+    <rect x="14" y="0" width="16" height="14" rx="4" fill="#31414a"/>
+    <path d="M6 14 H38 a8 8 0 0 1 8 8 V80 a8 8 0 0 1 -8 8 H6 a8 8 0 0 1 -8 -8 V22 a8 8 0 0 1 8 -8 Z" fill="#2b6f88"/>
+    <text x="22" y="60" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">B</text>
+  </g>
+  <path d="M284 122 q-10 22 -18 40" stroke="#7fc4dc" stroke-width="9" stroke-linecap="round" fill="none" opacity=".85"/>
+
+  <path d="M104 152 H316 L300 262 a10 10 0 0 1 -10 9 H130 a10 10 0 0 1 -10 -9 Z" fill="#e6ece8"/>
+  <path d="M112 178 H308 L297 256 a8 8 0 0 1 -8 7 H131 a8 8 0 0 1 -8 -7 Z" fill="url(#airA3)"/>
+  <path d="M104 152 H316 L300 262 a10 10 0 0 1 -10 9 H130 a10 10 0 0 1 -10 -9 Z" fill="none" stroke="#31414a" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="96" y="140" width="228" height="18" rx="9" fill="#31414a"/>
+  <text x="210" y="222" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">TANDON</text>
+
+  <g transform="translate(66 176)">
+    <rect x="-46" y="-30" width="96" height="62" rx="12" fill="#fbe4e4" stroke="#c0392b" stroke-width="3"/>
+    <g transform="translate(-24 0)">
+      <path d="M-8 -14 H8 a5 5 0 0 1 5 5 V14 a5 5 0 0 1 -5 5 H-8 a5 5 0 0 1 -5 -5 V-9 a5 5 0 0 1 5 -5 Z" fill="#2d5a27"/>
+    </g>
+    <g transform="translate(24 0)">
+      <path d="M-8 -14 H8 a5 5 0 0 1 5 5 V14 a5 5 0 0 1 -5 5 H-8 a5 5 0 0 1 -5 -5 V-9 a5 5 0 0 1 5 -5 Z" fill="#2b6f88"/>
+    </g>
+    <path d="M-30 -22 L30 26 M30 -22 L-30 26" stroke="#c0392b" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="66" y="232" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#c0392b" text-anchor="middle">jangan dicampur</text>
+  <text x="66" y="250" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#c0392b" text-anchor="middle">saat masih pekat</text>
+
+  <text x="210" y="290" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Kalsium bertemu sulfat akan mengendap</text>
+</svg>

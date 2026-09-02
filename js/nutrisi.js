@@ -715,10 +715,13 @@
        membawa lampiran urutan meracik beserta ilustrasinya. */
     function bagianAktif() {
       var racikTerbuka = !el('panel-racik').hidden;
-      var id = racikTerbuka ? ['cetak-wrap', 'langkah-meracik'] : ['cetak-wrap-a'];
+      var id = racikTerbuka
+        ? ['cetak-wrap', 'langkah-meracik']       /* racik: cara meracik dari pupuk tunggal */
+        : ['cetak-wrap-a', 'langkah-abmix'];      /* siap pakai: cara memakai pekatan jadi */
       return id.map(function (x) { return el(x); }).filter(Boolean);
     }
 
+    var kaki = area.querySelector('.cetak-kaki');
     var dipindah = null;
 
     function pindahkan() {
@@ -726,7 +729,8 @@
       dipindah = bagianAktif().map(function (n) {
         var jangkar = document.createComment('posisi-' + n.id);
         n.parentNode.insertBefore(jangkar, n);
-        area.appendChild(n);
+        /* Disisipkan sebelum baris kaki, supaya kaki tetap paling bawah. */
+        area.insertBefore(n, kaki);
         return { simpul: n, jangkar: jangkar };
       });
       document.documentElement.classList.add('sedang-cetak');
