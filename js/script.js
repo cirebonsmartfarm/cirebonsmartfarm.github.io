@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileOptimizations();
     initCurrentYear();
     initBiofloc();
+    initSalinKutipan();
 });
 
 
@@ -108,8 +109,16 @@ function initBiofloc() {
     form.addEventListener('reset', () => setTimeout(hitung, 0));
     hitung();
 
-    // Tombol salin pada blok kutipan.
-    document.querySelectorAll('.cite-copy').forEach((btn) => {
+}
+
+
+// Tombol salin pada blok kutipan. Dipakai di beberapa halaman kalkulator,
+// jadi berdiri sendiri dan berhenti diam-diam kalau tombolnya tidak ada.
+function initSalinKutipan() {
+    const tombol = document.querySelectorAll('.cite-copy');
+    if (!tombol.length) return;
+
+    tombol.forEach((btn) => {
         btn.addEventListener('click', async () => {
             const target = document.getElementById(btn.dataset.copy);
             if (!target) return;
@@ -120,6 +129,8 @@ function initBiofloc() {
             } catch (e) {
                 const tmp = document.createElement('textarea');
                 tmp.value = teks;
+                tmp.style.position = 'fixed';
+                tmp.style.opacity = '0';
                 document.body.appendChild(tmp);
                 tmp.select();
                 try { document.execCommand('copy'); } catch (err) { /* diabaikan */ }

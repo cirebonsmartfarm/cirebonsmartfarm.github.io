@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Nutrisi AB Mix Hidroponik - Takaran per Tanaman, EC, PPM, dan Racikan Pupuk Tunggal | Cirebon Smart Farm</title>
+    <meta name="description" content="Kalkulator AB Mix hidroponik gratis. Hitung takaran pekatan A dan B untuk volume tandon, sesuaikan EC dan PPM per tanaman, koreksi larutan berjalan, serta racik sendiri dari Kalsium Nitrat, KNO3, MKP, dan MgSO4 yang dijual di Indonesia.">
+    <meta name="keywords" content="kalkulator ab mix, nutrisi hidroponik, takaran ab mix, ppm hidroponik, ec hidroponik, racik ab mix sendiri, kalsium nitrat, kno3, mkp hidroponik, pupuk hidroponik indonesia, kalkulator pupuk hidroponik, ab mix selada, ab mix melon, tandon hidroponik">
+    <meta name="author" content="Cirebon Smart Farm">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#2d5a27">
+    <meta name="geo.region" content="ID-JB">
+    <meta name="geo.placename" content="Cirebon, Jawa Barat">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cirebon Smart Farm">
+    <meta property="og:title" content="Kalkulator Nutrisi AB Mix Hidroponik - Gratis, Tanpa Daftar">
+    <meta property="og:description" content="Takaran AB Mix per tanaman, koreksi EC tandon berjalan, dan racikan dari pupuk tunggal yang dijual di Indonesia.">
+    <meta property="og:url" content="https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html">
+    <meta property="og:image" content="https://www.cirebonsmartfarm.com/images/tekno4.png">
+    <meta property="og:image:alt" content="Instalasi nutrisi hidroponik Cirebon Smart Farm">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kalkulator Nutrisi AB Mix Hidroponik - Gratis, Tanpa Daftar">
+    <meta name="twitter:description" content="Takaran AB Mix per tanaman, koreksi EC tandon, dan racikan dari pupuk tunggal Indonesia.">
+    <meta name="twitter:image" content="https://www.cirebonsmartfarm.com/images/tekno4.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html">
+
+    <!-- Ikon Situs -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://www.cirebonsmartfarm.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Produk", "item": "https://www.cirebonsmartfarm.com/product.html" },
+                    { "@type": "ListItem", "position": 3, "name": "Kalkulator Nutrisi AB Mix", "item": "https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html" }
+                ]
+            },
+            {
+                "@type": "WebApplication",
+                "name": "Kalkulator Nutrisi AB Mix Hidroponik",
+                "url": "https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "Semua peramban modern",
+                "inLanguage": "id-ID",
+                "description": "Menghitung takaran pekatan AB Mix untuk volume tandon berdasarkan EC sasaran tiap tanaman, mengoreksi larutan yang sedang berjalan, dan menyusun racikan dari pupuk tunggal seperti Kalsium Nitrat, KNO3, MKP, dan Magnesium Sulfat.",
+                "browserRequirements": "Membutuhkan JavaScript",
+                "isAccessibleForFree": true,
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "IDR" },
+                "featureList": [
+                    "Takaran pekatan A dan B per volume tandon",
+                    "Rentang EC, PPM, dan pH untuk 16 jenis tanaman",
+                    "Konversi PPM skala 500, 640, dan 700",
+                    "Koreksi EC tandon yang sedang berjalan",
+                    "Racikan dari pupuk tunggal dengan pemisahan Tangki A dan B",
+                    "Perbandingan sasaran unsur hara terhadap hasil racikan"
+                ],
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Cirebon Smart Farm",
+                    "url": "https://www.cirebonsmartfarm.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.cirebonsmartfarm.com/images/logo.png",
+                        "width": 512,
+                        "height": 512
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Berapa takaran AB Mix untuk 1 liter air?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Untuk pekatan AB Mix yang lazim dijual di Indonesia, takaran umumnya 5 mililiter larutan A ditambah 5 mililiter larutan B per 1 liter air. Angka pastinya bergantung pada kepekatan produk dan EC sasaran tanaman. Ukur EC hasil pengenceran memakai alat, lalu sesuaikan takarannya." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Kenapa larutan A dan B tidak boleh dicampur langsung?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Larutan A mengandung kalsium, sedangkan larutan B mengandung sulfat dan fosfat. Dalam keadaan pekat, kalsium akan bereaksi menjadi kalsium sulfat dan kalsium fosfat yang mengendap dan tidak bisa diserap tanaman. Karena itu A dan B hanya boleh bertemu setelah masing-masing diencerkan ke dalam air tandon." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Berapa EC dan PPM yang tepat untuk selada hidroponik?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Selada tumbuh baik pada EC 0,8 sampai 1,2 mS per sentimeter. Pada TDS meter skala 500 itu setara 400 sampai 600 ppm, sedangkan pada skala 700 setara 560 sampai 840 ppm. Nilai pH yang dianjurkan 5,5 sampai 6,5." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Kenapa angka PPM di alat saya berbeda dengan panduan?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "TDS meter tidak mengukur ppm secara langsung, melainkan menghitungnya dari nilai EC dengan sebuah faktor konversi. Alat murah biasanya memakai skala 500, sedangkan sebagian merek lain memakai skala 640 atau 700. EC yang sama bisa terbaca 1000 ppm di satu alat dan 1400 ppm di alat lain. Selalu catat EC, bukan hanya ppm." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Bagaimana cara menurunkan EC yang terlanjur terlalu tinggi?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "EC yang terlalu tinggi hanya bisa diturunkan dengan menambah air tawar, bukan dengan menambah pupuk. Hitung selisihnya, tambahkan air secara bertahap, aduk, lalu ukur ulang. Menambah air berarti volume tandon ikut naik, jadi pastikan kapasitas tandon masih cukup." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Apa saja pupuk tunggal untuk meracik AB Mix sendiri di Indonesia?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Bahan utamanya Kalsium Nitrat, Kalium Nitrat atau KNO3, MKP atau Mono Kalium Fosfat, dan Magnesium Sulfat yang dikenal sebagai garam Inggris. Penyeimbangnya Kalium Sulfat dan kadang Amonium Sulfat atau ZA. Untuk hara mikro dipakai Fe-EDTA, Mangan Sulfat, Seng Sulfat, Tembaga Sulfat, Borax, dan Natrium Molibdat." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Pupuk mana yang masuk Tangki A dan mana yang Tangki B?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Tangki A berisi Kalsium Nitrat, Kalium Nitrat, dan besi dalam bentuk kelat. Tangki B berisi MKP, Magnesium Sulfat, Kalium Sulfat, serta hara mikro selain besi. Pemisahan ini mencegah kalsium bertemu sulfat dan fosfat dalam keadaan pekat." }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#konten">Lompat ke konten utama</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Cirebon Smart Farm, kembali ke beranda">
+                <img src="images/logo.png" alt="Logo Cirebon Smart Farm" width="38" height="38">
+                <h2>Cirebon Smart Farm</h2>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="about.html" class="nav-link">Tentang</a>
+                <a href="product.html" class="nav-link active">Produk</a>
+                <a href="budidaya-ikan-bioflok.html" class="nav-link">Bioflok</a>
+                <a href="contact.html" class="nav-link">Kontak</a>
+                <a href="sitemap.html" class="nav-link">Sitemap</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Kalkulator Nutrisi AB Mix</h1>
+            <p>Takaran per tanaman, koreksi EC tandon, dan racikan dari pupuk tunggal. Gratis, tanpa daftar.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Beranda</a> <span>/</span>
+                <a href="product.html">Produk</a> <span>/</span> <span>Kalkulator Nutrisi</span>
+            </div>
+        </div>
+    </section>
+
+    <main id="konten">
+
+    <section class="content-block">
+        <div class="container">
+            <p class="content-lead">
+                Dua cara memberi nutrisi, dua mode kalkulator. Kalau Anda memakai AB Mix jadi,
+                pakai mode pertama untuk menghitung takaran pekatan sesuai volume tandon. Kalau Anda
+                meracik sendiri dari pupuk tunggal, mode kedua menghitung gram tiap bahan dan
+                menunjukkan berapa ppm unsur hara yang benar-benar Anda dapat.
+            </p>
+
+            <div id="kalkulator-nutrisi">
+
+                <div class="tabs" role="tablist" aria-label="Pilih mode kalkulator">
+                    <button type="button" class="tab-btn aktif" role="tab" aria-selected="true"
+                            data-panel="panel-siap">
+                        <i class="fas fa-flask" aria-hidden="true"></i> AB Mix Siap Pakai
+                    </button>
+                    <button type="button" class="tab-btn" role="tab" aria-selected="false"
+                            data-panel="panel-racik">
+                        <i class="fas fa-vials" aria-hidden="true"></i> Racik Pupuk Tunggal
+                    </button>
+                </div>
+
+                <!-- ============ MODE A ============ -->
+                <div class="tab-panel" id="panel-siap" role="tabpanel">
+                    <div class="calc-wrap">
+                        <form class="calc-form" novalidate>
+                            <h2 class="calc-title">Tandon &amp; Tanaman</h2>
+
+                            <div class="calc-field">
+                                <label for="n-volume">Volume tandon (liter)</label>
+                                <input type="number" id="n-volume" value="200" min="1" max="100000" step="1" inputmode="numeric">
+                                <small>Isi air sesungguhnya, bukan kapasitas maksimum tandon.</small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="n-tanaman">Tanaman</label>
+                                <select id="n-tanaman"></select>
+                                <small id="n-target-info">&nbsp;</small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="n-ec-target">EC sasaran (mS/cm)</label>
+                                <input type="number" id="n-ec-target" value="1.0" min="0.1" max="6" step="0.05" inputmode="decimal">
+                                <small>Terisi otomatis di tengah rentang tanaman. Boleh diubah.</small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="n-skala">Skala TDS meter Anda</label>
+                                <select id="n-skala">
+                                    <option value="500" selected>Skala 500 (NaCl) &mdash; paling umum</option>
+                                    <option value="640">Skala 640 (EC x 640)</option>
+                                    <option value="700">Skala 700 (KCl / 442)</option>
+                                </select>
+                                <small>Hanya memengaruhi angka ppm yang ditampilkan, bukan takarannya.</small>
+                            </div>
+
+                            <h2 class="calc-title">Kepekatan Produk Anda</h2>
+
+                            <div class="calc-field">
+                                <label for="n-dosis-acuan">Dosis acuan (ml per liter)</label>
+                                <input type="number" id="n-dosis-acuan" value="5" min="0.1" max="50" step="0.1" inputmode="decimal">
+                                <small>Takaran yang tertulis di kemasan. Umumnya 5 ml A + 5 ml B per liter.</small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="n-ec-acuan">EC pada dosis acuan (mS/cm)</label>
+                                <input type="number" id="n-ec-acuan" value="2.4" min="0.1" max="10" step="0.05" inputmode="decimal">
+                                <small>
+                                    Inilah kunci ketepatan. Larutkan sesuai dosis acuan, ukur EC-nya,
+                                    lalu masukkan hasilnya di sini. Sekali kalibrasi berlaku untuk
+                                    seterusnya selama produknya sama.
+                                </small>
+                            </div>
+
+                            <h2 class="calc-title">Koreksi Tandon Berjalan</h2>
+
+                            <div class="calc-field">
+                                <label for="n-k-volume">Sisa air di tandon (liter)</label>
+                                <input type="number" id="n-k-volume" value="150" min="0" max="100000" step="1" inputmode="numeric">
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="n-k-ec">EC terukur sekarang (mS/cm)</label>
+                                <input type="number" id="n-k-ec" value="0.7" min="0" max="10" step="0.05" inputmode="decimal">
+                            </div>
+                        </form>
+
+                        <div class="calc-output">
+                            <h2 class="calc-title">Takaran Pengisian</h2>
+
+                            <div class="calc-badge" id="n-status">
+                                <span class="calc-badge-label">Kesesuaian EC</span>
+                                <strong id="n-out-ml">-</strong>
+                                <span class="calc-badge-note" id="n-status-teks">-</span>
+                            </div>
+
+                            <dl class="calc-results">
+                                <div class="calc-row"><dt>Volume tandon</dt><dd id="n-out-volume">-</dd></div>
+                                <div class="calc-row calc-row-strong"><dt>Pekatan A</dt><dd id="n-out-a">-</dd></div>
+                                <div class="calc-row calc-row-strong"><dt>Pekatan B</dt><dd id="n-out-b">-</dd></div>
+                                <div class="calc-row"><dt>Perkiraan bacaan TDS</dt><dd id="n-out-ppm">-</dd></div>
+                                <div class="calc-row"><dt>pH dianjurkan</dt><dd id="n-out-ph">-</dd></div>
+                            </dl>
+
+                            <p class="calc-note">
+                                <i class="fas fa-circle-info" aria-hidden="true"></i>
+                                Urutannya: isi tandon dengan air, tuang pekatan A, aduk sampai rata, baru tuang
+                                pekatan B. Jangan pernah menuang A dan B berdampingan dalam keadaan pekat.
+                            </p>
+
+                            <h3 class="calc-subtitle">Koreksi Larutan Berjalan</h3>
+                            <dl class="calc-results" id="n-koreksi-hasil"></dl>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ MODE B ============ -->
+                <div class="tab-panel" id="panel-racik" role="tabpanel" hidden>
+                    <div class="calc-wrap">
+                        <form class="calc-form" novalidate>
+                            <h2 class="calc-title">Larutan &amp; Pekatan</h2>
+
+                            <div class="calc-field">
+                                <label for="r-faktor">Faktor kepekatan stok</label>
+                                <select id="r-faktor">
+                                    <option value="100">100x &mdash; pakai 10 ml/L</option>
+                                    <option value="200" selected>200x &mdash; pakai 5 ml/L</option>
+                                    <option value="250">250x &mdash; pakai 4 ml/L</option>
+                                    <option value="400">400x &mdash; pakai 2,5 ml/L</option>
+                                </select>
+                                <small>Makin pekat makin hemat tempat, tapi makin berisiko mengendap.</small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="r-vol-stok">Volume tiap tangki pekatan (liter)</label>
+                                <input type="number" id="r-vol-stok" value="5" min="0.5" max="200" step="0.5" inputmode="decimal">
+                                <small>Tangki A dan tangki B dibuat dengan volume sama. Volume larutan kerja yang dihasilkan = volume ini dikali faktor kepekatan.</small>
+                            </div>
+
+                            <h2 class="calc-title">Sasaran Unsur Hara</h2>
+
+                            <div class="calc-field">
+                                <label for="r-tanaman">Tanaman</label>
+                                <select id="r-tanaman"></select>
+                                <small id="r-target-info">&nbsp;</small>
+                            </div>
+
+                            <div class="hara-grid">
+                                <div class="calc-field"><label for="r-N">N (ppm)</label>
+                                    <input type="number" id="r-N" value="150" min="0" max="400" step="5" inputmode="numeric"></div>
+                                <div class="calc-field"><label for="r-P">P (ppm)</label>
+                                    <input type="number" id="r-P" value="45" min="0" max="150" step="5" inputmode="numeric"></div>
+                                <div class="calc-field"><label for="r-K">K (ppm)</label>
+                                    <input type="number" id="r-K" value="200" min="0" max="500" step="5" inputmode="numeric"></div>
+                                <div class="calc-field"><label for="r-Ca">Ca (ppm)</label>
+                                    <input type="number" id="r-Ca" value="150" min="0" max="350" step="5" inputmode="numeric"></div>
+                                <div class="calc-field"><label for="r-Mg">Mg (ppm)</label>
+                                    <input type="number" id="r-Mg" value="45" min="0" max="150" step="5" inputmode="numeric"></div>
+                                <div class="calc-field"><label for="r-S">S (ppm)</label>
+                                    <input type="number" id="r-S" value="55" min="0" max="250" step="5" inputmode="numeric"></div>
+                            </div>
+
+                            <div class="calc-field">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="r-pakai-za">
+                                    Boleh memakai ZA kalau nitrogen kurang
+                                </label>
+                                <small>
+                                    ZA menutup kekurangan nitrogen saat kalium sudah penuh, tetapi menambah
+                                    amonium. Kalkulator akan memperingatkan bila amonium melewati 15 persen
+                                    dari total nitrogen.
+                                </small>
+                            </div>
+
+                            <div class="calc-actions">
+                                <button type="button" class="btn-secondary" id="r-reset-hara">
+                                    <i class="fas fa-rotate-left" aria-hidden="true"></i> Kembalikan Sasaran Bawaan
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="calc-output">
+                            <h2 class="calc-title">Takaran Racikan</h2>
+
+                            <dl class="calc-results">
+                                <div class="calc-row"><dt>Dosis pakai nanti</dt><dd id="r-out-dosis">-</dd></div>
+                                <div class="calc-row"><dt>Volume tiap tangki</dt><dd id="r-out-stok">-</dd></div>
+                                <div class="calc-row calc-row-strong"><dt>Cukup untuk</dt><dd id="r-out-cukup">-</dd></div>
+                            </dl>
+
+                            <div class="notice-banner" id="r-catatan" style="display:none;margin:1.25rem 0"></div>
+
+                            <h3 class="calc-subtitle">Tangki A <span class="tangki-tanda a">kalsium</span></h3>
+                            <div class="table-wrap">
+                                <table class="data-table racik">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Pupuk</th>
+                                            <th scope="col">Untuk stok</th>
+                                            <th scope="col">Per 1000 L kerja</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="r-tabel-a"></tbody>
+                                    <tfoot>
+                                        <tr><td><strong>Total padatan</strong></td>
+                                            <td id="r-total-a">-</td><td></td></tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+                            <h3 class="calc-subtitle">Tangki B <span class="tangki-tanda b">sulfat &amp; fosfat</span></h3>
+                            <div class="table-wrap">
+                                <table class="data-table racik">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Pupuk</th>
+                                            <th scope="col">Untuk stok</th>
+                                            <th scope="col">Per 1000 L kerja</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="r-tabel-b"></tbody>
+                                    <tfoot>
+                                        <tr><td><strong>Total padatan</strong></td>
+                                            <td id="r-total-b">-</td><td></td></tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+                            <h3 class="calc-subtitle">Sasaran Dibanding Hasil</h3>
+                            <div class="table-wrap">
+                                <table class="data-table racik">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Unsur</th>
+                                            <th scope="col">Sasaran</th>
+                                            <th scope="col">Hasil</th>
+                                            <th scope="col">Selisih</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="r-tabel-cek"></tbody>
+                                </table>
+                            </div>
+
+                            <p class="calc-note">
+                                <i class="fas fa-circle-info" aria-hidden="true"></i>
+                                Selisih di bawah 5 persen sudah sangat baik. Belerang sering berlebih karena
+                                ikut terbawa magnesium sulfat dan kalium sulfat, dan itu wajar. Yang perlu
+                                dijaga ketat adalah kalsium, kalium, dan nitrogen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara pakai -->
+    <section class="content-block alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Urutan Meracik yang Benar</h2>
+                <p>Langkah yang paling sering dilewati, dan akibatnya endapan putih di dasar tangki</p>
+            </div>
+
+            <ol class="steps-list">
+                <li>
+                    <h3>Siapkan dua tangki terpisah</h3>
+                    <p>
+                        Beri label A dan B, jangan sampai tertukar. Isi masing-masing dengan air bersih
+                        sekitar tiga perempat volume akhirnya. Air sumur berkapur sebaiknya diendapkan atau
+                        disaring dulu.
+                    </p>
+                </li>
+                <li>
+                    <h3>Larutkan satu per satu, bukan sekaligus</h3>
+                    <p>
+                        Masukkan pupuk pertama, aduk sampai benar-benar larut dan air kembali jernih, baru
+                        masukkan yang berikutnya. Menumpuk semuanya sekaligus membuat sebagian mengendap dan
+                        takarannya meleset.
+                    </p>
+                </li>
+                <li>
+                    <h3>Hara mikro dilarutkan lebih dulu di gelas kecil</h3>
+                    <p>
+                        Jumlahnya sangat sedikit, jadi larutkan dalam segelas air hangat sampai bening, baru
+                        tuang ke tangki B. Besi kelat masuk tangki A supaya tidak bertemu fosfat.
+                    </p>
+                </li>
+                <li>
+                    <h3>Genapkan volume, jangan dikira-kira</h3>
+                    <p>
+                        Setelah semua larut, tambahkan air sampai tepat pada volume yang Anda rencanakan.
+                        Menggenapkan di awal membuat pupuk terakhir sulit larut.
+                    </p>
+                </li>
+                <li>
+                    <h3>Saat memakai, encerkan bergantian</h3>
+                    <p>
+                        Air tandon dulu, lalu pekatan A, aduk, baru pekatan B. Kalsium dari A dan sulfat dari
+                        B hanya aman bertemu setelah keduanya sudah encer.
+                    </p>
+                </li>
+                <li>
+                    <h3>Ukur, lalu catat</h3>
+                    <p>
+                        Ukur EC dan pH setelah larutan tercampur rata, bukan seketika setelah menuang. Catat
+                        hasilnya. Catatan mingguan jauh lebih berguna daripada mengingat-ingat.
+                    </p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Tabel rujukan -->
+    <section class="content-block">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tabel Rujukan</h2>
+                <p>Angka yang dipakai mesin hitung di atas, dibuka supaya bisa Anda periksa</p>
+            </div>
+
+            <h3 class="calc-subtitle">EC, PPM, dan pH per Tanaman</h3>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <caption>Rentang kerja yang lazim dipakai pada budidaya hidroponik</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Tanaman</th>
+                            <th scope="col">EC (mS/cm)</th>
+                            <th scope="col">PPM skala 500</th>
+                            <th scope="col">PPM skala 700</th>
+                            <th scope="col">pH</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabel-tanaman"></tbody>
+                </table>
+            </div>
+
+            <h3 class="calc-subtitle" style="margin-top:2.5rem">Pupuk Tunggal yang Dijual di Indonesia</h3>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <caption>Persentase mengikuti angka pada label dagang, bukan kemurnian teoretis</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Pupuk</th>
+                            <th scope="col">Rumus</th>
+                            <th scope="col">Label dagang</th>
+                            <th scope="col">Unsur terhitung</th>
+                            <th scope="col">Tangki</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabel-pupuk"></tbody>
+                </table>
+            </div>
+
+            <div class="notice-banner">
+                <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+                <div>
+                    <h3>Periksa Label Karung Anda</h3>
+                    <p>
+                        Kadar pupuk berbeda antarmerek dan antarpabrik. Kalsium nitrat kualitas greenhouse
+                        biasanya 15,5 persen N, tetapi kualitas teknis bisa lebih rendah. Bandingkan angka di
+                        tabel ini dengan karung yang Anda beli. Kalau berbeda jauh, hasil racikan ikut
+                        bergeser.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Asumsi -->
+    <section class="content-block alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Asumsi dan Batasnya</h2>
+                <p>Supaya Anda tahu persis di mana alat ini bisa dipercaya, dan di mana tidak</p>
+            </div>
+
+            <div class="split">
+                <div>
+                    <ul class="check-list">
+                        <li><strong>EC berbanding lurus dengan takaran.</strong> Mode pertama menganggap
+                            dua kali takaran memberi dua kali EC. Anggapan ini akurat pada rentang kerja
+                            hidroponik biasa, dan mulai melenceng pada larutan yang sangat pekat.</li>
+                        <li><strong>Air baku dianggap bersih.</strong> Kalkulator memulai dari EC nol. Kalau
+                            air sumur Anda sudah 0,3 mS/cm sebelum dipupuk, kurangi angka itu dari EC
+                            sasaran, dan ingat bahwa kandungan kalsium bawaan ikut menambah.</li>
+                        <li><strong>Suhu tidak dihitung.</strong> EC meter tanpa kompensasi suhu akan
+                            membaca lebih tinggi saat larutan panas. Ukur pada waktu yang sama tiap hari.</li>
+                        <li><strong>pH tidak ikut dihitung.</strong> Menaikkan atau menurunkan pH memerlukan
+                            asam atau basa terpisah, dan jumlahnya bergantung daya sangga air Anda.</li>
+                        <li><strong>Racikan memakai urutan baku.</strong> Kalsium ditetapkan lebih dulu,
+                            lalu fosfor, magnesium, nitrogen, dan terakhir kalium. Itu sebabnya tabel
+                            perbandingan ditampilkan, supaya sisa selisihnya terlihat, bukan disembunyikan.</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="notice-banner" style="margin-top:0">
+                        <i class="fas fa-circle-info" aria-hidden="true"></i>
+                        <div>
+                            <h3>Alat Ukur Tetap yang Menentukan</h3>
+                            <p>
+                                Kalkulator memberi titik berangkat yang masuk akal. Yang menentukan tetap
+                                EC meter dan pH meter Anda, dan keduanya perlu dikalibrasi berkala dengan
+                                cairan standar. Alat yang tidak pernah dikalibrasi membuat semua hitungan
+                                di halaman ini sia-sia.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="price-box" style="margin-top:1.25rem">
+                        <span class="price-label">Konversi cepat</span>
+                        <span class="price-value">EC 1,0 mS/cm</span>
+                        <span class="price-note">
+                            = 500 ppm pada skala 500<br>
+                            = 640 ppm pada skala 640<br>
+                            = 700 ppm pada skala 700<br>
+                            Skala meter tertulis di buku manualnya. Kalau ragu, pakai EC saja.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tautkan -->
+    <section class="content-block">
+        <div class="container">
+            <div class="section-header">
+                <h2>Boleh Dipakai dan Dibagikan</h2>
+                <p>Gratis untuk siapa saja. Kalau membantu, cukup sertakan tautan sumbernya</p>
+            </div>
+
+            <div class="split">
+                <div>
+                    <p>
+                        Silakan pakai kalkulator ini untuk mengajar, menyusun modul pelatihan, atau melatih
+                        kelompok tani. Tidak perlu meminta izin. Kami hanya berharap pembaca Anda bisa
+                        menemukan sumber aslinya.
+                    </p>
+                    <div class="contact-action">
+                        <a href="kalkulator-bioflok.html" class="btn-primary">
+                            <i class="fas fa-calculator" aria-hidden="true"></i> Kalkulator Kolam Bioflok
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="cite-box">
+                        <div class="cite-head">
+                            <span>Tautan biasa</span>
+                            <button type="button" class="cite-copy" data-copy="cite-plain">
+                                <i class="fas fa-copy" aria-hidden="true"></i> Salin
+                            </button>
+                        </div>
+                        <code id="cite-plain">Kalkulator Nutrisi AB Mix - Cirebon Smart Farm
+https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html</code>
+                    </div>
+
+                    <div class="cite-box">
+                        <div class="cite-head">
+                            <span>Kode HTML</span>
+                            <button type="button" class="cite-copy" data-copy="cite-html">
+                                <i class="fas fa-copy" aria-hidden="true"></i> Salin
+                            </button>
+                        </div>
+                        <code id="cite-html">&lt;a href="https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html"&gt;Kalkulator Nutrisi AB Mix&lt;/a&gt; oleh Cirebon Smart Farm</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pertanyaan Seputar Nutrisi</h2>
+                <p>Yang paling sering ditanyakan pemula hidroponik</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa takaran AB Mix untuk 1 liter air?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Untuk pekatan AB Mix yang lazim dijual di Indonesia, takarannya umumnya 5 ml
+                            larutan A ditambah 5 ml larutan B per 1 liter air. Angka pastinya bergantung
+                            kepekatan produk dan EC sasaran tanaman. Ukur EC hasil pengenceran memakai alat,
+                            lalu masukkan hasilnya ke kolom kalibrasi di kalkulator agar takarannya tepat
+                            untuk produk Anda.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Kenapa larutan A dan B tidak boleh dicampur langsung?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Larutan A mengandung kalsium, larutan B mengandung sulfat dan fosfat. Dalam
+                            keadaan pekat, kalsium bereaksi menjadi kalsium sulfat dan kalsium fosfat yang
+                            mengendap dan tidak bisa diserap tanaman. Endapan putih di dasar tangki hampir
+                            selalu berasal dari kesalahan ini. Keduanya hanya boleh bertemu setelah
+                            masing-masing sudah encer di dalam tandon.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa EC dan PPM yang tepat untuk selada?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Selada tumbuh baik pada EC 0,8 sampai 1,2 mS/cm. Pada TDS meter skala 500 itu
+                            setara 400 sampai 600 ppm, sedangkan pada skala 700 setara 560 sampai 840 ppm.
+                            pH yang dianjurkan 5,5 sampai 6,5. Rentang untuk tanaman lain ada di tabel
+                            rujukan di halaman ini.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Kenapa angka PPM di alat saya berbeda dengan panduan?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            TDS meter tidak mengukur ppm secara langsung. Ia mengukur EC lalu mengalikannya
+                            dengan sebuah faktor. Alat murah biasanya memakai skala 500, sebagian merek lain
+                            memakai 640 atau 700. Larutan yang sama bisa terbaca 1000 ppm di satu alat dan
+                            1400 ppm di alat lain, padahal isinya persis sama. Karena itu catat EC, bukan
+                            hanya ppm.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana menurunkan EC yang terlanjur terlalu tinggi?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Hanya dengan menambah air tawar, tidak bisa dengan menambah pupuk apa pun.
+                            Kolom koreksi di kalkulator menghitung berapa liter air yang perlu ditambahkan.
+                            Ingat bahwa volume tandon ikut naik, jadi pastikan kapasitasnya masih cukup.
+                            Tambahkan bertahap, aduk, lalu ukur ulang.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apa saja pupuk tunggal untuk meracik sendiri?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Bahan utamanya Kalsium Nitrat, Kalium Nitrat atau KNO3, MKP atau Mono Kalium
+                            Fosfat, dan Magnesium Sulfat yang dikenal sebagai garam Inggris. Penyeimbangnya
+                            Kalium Sulfat, kadang ditambah ZA. Untuk hara mikro dipakai Fe-EDTA, Mangan
+                            Sulfat, Seng Sulfat, Tembaga Sulfat, Borax, dan Natrium Molibdat. Semuanya ada
+                            di toko pertanian dan lokapasar dalam negeri.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Pupuk mana yang masuk Tangki A dan mana Tangki B?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Tangki A berisi Kalsium Nitrat, Kalium Nitrat, dan besi kelat. Tangki B berisi
+                            MKP, Magnesium Sulfat, Kalium Sulfat, dan hara mikro selain besi. Pemisahan ini
+                            menjaga kalsium agar tidak bertemu sulfat dan fosfat selama masih pekat.
+                            Kalkulator sudah memisahkannya otomatis di tabel hasil.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah angka yang saya isi tersimpan?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Tidak. Seluruh perhitungan berjalan di peramban Anda. Website ini halaman statis
+                            tanpa basis data, jadi tidak ada angka yang dikirim atau disimpan di mana pun.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tautan terkait -->
+    <section class="content-block alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Alat dan Panduan Lain</h2>
+                <p>Semuanya gratis dan terbuka</p>
+            </div>
+            <div class="link-cards">
+                <a href="kalkulator-bioflok.html" class="link-card">
+                    <i class="fas fa-calculator" aria-hidden="true"></i>
+                    <h3>Kalkulator Kolam Bioflok</h3>
+                    <p>Volume kolam, jumlah benih, kebutuhan pakan, dan kepadatan ikan saat panen.</p>
+                </a>
+                <a href="budidaya-ikan-bioflok.html" class="link-card">
+                    <i class="fas fa-fish" aria-hidden="true"></i>
+                    <h3>Panduan Bioflok</h3>
+                    <p>Siklus nitrogen, rasio C:N, daftar peralatan, dan tahapan menyiapkan kolam.</p>
+                </a>
+                <a href="product.html" class="link-card">
+                    <i class="fas fa-seedling" aria-hidden="true"></i>
+                    <h3>Produk Kami</h3>
+                    <p>Hami melon dan selada hidroponik yang tumbuh dengan nutrisi terukur seperti ini.</p>
+                </a>
+                <a href="contact.html" class="link-card">
+                    <i class="fas fa-comments" aria-hidden="true"></i>
+                    <h3>Tanya Kami</h3>
+                    <p>Ada angka yang menurut pengalaman Anda kurang pas? Kami senang dikoreksi.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Cirebon Smart Farm</h3>
+                    <p>Pelopor teknologi hidroponik modern di Cirebon dengan komitmen menghasilkan produk pertanian berkualitas premium melalui inovasi dan keberlanjutan.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/cirebonsmartfarm/" target="_blank" rel="noopener" aria-label="Instagram Cirebon Smart Farm">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61578927462988" target="_blank" rel="noopener" aria-label="Facebook Cirebon Smart Farm">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:cirebonsmartfarm@gmail.com" aria-label="Email Cirebon Smart Farm">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="product.html">Produk</a></li>
+                        <li><a href="budidaya-ikan-bioflok.html">Budidaya Ikan Bioflok</a></li>
+                        <li><a href="kalkulator-bioflok.html">Kalkulator Bioflok</a></li>
+                        <li><a href="kalkulator-nutrisi-ab-mix.html">Kalkulator Nutrisi AB Mix</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Produk Kami</h4>
+                    <ul>
+                        <li><a href="product.html#melon">Hami Melon Premium</a></li>
+                        <li><a href="product.html#lettuce">Selada Hidroponik</a></li>
+                        <li><a href="budidaya-ikan-bioflok.html">Ikan Nila Bioflok</a></li>
+                        <li><a href="product.html#technology">Teknologi Greenhouse</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak Info</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> cirebonsmartfarm@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Cirebon, Jawa Barat</li>
+                        <li><i class="fas fa-clock" aria-hidden="true"></i> Senin - Sabtu: 08:00 - 17:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="js-year">2026</span> Cirebon Smart Farm. Semua hak dilindungi. | Teknologi Hidroponik Modern di Cirebon</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/nutrisi.js"></script>
+</body>
+</html>

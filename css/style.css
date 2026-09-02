@@ -2694,7 +2694,8 @@ img {
     margin-bottom: 0.4rem;
 }
 
-.calc-field input {
+.calc-field input,
+.calc-field select {
     width: 100%;
     padding: 0.75rem;
     border: 2px solid #e5e7eb;
@@ -2704,7 +2705,8 @@ img {
     transition: var(--transition);
 }
 
-.calc-field input:focus {
+.calc-field input:focus,
+.calc-field select:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(45, 90, 39, 0.1);
@@ -2926,4 +2928,178 @@ img {
     .cite-head {
         flex-wrap: wrap;
     }
+}
+
+/* ==========================================================================
+   Kalkulator nutrisi AB Mix
+   ========================================================================== */
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1.75rem;
+    border-bottom: 2px solid #e3eee5;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    font: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-light);
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    padding: 0.85rem 1.25rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tab-btn:hover {
+    color: var(--primary-color);
+}
+
+.tab-btn.aktif {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.tab-panel[hidden] {
+    display: none;
+}
+
+/* Kisi sasaran unsur hara */
+.hara-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.1rem;
+}
+
+.hara-grid .calc-field {
+    margin-bottom: 0;
+}
+
+.hara-grid label {
+    font-size: 0.9rem;
+}
+
+.hara-grid input {
+    padding: 0.6rem 0.5rem;
+    text-align: center;
+}
+
+/* Tabel racikan */
+.data-table.racik {
+    min-width: 460px;
+    font-size: 0.92rem;
+}
+
+.data-table.racik td,
+.data-table.racik th {
+    padding: 0.7rem 1rem;
+}
+
+.data-table.racik tfoot td {
+    background: var(--light-bg);
+    font-weight: 600;
+    color: var(--primary-color);
+    border-top: 2px solid #dfeade;
+}
+
+.pupuk-rumus {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-top: 0.15rem;
+}
+
+.delta {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 2px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.delta.pas   { color: #1f5b2a; background: #e4f2e2; }
+.delta.dekat { color: #8a5a08; background: #fbf0dc; }
+.delta.jauh  { color: #9b1c1c; background: #fbe4e4; }
+
+.data-table tr.mikro td {
+    color: var(--text-light);
+}
+
+.tangki-tanda {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-left: 0.6rem;
+    vertical-align: middle;
+}
+
+.tangki-tanda.a { color: #1f5b2a; background: #e4f2e2; border: 1px solid #a7c957; }
+.tangki-tanda.b { color: #1f5b70; background: #e4f0f4; border: 1px solid #7fc4dc; }
+
+@media (max-width: 600px) {
+    .tabs {
+        gap: 0;
+    }
+
+    .tab-btn {
+        flex: 1 1 auto;
+        justify-content: center;
+        padding: 0.8rem 0.5rem;
+        font-size: 0.94rem;
+    }
+
+    .hara-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Tabel racikan ikut menumpuk seperti tabel lain di ponsel */
+    .data-table.racik {
+        min-width: 0;
+    }
+
+    .data-table.racik tfoot,
+    .data-table.racik tfoot tr,
+    .data-table.racik tfoot td {
+        display: block;
+        width: 100%;
+    }
+
+    .data-table.racik tfoot tr {
+        background: var(--light-bg);
+        border-radius: var(--border-radius);
+        padding: 0.5rem 1.15rem;
+    }
+
+    .data-table.racik tfoot td:empty {
+        display: none;
+    }
+
+    .pupuk-rumus {
+        font-size: 0.8rem;
+    }
+}
+
+.calc-field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath fill='%234a7c59' d='M1 1.5 6 6.5l5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    background-size: 12px 8px;
+    padding-right: 2.4rem;
+    cursor: pointer;
 }
