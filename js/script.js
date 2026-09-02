@@ -12,7 +12,17 @@ document.addEventListener('DOMContentLoaded', function() {
     initCounterAnimations();
     initSmoothScrolling();
     initMobileOptimizations();
+    initCurrentYear();
 });
+
+
+// Isi otomatis tahun berjalan pada footer
+function initCurrentYear() {
+    const year = new Date().getFullYear();
+    document.querySelectorAll('.js-year').forEach(el => {
+        el.textContent = year;
+    });
+}
 
 // Navigation functionality
 function initNavigation() {

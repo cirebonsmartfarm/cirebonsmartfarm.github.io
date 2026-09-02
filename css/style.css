@@ -1534,3 +1534,699 @@ a {
         height: 10px;
     }
 }
+
+/* ==========================================================================
+   Tambahan 2026: identitas visual, halaman bioflok, halaman tentang.
+   Memakai palet dan token yang sama dengan bagian di atas.
+   ========================================================================== */
+
+/* Aksesibilitas: lompat ke konten */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 1100;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0 0 var(--border-radius) 0;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Logo di navbar */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.nav-logo img {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: block;
+}
+
+.nav-menu {
+    gap: 1.25rem;
+}
+
+.nav-link {
+    padding: 0.5rem 0.75rem;
+    white-space: nowrap;
+}
+
+/* Badge tambahan */
+.badge.soon {
+    background: #b45309;
+    color: var(--white);
+}
+
+.badge.fish {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Panel pemberitahuan */
+.notice-banner {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-left: 6px solid #d97706;
+    border-radius: var(--border-radius);
+    padding: 1.5rem 1.75rem;
+    margin: 2rem 0;
+}
+
+.notice-banner i {
+    color: #d97706;
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+}
+
+.notice-banner h3 {
+    font-size: 1.25rem;
+    color: #92400e;
+    margin-bottom: 0.4rem;
+}
+
+.notice-banner p {
+    margin-bottom: 0;
+    color: #78350f;
+}
+
+/* Blok harga */
+.price-box {
+    background: var(--light-bg);
+    border: 1px solid #d7e8dc;
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.price-box .price-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+}
+
+.price-box .price-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.price-box .price-note {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 0.4rem;
+}
+
+/* Gambar dengan keterangan dan kredit */
+.figure {
+    margin: 0 0 2rem;
+}
+
+.figure img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: block;
+}
+
+.figure figcaption {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.75rem;
+    line-height: 1.5;
+}
+
+.figure figcaption .credit {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.85;
+    margin-top: 0.2rem;
+}
+
+.figure figcaption a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Diagram penjelas */
+.diagram {
+    background: var(--white);
+    border: 1px solid #e3eee5;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    margin: 2rem 0;
+}
+
+.diagram img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.diagram figcaption {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Blok isi teks panjang */
+.content-block {
+    padding: 80px 0;
+}
+
+.content-block.alt {
+    background: var(--light-bg);
+}
+
+.content-lead {
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    max-width: 820px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.split.wide-left {
+    grid-template-columns: 1.15fr 0.85fr;
+}
+
+.split h3 {
+    color: var(--primary-color);
+}
+
+.check-list {
+    list-style: none;
+    margin: 1.25rem 0;
+}
+
+.check-list li {
+    padding: 0.55rem 0 0.55rem 2rem;
+    position: relative;
+    color: var(--text-light);
+}
+
+.check-list li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    color: var(--accent-color);
+}
+
+/* Kartu peralatan */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.75rem;
+}
+
+.tool-card {
+    background: var(--white);
+    border: 1px solid #e3eee5;
+    border-radius: var(--border-radius);
+    padding: 1.75rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tool-card .tool-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #e6f1e2;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.tool-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.tool-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.tool-card .tool-spec {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    background: var(--light-bg);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+}
+
+/* Tabel spesifikasi */
+.table-wrap {
+    overflow-x: auto;
+    margin: 2rem 0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    min-width: 560px;
+}
+
+.data-table caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 1rem 1.25rem 0.75rem;
+}
+
+.data-table th,
+.data-table td {
+    padding: 0.9rem 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid #eef4ef;
+    font-size: 0.95rem;
+}
+
+.data-table thead th {
+    background: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    border-bottom: none;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background: var(--light-bg);
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table td strong {
+    color: var(--text-dark);
+}
+
+/* Kartu komoditas ikan */
+.fish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.75rem;
+}
+
+.fish-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.fish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.fish-card .fish-body {
+    padding: 1.5rem;
+}
+
+.fish-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.fish-card .latin {
+    display: block;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+}
+
+.fish-card p {
+    font-size: 0.94rem;
+    margin-bottom: 0;
+}
+
+/* Langkah bernomor */
+.steps-list {
+    counter-reset: langkah;
+    list-style: none;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.steps-list li {
+    counter-increment: langkah;
+    position: relative;
+    background: var(--white);
+    border: 1px solid #e3eee5;
+    border-radius: var(--border-radius);
+    padding: 1.5rem 1.75rem 1.5rem 4.75rem;
+    box-shadow: var(--shadow);
+}
+
+.steps-list li::before {
+    content: counter(langkah, decimal-leading-zero);
+    position: absolute;
+    left: 1.5rem;
+    top: 1.4rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.steps-list h3 {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    margin-bottom: 0.35rem;
+}
+
+.steps-list p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* Area layanan */
+.area-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.area-chip {
+    background: var(--white);
+    border: 1px solid #d7e8dc;
+    color: var(--primary-color);
+    border-radius: 999px;
+    padding: 0.6rem 1.25rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.area-chip:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+/* Kartu tautan artikel */
+.link-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.75rem;
+}
+
+.link-card {
+    display: block;
+    background: var(--white);
+    border: 1px solid #e3eee5;
+    border-radius: var(--border-radius);
+    padding: 1.75rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
+}
+
+.link-card i {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.link-card h3 {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+}
+
+.link-card p {
+    font-size: 0.94rem;
+    margin-bottom: 0;
+}
+
+/* Linimasa halaman Tentang */
+.timeline {
+    list-style: none;
+    position: relative;
+    margin: 2rem 0 0;
+    padding-left: 2.5rem;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0.55rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 3px;
+    background: #dbe8dc;
+    border-radius: 3px;
+}
+
+.timeline li {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -2.5rem;
+    top: 0.35rem;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    box-shadow: 0 0 0 4px var(--light-bg);
+}
+
+.timeline .year {
+    display: block;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.timeline p {
+    margin-bottom: 0;
+}
+
+/* Nilai perusahaan */
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.75rem;
+}
+
+.value-item {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.value-item i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.value-item h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.value-item p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Kredit foto */
+.credit-list {
+    list-style: none;
+    display: grid;
+    gap: 0.85rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.credit-list li {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.credit-list li::before {
+    content: "\f03e";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    top: 0.3rem;
+}
+
+.credit-list a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Header halaman dengan foto latar */
+.page-header.with-photo {
+    background-image: linear-gradient(rgba(45, 90, 39, 0.68), rgba(74, 124, 89, 0.72)),
+        url("../images/bioflok-panen-nila.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.page-header.with-photo h1,
+.page-header.with-photo p {
+    color: var(--white);
+}
+
+.page-header.with-photo .breadcrumb a,
+.page-header.with-photo .breadcrumb span {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Tombol Instagram cepat */
+.quick-action.instagram {
+    background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+    color: var(--white);
+}
+
+@media (max-width: 1080px) {
+    .nav-logo h2 {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        gap: 0.4rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 0;
+    }
+
+    .split,
+    .split.wide-left {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .content-block {
+        padding: 60px 0;
+    }
+
+    .notice-banner {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1.25rem;
+    }
+
+    .steps-list li {
+        padding: 3.25rem 1.25rem 1.25rem;
+    }
+
+    .steps-list li::before {
+        top: 1.1rem;
+        left: 1.25rem;
+    }
+}
+
+/* Tombol CTA dipakai sebagai tautan */
+a.cta-button {
+    display: inline-block;
+    text-align: center;
+}
+
+/* Slide selain yang pertama memakai h2 agar hanya ada satu h1 per halaman */
+.hero-content h2 {
+    font-size: 3.5rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
