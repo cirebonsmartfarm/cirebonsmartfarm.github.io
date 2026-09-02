@@ -3103,3 +3103,161 @@ img {
     padding-right: 2.4rem;
     cursor: pointer;
 }
+
+/* Bagian lipat, simpan resep, dan kisi kadar pupuk */
+.lipat {
+    border: 1px solid #e3eee5;
+    border-radius: var(--border-radius);
+    padding: 0.85rem 1.1rem;
+    margin-bottom: 1.1rem;
+    background: var(--light-bg);
+}
+
+.lipat > summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    list-style: none;
+}
+
+.lipat > summary::-webkit-details-marker { display: none; }
+
+.lipat > summary::before {
+    content: "067";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 0.72rem;
+    margin-right: 0.55rem;
+    color: var(--accent-color);
+}
+
+.lipat[open] > summary::before { content: "068"; }
+
+.lipat-catatan {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    margin: 0.9rem 0 0.75rem;
+}
+
+.kadar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.kadar-grid > div {
+    background: var(--white);
+    border: 1px solid #e3eee5;
+    border-radius: var(--border-radius);
+    padding: 0.7rem 0.85rem;
+}
+
+.kadar-grid span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.45rem;
+}
+
+.kadar-grid label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 0.35rem;
+}
+
+.kadar-grid input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.4rem 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font: inherit;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.simpan-resep {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.simpan-resep input[type="text"] {
+    flex: 1 1 160px;
+    min-width: 0;
+    padding: 0.65rem 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: var(--border-radius);
+    font: inherit;
+    font-size: 0.95rem;
+}
+
+.simpan-resep .btn-secondary {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    flex: none;
+}
+
+.simpan-resep .btn-secondary.hapus {
+    color: #b91c1c;
+    border-color: #f3c9c9;
+}
+
+.simpan-resep .btn-secondary.hapus:hover {
+    background: #fbe4e4;
+    color: #7f1d1d;
+}
+
+.catatan-simpan {
+    display: block;
+    font-size: 0.83rem;
+    color: var(--text-light);
+    margin-bottom: 1.1rem;
+}
+
+.tipe-tanda {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.tipe-tanda.a { color: #1f5b2a; background: #e4f2e2; }
+.tipe-tanda.b { color: #1f5b70; background: #e4f0f4; }
+
+.data-table tr.baris-total td {
+    background: var(--light-bg);
+    font-weight: 700;
+    color: var(--primary-color);
+    border-top: 2px solid #dfeade;
+}
+
+@media (max-width: 600px) {
+    .kadar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .simpan-resep {
+        gap: 0.5rem;
+    }
+
+    .simpan-resep input[type="text"] {
+        flex: 1 1 100%;
+    }
+
+    .data-table.racik tr.baris-total {
+        background: var(--light-bg);
+    }
+}

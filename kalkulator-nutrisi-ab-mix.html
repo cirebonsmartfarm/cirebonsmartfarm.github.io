@@ -300,46 +300,111 @@
                 <div class="tab-panel" id="panel-racik" role="tabpanel" hidden>
                     <div class="calc-wrap">
                         <form class="calc-form" novalidate>
-                            <h2 class="calc-title">Larutan &amp; Pekatan</h2>
+                            <h2 class="calc-title">Resep</h2>
 
                             <div class="calc-field">
-                                <label for="r-faktor">Faktor kepekatan stok</label>
-                                <select id="r-faktor">
-                                    <option value="100">100x &mdash; pakai 10 ml/L</option>
-                                    <option value="200" selected>200x &mdash; pakai 5 ml/L</option>
-                                    <option value="250">250x &mdash; pakai 4 ml/L</option>
-                                    <option value="400">400x &mdash; pakai 2,5 ml/L</option>
-                                </select>
-                                <small>Makin pekat makin hemat tempat, tapi makin berisiko mengendap.</small>
-                            </div>
-
-                            <div class="calc-field">
-                                <label for="r-vol-stok">Volume tiap tangki pekatan (liter)</label>
-                                <input type="number" id="r-vol-stok" value="5" min="0.5" max="200" step="0.5" inputmode="decimal">
-                                <small>Tangki A dan tangki B dibuat dengan volume sama. Volume larutan kerja yang dihasilkan = volume ini dikali faktor kepekatan.</small>
-                            </div>
-
-                            <h2 class="calc-title">Sasaran Unsur Hara</h2>
-
-                            <div class="calc-field">
-                                <label for="r-tanaman">Tanaman</label>
-                                <select id="r-tanaman"></select>
+                                <label for="r-resep">Pilih resep</label>
+                                <select id="r-resep"></select>
                                 <small id="r-target-info">&nbsp;</small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="r-konsentrasi">Konsentrasi (%)</label>
+                                <input type="number" id="r-konsentrasi" value="100" min="10" max="200" step="5" inputmode="numeric">
+                                <small>Turunkan ke 50 persen untuk fase semai, atau saat cuaca sangat panas.</small>
                             </div>
 
                             <div class="hara-grid">
                                 <div class="calc-field"><label for="r-N">N (ppm)</label>
-                                    <input type="number" id="r-N" value="150" min="0" max="400" step="5" inputmode="numeric"></div>
+                                    <input type="number" id="r-N" value="150" min="0" max="400" step="1" inputmode="numeric"></div>
                                 <div class="calc-field"><label for="r-P">P (ppm)</label>
-                                    <input type="number" id="r-P" value="45" min="0" max="150" step="5" inputmode="numeric"></div>
+                                    <input type="number" id="r-P" value="45" min="0" max="150" step="1" inputmode="numeric"></div>
                                 <div class="calc-field"><label for="r-K">K (ppm)</label>
-                                    <input type="number" id="r-K" value="200" min="0" max="500" step="5" inputmode="numeric"></div>
+                                    <input type="number" id="r-K" value="200" min="0" max="500" step="1" inputmode="numeric"></div>
                                 <div class="calc-field"><label for="r-Ca">Ca (ppm)</label>
-                                    <input type="number" id="r-Ca" value="150" min="0" max="350" step="5" inputmode="numeric"></div>
+                                    <input type="number" id="r-Ca" value="150" min="0" max="350" step="1" inputmode="numeric"></div>
                                 <div class="calc-field"><label for="r-Mg">Mg (ppm)</label>
-                                    <input type="number" id="r-Mg" value="45" min="0" max="150" step="5" inputmode="numeric"></div>
+                                    <input type="number" id="r-Mg" value="45" min="0" max="150" step="1" inputmode="numeric"></div>
                                 <div class="calc-field"><label for="r-S">S (ppm)</label>
-                                    <input type="number" id="r-S" value="55" min="0" max="250" step="5" inputmode="numeric"></div>
+                                    <input type="number" id="r-S" value="55" min="0" max="250" step="1" inputmode="numeric"></div>
+                            </div>
+
+                            <details class="lipat">
+                                <summary>Sasaran hara mikro</summary>
+                                <div class="hara-grid" style="margin-top:1rem">
+                                    <div class="calc-field"><label for="r-m-Fe">Fe (ppm)</label>
+                                        <input type="number" id="r-m-Fe" value="3" min="0" max="15" step="0.1" inputmode="decimal"></div>
+                                    <div class="calc-field"><label for="r-m-Mn">Mn (ppm)</label>
+                                        <input type="number" id="r-m-Mn" value="0.5" min="0" max="5" step="0.01" inputmode="decimal"></div>
+                                    <div class="calc-field"><label for="r-m-Zn">Zn (ppm)</label>
+                                        <input type="number" id="r-m-Zn" value="0.25" min="0" max="5" step="0.01" inputmode="decimal"></div>
+                                    <div class="calc-field"><label for="r-m-B">B (ppm)</label>
+                                        <input type="number" id="r-m-B" value="0.5" min="0" max="5" step="0.01" inputmode="decimal"></div>
+                                    <div class="calc-field"><label for="r-m-Cu">Cu (ppm)</label>
+                                        <input type="number" id="r-m-Cu" value="0.05" min="0" max="2" step="0.01" inputmode="decimal"></div>
+                                    <div class="calc-field"><label for="r-m-Mo">Mo (ppm)</label>
+                                        <input type="number" id="r-m-Mo" value="0.05" min="0" max="2" step="0.01" inputmode="decimal"></div>
+                                </div>
+                            </details>
+
+                            <div class="simpan-resep">
+                                <input type="text" id="r-nama-resep" placeholder="Nama resep baru" maxlength="60">
+                                <button type="button" class="btn-secondary" id="r-simpan-resep">
+                                    <i class="fas fa-plus" aria-hidden="true"></i> Simpan
+                                </button>
+                                <button type="button" class="btn-secondary hapus" id="r-hapus-resep" hidden>
+                                    <i class="fas fa-trash-can" aria-hidden="true"></i> Hapus
+                                </button>
+                            </div>
+                            <small class="catatan-simpan">
+                                Resep tersimpan di peramban perangkat ini saja, tidak dikirim ke mana pun.
+                            </small>
+
+                            <h2 class="calc-title">Pekatan yang Dibuat</h2>
+
+                            <div class="calc-field">
+                                <label for="r-vol-stok">Volume tiap tangki pekatan (liter)</label>
+                                <input type="number" id="r-vol-stok" value="5" min="0.25" max="500" step="0.25" inputmode="decimal">
+                                <small>Tangki A dan B dibuat dengan volume sama. Isi 5 untuk membuat pekatan 5 liter A dan 5 liter B.</small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="r-faktor">Faktor kepekatan</label>
+                                <select id="r-faktor">
+                                    <option value="100">100x &mdash; nanti dipakai 10 ml/L</option>
+                                    <option value="200" selected>200x &mdash; nanti dipakai 5 ml/L</option>
+                                    <option value="250">250x &mdash; nanti dipakai 4 ml/L</option>
+                                    <option value="400">400x &mdash; nanti dipakai 2,5 ml/L</option>
+                                </select>
+                                <small>Makin pekat makin hemat tempat, tapi makin berisiko mengendap.</small>
+                            </div>
+
+                            <h2 class="calc-title">Sumber Hara Mikro</h2>
+
+                            <div class="calc-field">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="r-mikro-campuran">
+                                    Pakai campuran mikro siap pakai, bukan garam terpisah
+                                </label>
+                                <small>
+                                    Kalau Anda memakai produk mikro jadi, isi kadarnya di bawah. Takarannya
+                                    dikunci pada besi, jadi unsur lain mengikuti perbandingan bawaan produk.
+                                </small>
+                            </div>
+
+                            <div class="hara-grid" id="r-campuran-kolom" hidden>
+                                <div class="calc-field"><label for="r-c-Fe">Fe (%)</label>
+                                    <input type="number" id="r-c-Fe" value="7" min="0" max="100" step="0.01" inputmode="decimal"></div>
+                                <div class="calc-field"><label for="r-c-Mn">Mn (%)</label>
+                                    <input type="number" id="r-c-Mn" value="3" min="0" max="100" step="0.01" inputmode="decimal"></div>
+                                <div class="calc-field"><label for="r-c-Zn">Zn (%)</label>
+                                    <input type="number" id="r-c-Zn" value="0.6" min="0" max="100" step="0.01" inputmode="decimal"></div>
+                                <div class="calc-field"><label for="r-c-B">B (%)</label>
+                                    <input type="number" id="r-c-B" value="1.2" min="0" max="100" step="0.01" inputmode="decimal"></div>
+                                <div class="calc-field"><label for="r-c-Cu">Cu (%)</label>
+                                    <input type="number" id="r-c-Cu" value="0.4" min="0" max="100" step="0.01" inputmode="decimal"></div>
+                                <div class="calc-field"><label for="r-c-Mo">Mo (%)</label>
+                                    <input type="number" id="r-c-Mo" value="0.1" min="0" max="100" step="0.01" inputmode="decimal"></div>
                             </div>
 
                             <div class="calc-field">
@@ -349,25 +414,56 @@
                                 </label>
                                 <small>
                                     ZA menutup kekurangan nitrogen saat kalium sudah penuh, tetapi menambah
-                                    amonium. Kalkulator akan memperingatkan bila amonium melewati 15 persen
-                                    dari total nitrogen.
+                                    amonium. Kalkulator memperingatkan bila amonium melewati 15 persen dari
+                                    total nitrogen.
                                 </small>
                             </div>
 
-                            <div class="calc-actions">
-                                <button type="button" class="btn-secondary" id="r-reset-hara">
-                                    <i class="fas fa-rotate-left" aria-hidden="true"></i> Kembalikan Sasaran Bawaan
-                                </button>
-                            </div>
+                            <details class="lipat">
+                                <summary>Kadar pupuk Anda sendiri</summary>
+                                <p class="lipat-catatan">
+                                    Angka bawaan mengikuti terbitan Yara dan Petrokimia Gresik. Kalau karung
+                                    Anda berbeda, ganti di sini dan seluruh perhitungan ikut menyesuaikan.
+                                </p>
+                                <div class="kadar-grid">
+                                    <div><span>Kalsium Nitrat</span>
+                                        <label>N %<input type="number" id="k-kalnit-N" value="15.5" min="0" max="100" step="0.1"></label>
+                                        <label>Ca %<input type="number" id="k-kalnit-Ca" value="19" min="0" max="100" step="0.1"></label></div>
+                                    <div><span>Kalium Nitrat</span>
+                                        <label>N %<input type="number" id="k-kno3-N" value="13" min="0" max="100" step="0.1"></label>
+                                        <label>K %<input type="number" id="k-kno3-K" value="38.2" min="0" max="100" step="0.1"></label></div>
+                                    <div><span>MKP</span>
+                                        <label>P %<input type="number" id="k-mkp-P" value="22.7" min="0" max="100" step="0.1"></label>
+                                        <label>K %<input type="number" id="k-mkp-K" value="28.2" min="0" max="100" step="0.1"></label></div>
+                                    <div><span>Magnesium Sulfat</span>
+                                        <label>Mg %<input type="number" id="k-mgso4-Mg" value="9.7" min="0" max="100" step="0.1"></label>
+                                        <label>S %<input type="number" id="k-mgso4-S" value="13" min="0" max="100" step="0.1"></label></div>
+                                    <div><span>Kalium Sulfat (ZK)</span>
+                                        <label>K %<input type="number" id="k-k2so4-K" value="41.5" min="0" max="100" step="0.1"></label>
+                                        <label>S %<input type="number" id="k-k2so4-S" value="17" min="0" max="100" step="0.1"></label></div>
+                                    <div><span>Amonium Sulfat (ZA)</span>
+                                        <label>N %<input type="number" id="k-za-N" value="20.8" min="0" max="100" step="0.1"></label>
+                                        <label>S %<input type="number" id="k-za-S" value="23.8" min="0" max="100" step="0.1"></label></div>
+                                </div>
+                            </details>
                         </form>
 
                         <div class="calc-output">
-                            <h2 class="calc-title">Takaran Racikan</h2>
+                            <h2 class="calc-title">Hasil Racikan</h2>
+
+                            <div class="calc-badge" id="r-skor-badge">
+                                <span class="calc-badge-label">Kecocokan dengan resep</span>
+                                <strong id="r-out-skor">-</strong>
+                                <span class="calc-badge-note" id="r-skor-teks">-</span>
+                            </div>
 
                             <dl class="calc-results">
-                                <div class="calc-row"><dt>Dosis pakai nanti</dt><dd id="r-out-dosis">-</dd></div>
                                 <div class="calc-row"><dt>Volume tiap tangki</dt><dd id="r-out-stok">-</dd></div>
                                 <div class="calc-row calc-row-strong"><dt>Cukup untuk</dt><dd id="r-out-cukup">-</dd></div>
+                                <div class="calc-row"><dt>Dosis pakai nanti</dt><dd id="r-out-dosis">-</dd></div>
+                                <div class="calc-row"><dt>Berat pupuk tangki A</dt><dd id="r-out-berat-a">-</dd></div>
+                                <div class="calc-row"><dt>Berat pupuk tangki B</dt><dd id="r-out-berat-b">-</dd></div>
+                                <div class="calc-row calc-row-strong"><dt>Total berat pupuk</dt><dd id="r-out-berat">-</dd></div>
                             </dl>
 
                             <div class="notice-banner" id="r-catatan" style="display:none;margin:1.25rem 0"></div>
@@ -376,17 +472,10 @@
                             <div class="table-wrap">
                                 <table class="data-table racik">
                                     <thead>
-                                        <tr>
-                                            <th scope="col">Pupuk</th>
-                                            <th scope="col">Untuk stok</th>
-                                            <th scope="col">Per 1000 L kerja</th>
-                                        </tr>
+                                        <tr><th scope="col">Pupuk</th><th scope="col">Tipe</th><th scope="col">Berat</th></tr>
                                     </thead>
                                     <tbody id="r-tabel-a"></tbody>
-                                    <tfoot>
-                                        <tr><td><strong>Total padatan</strong></td>
-                                            <td id="r-total-a">-</td><td></td></tr>
-                                    </tfoot>
+                                    <tfoot><tr><td><strong>Total</strong></td><td></td><td id="r-total-a">-</td></tr></tfoot>
                                 </table>
                             </div>
 
@@ -394,30 +483,19 @@
                             <div class="table-wrap">
                                 <table class="data-table racik">
                                     <thead>
-                                        <tr>
-                                            <th scope="col">Pupuk</th>
-                                            <th scope="col">Untuk stok</th>
-                                            <th scope="col">Per 1000 L kerja</th>
-                                        </tr>
+                                        <tr><th scope="col">Pupuk</th><th scope="col">Tipe</th><th scope="col">Berat</th></tr>
                                     </thead>
                                     <tbody id="r-tabel-b"></tbody>
-                                    <tfoot>
-                                        <tr><td><strong>Total padatan</strong></td>
-                                            <td id="r-total-b">-</td><td></td></tr>
-                                    </tfoot>
+                                    <tfoot><tr><td><strong>Total</strong></td><td></td><td id="r-total-b">-</td></tr></tfoot>
                                 </table>
                             </div>
 
-                            <h3 class="calc-subtitle">Sasaran Dibanding Hasil</h3>
+                            <h3 class="calc-subtitle">Perbandingan Nutrisi</h3>
                             <div class="table-wrap">
                                 <table class="data-table racik">
                                     <thead>
-                                        <tr>
-                                            <th scope="col">Unsur</th>
-                                            <th scope="col">Sasaran</th>
-                                            <th scope="col">Hasil</th>
-                                            <th scope="col">Selisih</th>
-                                        </tr>
+                                        <tr><th scope="col">Unsur</th><th scope="col">Target PPM</th>
+                                            <th scope="col">Hasil PPM</th><th scope="col">Selisih</th></tr>
                                     </thead>
                                     <tbody id="r-tabel-cek"></tbody>
                                 </table>
@@ -425,9 +503,9 @@
 
                             <p class="calc-note">
                                 <i class="fas fa-circle-info" aria-hidden="true"></i>
-                                Selisih di bawah 5 persen sudah sangat baik. Belerang sering berlebih karena
-                                ikut terbawa magnesium sulfat dan kalium sulfat, dan itu wajar. Yang perlu
-                                dijaga ketat adalah kalsium, kalium, dan nitrogen.
+                                Berat di atas adalah untuk <strong>satu tangki pekatan</strong>, bukan untuk
+                                air tandon. Larutkan tangki A dan tangki B terpisah, lalu pakai sesuai dosis
+                                yang tertulis di ringkasan.
                             </p>
                         </div>
                     </div>
@@ -522,7 +600,7 @@
             <h3 class="calc-subtitle" style="margin-top:2.5rem">Pupuk Tunggal yang Dijual di Indonesia</h3>
             <div class="table-wrap">
                 <table class="data-table">
-                    <caption>Persentase mengikuti angka pada label dagang, bukan kemurnian teoretis</caption>
+                    <caption>Kadar mengikuti terbitan produsen. Periksa karung Anda sendiri, tiap merek berbeda</caption>
                     <thead>
                         <tr>
                             <th scope="col">Pupuk</th>
@@ -530,6 +608,7 @@
                             <th scope="col">Label dagang</th>
                             <th scope="col">Unsur terhitung</th>
                             <th scope="col">Tangki</th>
+                            <th scope="col">Sumber angka</th>
                         </tr>
                     </thead>
                     <tbody id="tabel-pupuk"></tbody>
