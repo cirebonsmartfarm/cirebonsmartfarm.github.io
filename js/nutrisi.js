@@ -8,16 +8,14 @@
         tunggal untuk sekian liter pekatan, dipisah ke Tangki A dan Tangki B
         supaya kalsium tidak bertemu sulfat dan fosfat selama masih pekat.
 
-   Semua hitungan berjalan di peramban pengunjung. Tidak ada data yang dikirim.
-   Resep buatan sendiri disimpan di peramban perangkat ini saja.
+   Semua hitungan berjalan di peramban pengunjung. Tidak ada yang dikirim maupun
+   disimpan. Hasilnya dibawa keluar lewat cetak PDF, bukan lewat penyimpanan web.
    ========================================================================= */
 (function () {
   'use strict';
 
   var akar = document.getElementById('kalkulator-nutrisi');
   if (!akar) return;
-
-  var KUNCI_SIMPAN = 'csf-resep-nutrisi-v1';
 
   /* ---------------------------------------------------------------------
      Resep bawaan.
@@ -84,34 +82,46 @@
   var PUPUK = {
     kalnit:  { nama: 'Kalsium Nitrat (Calnit)', rumus: '5Ca(NO3)2 &middot; NH4NO3 &middot; 10H2O',
                label: '15,5% N &middot; 26,5% CaO', unsur: { N: 15.5, Ca: 19.0 }, tangki: 'A',
+               beli: 'Cari sebagai: Kalsium Nitrat, Calnit, atau YaraLiva Calcinit',
                sumber: 'Yara, YaraLiva' },
     kno3:    { nama: 'Kalium Nitrat (KNO3 / Kalinitra)', rumus: 'KNO3',
                label: '13% N &middot; 46% K2O', unsur: { N: 13.0, K: 38.2 }, tangki: 'A',
+               beli: 'Cari sebagai: Kalium Nitrat, KNO3, atau Kalinitra 13-0-46',
                sumber: 'label dagang 13-0-46. Garam murni menurut Yara 13,7% N dan 38,6% K' },
     mkp:     { nama: 'MKP', rumus: 'KH2PO4',
                label: '52% P2O5 &middot; 34% K2O', unsur: { P: 22.7, K: 28.2 }, tangki: 'B',
+               beli: 'Cari sebagai: MKP, Mono Kalium Fosfat, atau pupuk 0-52-34',
                sumber: 'label dagang 0-52-34. Garam murni menurut Yara 22,7% P dan 28,7% K' },
     mgso4:   { nama: 'Magnesium Sulfat (garam Inggris)', rumus: 'MgSO4 &middot; 7H2O',
                label: '16% MgO &middot; 13% S', unsur: { Mg: 9.7, S: 13.0 }, tangki: 'B',
+               beli: 'Cari sebagai: Garam Inggris, Magnesium Sulfat, atau MgSO4 heptahidrat',
                sumber: 'Yara' },
     k2so4:   { nama: 'Kalium Sulfat (ZK)', rumus: 'K2SO4',
                label: '50% K2O &middot; 17% S', unsur: { K: 41.5, S: 17.0 }, tangki: 'B',
+               beli: 'Cari sebagai: ZK, Kalium Sulfat, atau K2SO4',
                sumber: 'Petrokimia Gresik, ZK' },
     za:      { nama: 'Amonium Sulfat (ZA)', rumus: '(NH4)2SO4',
                label: '20,8% N &middot; 23,8% S', unsur: { N: 20.8, S: 23.8 }, tangki: 'B',
+               beli: 'Cari sebagai: ZA atau Amonium Sulfat',
                sumber: 'Petrokimia Gresik, ZA' },
     feedta:  { nama: 'Fe-EDTA 13%', rumus: 'C10H12FeN2NaO8',
-               label: '13% Fe', unsur: { Fe: 13.0 }, tangki: 'A', sumber: 'Yara' },
+               label: '13% Fe', unsur: { Fe: 13.0 }, tangki: 'A', sumber: 'Yara',
+               beli: 'Cari sebagai: Fe-EDTA 13% atau besi kelat hidroponik' },
     mnso4:   { nama: 'Mangan Sulfat', rumus: 'MnSO4 &middot; H2O',
-               label: '32,5% Mn', unsur: { Mn: 32.5 }, tangki: 'B', sumber: 'stoikiometri' },
+               label: '32,5% Mn', unsur: { Mn: 32.5 }, tangki: 'B', sumber: 'stoikiometri',
+               beli: 'Cari sebagai: Mangan Sulfat monohidrat' },
     znso4:   { nama: 'Seng Sulfat', rumus: 'ZnSO4 &middot; 7H2O',
-               label: '22,7% Zn', unsur: { Zn: 22.7 }, tangki: 'B', sumber: 'stoikiometri' },
+               label: '22,7% Zn', unsur: { Zn: 22.7 }, tangki: 'B', sumber: 'stoikiometri',
+               beli: 'Cari sebagai: Seng Sulfat heptahidrat' },
     cuso4:   { nama: 'Tembaga Sulfat', rumus: 'CuSO4 &middot; 5H2O',
-               label: '25,5% Cu', unsur: { Cu: 25.5 }, tangki: 'B', sumber: 'stoikiometri' },
+               label: '25,5% Cu', unsur: { Cu: 25.5 }, tangki: 'B', sumber: 'stoikiometri',
+               beli: 'Cari sebagai: Tembaga Sulfat pentahidrat, terusi' },
     borax:   { nama: 'Borax', rumus: 'Na2B4O7 &middot; 10H2O',
-               label: '11,3% B', unsur: { B: 11.3 }, tangki: 'B', sumber: 'Yara' },
+               label: '11,3% B', unsur: { B: 11.3 }, tangki: 'B', sumber: 'Yara',
+               beli: 'Cari sebagai: Borax atau Natrium Tetraborat' },
     namo:    { nama: 'Natrium Molibdat', rumus: 'Na2MoO4 &middot; 2H2O',
-               label: '39,6% Mo', unsur: { Mo: 39.6 }, tangki: 'B', sumber: 'Yara' }
+               label: '39,6% Mo', unsur: { Mo: 39.6 }, tangki: 'B', sumber: 'Yara',
+               beli: 'Cari sebagai: Natrium Molibdat dihidrat' }
   };
 
   /* Kadar boleh ditimpa pengguna, karena tiap merek dan pabrik berbeda.
@@ -128,6 +138,40 @@
       if (isFinite(v) && v > 0) return v;
     }
     return PUPUK[kode].unsur[unsur];
+  }
+
+  /* Kadar menurut sumber yang berbeda. Angka Yara berasal dari tabel teknis
+     terbitan Yara, angka Petrokimia dari halaman produknya sendiri, dan
+     angka umum mengikuti label dagang yang lazim beredar di Indonesia. */
+  var PRESET_KADAR = {
+    umum: {
+      nama: 'Label dagang umum Indonesia',
+      nilai: { 'kalnit-N': 15.5, 'kalnit-Ca': 19, 'kno3-N': 13, 'kno3-K': 38.2,
+               'mkp-P': 22.7, 'mkp-K': 28.2, 'mgso4-Mg': 9.7, 'mgso4-S': 13,
+               'k2so4-K': 41.5, 'k2so4-S': 17, 'za-N': 20.8, 'za-S': 23.8 }
+    },
+    yara: {
+      nama: 'Garam murni, tabel teknis Yara',
+      nilai: { 'kalnit-N': 15.5, 'kalnit-Ca': 19, 'kno3-N': 13.7, 'kno3-K': 38.6,
+               'mkp-P': 22.7, 'mkp-K': 28.7, 'mgso4-Mg': 9.7, 'mgso4-S': 13,
+               'k2so4-K': 44.8, 'k2so4-S': 18.3, 'za-N': 21, 'za-S': 24 }
+    },
+    petro: {
+      nama: 'Petrokimia Gresik untuk ZA dan ZK',
+      nilai: { 'kalnit-N': 15.5, 'kalnit-Ca': 19, 'kno3-N': 13, 'kno3-K': 38.2,
+               'mkp-P': 22.7, 'mkp-K': 28.2, 'mgso4-Mg': 9.7, 'mgso4-S': 13,
+               'k2so4-K': 41.5, 'k2so4-S': 17, 'za-N': 20.8, 'za-S': 23.8 }
+    }
+  };
+
+  function terapkanPreset(kunci) {
+    var pre = PRESET_KADAR[kunci];
+    if (!pre) return;                 /* pilihan 'sendiri', biarkan apa adanya */
+    Object.keys(pre.nilai).forEach(function (k) {
+      var e = document.getElementById('k-' + k);
+      if (e) e.value = pre.nilai[k];
+    });
+    hitungRacikan();
   }
 
   var URUT_HARA = ['N', 'P', 'K', 'Ca', 'Mg', 'S'];
@@ -163,26 +207,11 @@
     return nf1.format(v * 1000) / 1000 ? nf2.format(v) : nf2.format(v);
   }
 
-  /* ---------------------------------------------------------------------
-     Resep buatan pengguna, disimpan di peramban
-     --------------------------------------------------------------------- */
-  function bacaSimpanan() {
-    try {
-      var d = JSON.parse(localStorage.getItem(KUNCI_SIMPAN) || '[]');
-      return Array.isArray(d) ? d : [];
-    } catch (e) { return []; }
-  }
-  function tulisSimpanan(daftar) {
-    try { localStorage.setItem(KUNCI_SIMPAN, JSON.stringify(daftar)); }
-    catch (e) { /* mode privat atau penyimpanan diblokir */ }
-  }
-
   function semuaResep() {
-    return { tanaman: TANAMAN, klasik: KLASIK, simpanan: bacaSimpanan() };
+    return { tanaman: TANAMAN, klasik: KLASIK };
   }
   function cariResep(id) {
-    var s = semuaResep();
-    var kumpulan = s.tanaman.concat(s.klasik, s.simpanan);
+    var kumpulan = TANAMAN.concat(KLASIK);
     for (var i = 0; i < kumpulan.length; i++) if (kumpulan[i].id === id) return kumpulan[i];
     return TANAMAN[1];
   }
@@ -207,7 +236,6 @@
     }
     grup('Tanaman', s.tanaman);
     grup('Rujukan klasik', s.klasik);
-    grup('Resep saya', s.simpanan);
 
     sel.value = terpilih;
     if (!sel.value) sel.value = 'selada';
@@ -317,8 +345,7 @@
     el('r-target-info').textContent = r.ec
       ? 'Acuan EC ' + nf1.format(r.ec[0]) + ' - ' + nf1.format(r.ec[1]) + ' mS/cm, pH ' +
         nf1.format(r.ph[0]) + ' - ' + nf1.format(r.ph[1])
-      : 'Resep simpanan Anda sendiri.';
-    el('r-hapus-resep').hidden = !r.milikSaya;
+      : '';
     hitungRacikan();
   }
 
@@ -452,6 +479,77 @@
     gambarRacikan(g, dapat, dapatMikro, s, volume, faktor, volStok, campuran, catatan);
   }
 
+  /* Keterangan yang hanya muncul di hasil cetak. Nilainya diisi lewat
+     textContent, bukan innerHTML, jadi tidak ada teks yang bisa jadi markup. */
+  /* Daftar belanja. Membulatkan ke atas ke satuan yang wajar dibeli,
+     supaya pengguna tahu berapa banyak yang perlu disiapkan. */
+  function bulatBeli(g) {
+    if (g <= 0) return 0;
+    if (g < 50) return Math.ceil(g / 10) * 10;        /* kelipatan 10 gram */
+    if (g < 1000) return Math.ceil(g / 50) * 50;      /* kelipatan 50 gram */
+    return Math.ceil(g / 250) * 250;                  /* kelipatan 250 gram */
+  }
+
+  function isiBelanja(g, campuran) {
+    var baris = '';
+    Object.keys(PUPUK).forEach(function (kode) {
+      var p = PUPUK[kode];
+      if (!g[kode] || g[kode] <= 0) return;
+      var beli = bulatBeli(g[kode]);
+      baris +=
+        '<tr>' +
+          '<td data-label="Pupuk"><strong>' + p.nama + '</strong>' +
+            '<span class="pupuk-rumus">' + (p.beli || '') + '</span></td>' +
+          '<td data-label="Dibutuhkan">' + gram(g[kode]) + '</td>' +
+          '<td data-label="Siapkan">' + gram(beli) + '</td>' +
+        '</tr>';
+    });
+    if (campuran && campuran.gram > 0) {
+      baris +=
+        '<tr>' +
+          '<td data-label="Pupuk"><strong>Campuran mikro siap pakai</strong>' +
+            '<span class="pupuk-rumus">Produk mikro hidroponik apa pun, sesuaikan kadarnya di kolom sebelah</span></td>' +
+          '<td data-label="Dibutuhkan">' + gram(campuran.gram) + '</td>' +
+          '<td data-label="Siapkan">' + gram(bulatBeli(campuran.gram)) + '</td>' +
+        '</tr>';
+    }
+    document.getElementById('r-tabel-belanja').innerHTML = baris ||
+      '<tr><td colspan="3">Belum ada bahan yang perlu dibeli.</td></tr>';
+  }
+
+  function isiKopCetak(volume, faktor, volStok, s, skor) {
+    var sel = el('r-resep');
+    var namaResep = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].text : '';
+    var asli = cariResep(sel.value);
+    var diubah = URUT_HARA.some(function (u) {
+      return Math.abs(num('r-' + u) - asli.hara[u]) > 0.01;
+    });
+
+    var tgl = new Date().toLocaleDateString('id-ID',
+      { day: 'numeric', month: 'long', year: 'numeric' });
+
+    el('cetak-judul').textContent = namaResep + (diubah ? ' (disesuaikan)' : '');
+    el('cetak-tanggal').textContent = tgl;
+
+    var baris = [
+      ['Volume tiap tangki pekatan', nf1.format(volStok) + ' liter'],
+      ['Faktor kepekatan', faktor + 'x'],
+      ['Cukup untuk larutan kerja', nf0.format(volume) + ' liter'],
+      ['Dosis pakai', nf1.format(1000 / faktor) + ' ml per liter air'],
+      ['Konsentrasi resep', nf0.format(s.persen * 100) + ' persen'],
+      ['Kecocokan dengan resep', nf2.format(skor) + ' persen']
+    ];
+    var dl = el('cetak-param');
+    dl.textContent = '';
+    baris.forEach(function (b) {
+      var div = document.createElement('div');
+      div.className = 'calc-row';
+      var dt = document.createElement('dt'); dt.textContent = b[0];
+      var dd = document.createElement('dd'); dd.textContent = b[1];
+      div.appendChild(dt); div.appendChild(dd); dl.appendChild(div);
+    });
+  }
+
   function gambarRacikan(g, dapat, dapatMikro, s, volume, faktor, volStok, campuran, catatan) {
     var mlPerLiter = faktor > 0 ? 1000 / faktor : 0;
 
@@ -555,6 +653,9 @@
       rata >= 75 ? 'Ada unsur yang meleset jauh. Sesuaikan sasaran atau sumber pupuknya.' :
                    'Resep ini sulit dicapai dengan pupuk yang dipilih. Ubah sasarannya.';
 
+    isiBelanja(g, campuran);
+    isiKopCetak(volume, faktor, volStok, s, rata);
+
     var kotak = el('r-catatan');
     if (catatan.length) {
       kotak.style.display = '';
@@ -566,41 +667,11 @@
     }
   }
 
-  /* =====================================================================
-     Simpan dan hapus resep sendiri
-     ===================================================================== */
-  el('r-simpan-resep').addEventListener('click', function () {
-    var nama = (el('r-nama-resep').value || '').trim();
-    if (!nama) {
-      el('r-nama-resep').focus();
-      return;
-    }
-    var resep = {
-      id: 'saya-' + Date.now().toString(36),
-      nama: nama,
-      milikSaya: true,
-      hara: {}, mikro: {}
-    };
-    URUT_HARA.forEach(function (u) { resep.hara[u] = num('r-' + u); });
-    URUT_MIKRO.forEach(function (u) { resep.mikro[u] = num('r-m-' + u); });
-
-    var daftar = bacaSimpanan();
-    daftar.push(resep);
-    tulisSimpanan(daftar);
-    el('r-nama-resep').value = '';
-    isiPilihanResep(resep.id);
-    muatResep();
-  });
-
-  el('r-hapus-resep').addEventListener('click', function () {
-    var id = el('r-resep').value;
-    var daftar = bacaSimpanan().filter(function (r) { return r.id !== id; });
-    tulisSimpanan(daftar);
-    isiPilihanResep('selada');
-    muatResep();
-  });
-
   el('r-resep').addEventListener('change', muatResep);
+
+  el('r-cetak').addEventListener('click', function () { window.print(); });
+
+  el('r-preset').addEventListener('change', function () { terapkanPreset(this.value); });
 
   el('r-mikro-campuran').addEventListener('change', function () {
     el('r-campuran-kolom').hidden = !this.checked;

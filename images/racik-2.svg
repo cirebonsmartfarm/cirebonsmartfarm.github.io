@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="j2 d2">
+  <title id="j2">Larutkan satu per satu</title>
+  <desc id="d2">Pupuk dimasukkan bergantian, diaduk sampai larut dan air kembali jernih,
+    baru pupuk berikutnya dimasukkan.</desc>
+  <defs>
+    <linearGradient id="air2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd0e4"/><stop offset="1" stop-color="#4e9cb8"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="300" rx="14" fill="#f4f9f2"/>
+  <text x="210" y="38" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#2d5a27" text-anchor="middle">Satu bahan, aduk, tunggu jernih</text>
+
+  <!-- urutan karung -->
+  <g>
+    <g transform="translate(36 66)">
+      <rect width="52" height="60" rx="8" fill="#a7c957"/><rect width="52" height="14" rx="7" fill="#7fb069"/>
+      <text x="26" y="44" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f3f1c" text-anchor="middle">1</text>
+    </g>
+    <g transform="translate(36 142)" opacity=".55">
+      <rect width="52" height="60" rx="8" fill="#cfe0b4"/><rect width="52" height="14" rx="7" fill="#b7cf95"/>
+      <text x="26" y="44" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#4c5b45" text-anchor="middle">2</text>
+    </g>
+    <g transform="translate(36 218)" opacity=".35">
+      <rect width="52" height="60" rx="8" fill="#cfe0b4"/><rect width="52" height="14" rx="7" fill="#b7cf95"/>
+      <text x="26" y="44" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#4c5b45" text-anchor="middle">3</text>
+    </g>
+    <path d="M62 132 V138 M62 208 V214" stroke="#7fb069" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- butiran jatuh -->
+  <g fill="#e9c46a">
+    <circle cx="150" cy="96" r="5"/><circle cx="164" cy="116" r="4"/><circle cx="146" cy="132" r="5"/>
+    <circle cx="160" cy="150" r="4"/><circle cx="150" cy="168" r="4"/>
+  </g>
+
+  <!-- ember -->
+  <path d="M116 124 H304 L288 258 a10 10 0 0 1 -10 9 H142 a10 10 0 0 1 -10 -9 Z" fill="#e6ece8"/>
+  <path d="M124 168 H296 L285 252 a8 8 0 0 1 -8 7 H143 a8 8 0 0 1 -8 -7 Z" fill="url(#air2)"/>
+  <path d="M116 124 H304 L288 258 a10 10 0 0 1 -10 9 H142 a10 10 0 0 1 -10 -9 Z" fill="none" stroke="#31414a" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="108" y="112" width="204" height="18" rx="9" fill="#31414a"/>
+
+  <!-- pusaran aduk -->
+  <g fill="none" stroke="#cdeaf4" stroke-width="5" stroke-linecap="round" opacity=".9">
+    <path d="M160 200 q40 -22 80 0"/>
+    <path d="M172 224 q38 -20 76 0"/>
+  </g>
+  <!-- pengaduk -->
+  <path d="M264 92 L228 216" stroke="#8a6a4a" stroke-width="9" stroke-linecap="round"/>
+  <path d="M264 92 L228 216" stroke="#a9855e" stroke-width="4" stroke-linecap="round"/>
+
+  <text x="210" y="288" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Jangan tumpuk semuanya sekaligus</text>
+</svg>

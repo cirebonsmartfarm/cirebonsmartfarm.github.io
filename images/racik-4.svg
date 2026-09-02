@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="j4 d4">
+  <title id="j4">Genapkan volume</title>
+  <desc id="d4">Setelah semua pupuk larut, air ditambahkan sampai tepat pada garis volume
+    yang direncanakan.</desc>
+  <defs>
+    <linearGradient id="air4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd0e4"/><stop offset="1" stop-color="#4e9cb8"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="300" rx="14" fill="#f4f9f2"/>
+  <text x="210" y="38" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#2d5a27" text-anchor="middle">Tambah air sampai garis</text>
+
+  <!-- aliran air -->
+  <path d="M210 62 V126" stroke="#8fd0e4" stroke-width="12" stroke-linecap="round" opacity=".85"/>
+  <g fill="#8fd0e4" opacity=".7"><circle cx="200" cy="96" r="4"/><circle cx="220" cy="112" r="3"/></g>
+
+  <!-- ember -->
+  <path d="M112 128 H308 L292 258 a10 10 0 0 1 -10 9 H138 a10 10 0 0 1 -10 -9 Z" fill="#e6ece8"/>
+  <path d="M120 160 H300 L289 252 a8 8 0 0 1 -8 7 H139 a8 8 0 0 1 -8 -7 Z" fill="url(#air4)"/>
+  <path d="M120 160 q18 -9 36 0 t36 0 t36 0 t36 0 t36 0" fill="none" stroke="#cdeaf4" stroke-width="5" stroke-linecap="round"/>
+  <path d="M112 128 H308 L292 258 a10 10 0 0 1 -10 9 H138 a10 10 0 0 1 -10 -9 Z" fill="none" stroke="#31414a" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="104" y="116" width="212" height="18" rx="9" fill="#31414a"/>
+
+  <!-- skala volume -->
+  <g stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".85">
+    <path d="M132 196 H160"/><path d="M132 224 H152"/>
+  </g>
+  <g stroke="#e0552b" stroke-width="4" stroke-linecap="round">
+    <path d="M124 160 H316"/>
+  </g>
+  <rect x="322" y="146" width="72" height="30" rx="8" fill="#e0552b"/>
+  <text x="358" y="167" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">5 L</text>
+
+  <text x="210" y="288" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Genapkan di akhir, bukan di awal</text>
+</svg>

@@ -347,19 +347,6 @@
                                 </div>
                             </details>
 
-                            <div class="simpan-resep">
-                                <input type="text" id="r-nama-resep" placeholder="Nama resep baru" maxlength="60">
-                                <button type="button" class="btn-secondary" id="r-simpan-resep">
-                                    <i class="fas fa-plus" aria-hidden="true"></i> Simpan
-                                </button>
-                                <button type="button" class="btn-secondary hapus" id="r-hapus-resep" hidden>
-                                    <i class="fas fa-trash-can" aria-hidden="true"></i> Hapus
-                                </button>
-                            </div>
-                            <small class="catatan-simpan">
-                                Resep tersimpan di peramban perangkat ini saja, tidak dikirim ke mana pun.
-                            </small>
-
                             <h2 class="calc-title">Pekatan yang Dibuat</h2>
 
                             <div class="calc-field">
@@ -419,6 +406,20 @@
                                 </small>
                             </div>
 
+                            <div class="calc-field">
+                                <label for="r-preset">Merek atau sumber kadar pupuk</label>
+                                <select id="r-preset">
+                                    <option value="umum" selected>Label dagang umum Indonesia</option>
+                                    <option value="petro">Petrokimia Gresik, untuk ZA dan ZK</option>
+                                    <option value="yara">Garam murni, tabel teknis Yara</option>
+                                    <option value="sendiri">Isi sendiri dari karung saya</option>
+                                </select>
+                                <small>
+                                    Sudah punya pupuknya? Pilih yang paling mendekati, lalu cocokkan
+                                    angkanya dengan karung Anda di bagian bawah.
+                                </small>
+                            </div>
+
                             <details class="lipat">
                                 <summary>Kadar pupuk Anda sendiri</summary>
                                 <p class="lipat-catatan">
@@ -448,8 +449,19 @@
                             </details>
                         </form>
 
-                        <div class="calc-output">
-                            <h2 class="calc-title">Hasil Racikan</h2>
+                        <div class="calc-output" id="cetak-wrap">
+                            <div class="cetak-kop cetak-only">
+                                <img src="images/logo-csf.svg" alt="" width="56" height="56">
+                                <div class="cetak-nama">
+                                    <strong>Cirebon Smart Farm</strong>
+                                    <span>Resep Nutrisi Hidroponik</span>
+                                </div>
+                                <div class="cetak-tanggal" id="cetak-tanggal"></div>
+                            </div>
+                            <h2 class="cetak-only cetak-judul" id="cetak-judul"></h2>
+                            <dl class="calc-results cetak-only" id="cetak-param"></dl>
+
+                            <h2 class="calc-title layar-only">Hasil Racikan</h2>
 
                             <div class="calc-badge" id="r-skor-badge">
                                 <span class="calc-badge-label">Kecocokan dengan resep</span>
@@ -467,6 +479,22 @@
                             </dl>
 
                             <div class="notice-banner" id="r-catatan" style="display:none;margin:1.25rem 0"></div>
+
+                            <h3 class="calc-subtitle">Daftar Belanja</h3>
+                            <div class="table-wrap">
+                                <table class="data-table racik">
+                                    <thead>
+                                        <tr><th scope="col">Pupuk</th><th scope="col">Dibutuhkan</th>
+                                            <th scope="col">Siapkan</th></tr>
+                                    </thead>
+                                    <tbody id="r-tabel-belanja"></tbody>
+                                </table>
+                            </div>
+                            <p class="calc-note">
+                                Kolom <strong>Siapkan</strong> dibulatkan ke atas ke satuan yang wajar
+                                dibeli. Pupuk tunggal biasanya dijual per kilogram di toko pertanian dan
+                                lokapasar, sedangkan hara mikro dijual dalam kemasan kecil.
+                            </p>
 
                             <h3 class="calc-subtitle">Tangki A <span class="tangki-tanda a">kalsium</span></h3>
                             <div class="table-wrap">
@@ -507,6 +535,23 @@
                                 air tandon. Larutkan tangki A dan tangki B terpisah, lalu pakai sesuai dosis
                                 yang tertulis di ringkasan.
                             </p>
+
+                            <div class="calc-actions layar-only">
+                                <button type="button" class="btn-primary" id="r-cetak">
+                                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Simpan sebagai PDF
+                                </button>
+                            </div>
+                            <p class="calc-note layar-only">
+                                Tombol ini membuka jendela cetak. Pilih tujuan
+                                <strong>Save as PDF</strong> atau <strong>Simpan sebagai PDF</strong>,
+                                lalu berkasnya tersimpan di perangkat Anda sendiri. Tidak ada apa pun yang
+                                tersimpan di website ini.
+                            </p>
+
+                            <p class="cetak-only cetak-kaki">
+                                Dihitung dengan kalkulator gratis di
+                                cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -525,48 +570,72 @@
 
             <ol class="steps-list">
                 <li>
-                    <h3>Siapkan dua tangki terpisah</h3>
+                    <div class="step-teks">
+                        <h3>Siapkan dua tangki terpisah</h3>
                     <p>
                         Beri label A dan B, jangan sampai tertukar. Isi masing-masing dengan air bersih
                         sekitar tiga perempat volume akhirnya. Air sumur berkapur sebaiknya diendapkan atau
                         disaring dulu.
                     </p>
+                    </div>
+                    <img class="step-gambar" src="images/racik-1.svg"
+                         alt="Dua ember berlabel A dan B diisi air tiga perempat penuh, diletakkan terpisah" width="420" height="300" loading="lazy" decoding="async">
                 </li>
                 <li>
-                    <h3>Larutkan satu per satu, bukan sekaligus</h3>
+                    <div class="step-teks">
+                        <h3>Larutkan satu per satu, bukan sekaligus</h3>
                     <p>
                         Masukkan pupuk pertama, aduk sampai benar-benar larut dan air kembali jernih, baru
                         masukkan yang berikutnya. Menumpuk semuanya sekaligus membuat sebagian mengendap dan
                         takarannya meleset.
                     </p>
+                    </div>
+                    <img class="step-gambar" src="images/racik-2.svg"
+                         alt="Pupuk dimasukkan satu per satu ke dalam ember sambil diaduk sampai jernih" width="420" height="300" loading="lazy" decoding="async">
                 </li>
                 <li>
-                    <h3>Hara mikro dilarutkan lebih dulu di gelas kecil</h3>
+                    <div class="step-teks">
+                        <h3>Hara mikro dilarutkan lebih dulu di gelas kecil</h3>
                     <p>
                         Jumlahnya sangat sedikit, jadi larutkan dalam segelas air hangat sampai bening, baru
                         tuang ke tangki B. Besi kelat masuk tangki A supaya tidak bertemu fosfat.
                     </p>
+                    </div>
+                    <img class="step-gambar" src="images/racik-3.svg"
+                         alt="Hara mikro dilarutkan lebih dulu dalam segelas air hangat sebelum dituang" width="420" height="300" loading="lazy" decoding="async">
                 </li>
                 <li>
-                    <h3>Genapkan volume, jangan dikira-kira</h3>
+                    <div class="step-teks">
+                        <h3>Genapkan volume, jangan dikira-kira</h3>
                     <p>
                         Setelah semua larut, tambahkan air sampai tepat pada volume yang Anda rencanakan.
                         Menggenapkan di awal membuat pupuk terakhir sulit larut.
                     </p>
+                    </div>
+                    <img class="step-gambar" src="images/racik-4.svg"
+                         alt="Air ditambahkan sampai tepat pada garis volume lima liter" width="420" height="300" loading="lazy" decoding="async">
                 </li>
                 <li>
-                    <h3>Saat memakai, encerkan bergantian</h3>
+                    <div class="step-teks">
+                        <h3>Saat memakai, encerkan bergantian</h3>
                     <p>
                         Air tandon dulu, lalu pekatan A, aduk, baru pekatan B. Kalsium dari A dan sulfat dari
                         B hanya aman bertemu setelah keduanya sudah encer.
                     </p>
+                    </div>
+                    <img class="step-gambar" src="images/racik-5.svg"
+                         alt="Tandon diisi air, lalu pekatan A dituang, diaduk, baru pekatan B" width="420" height="300" loading="lazy" decoding="async">
                 </li>
                 <li>
-                    <h3>Ukur, lalu catat</h3>
+                    <div class="step-teks">
+                        <h3>Ukur, lalu catat</h3>
                     <p>
                         Ukur EC dan pH setelah larutan tercampur rata, bukan seketika setelah menuang. Catat
                         hasilnya. Catatan mingguan jauh lebih berguna daripada mengingat-ingat.
                     </p>
+                    </div>
+                    <img class="step-gambar" src="images/racik-6.svg"
+                         alt="Alat ukur EC dicelup ke larutan dan hasilnya ditulis di buku catatan" width="420" height="300" loading="lazy" decoding="async">
                 </li>
             </ol>
         </div>

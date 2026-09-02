@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="j5 d5">
+  <title id="j5">Encerkan bergantian</title>
+  <desc id="d5">Tandon diisi air lebih dulu, lalu pekatan A dituang dan diaduk, baru pekatan B.
+    A dan B tidak pernah bertemu dalam keadaan pekat.</desc>
+  <defs>
+    <linearGradient id="air5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd0e4"/><stop offset="1" stop-color="#4e9cb8"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="300" rx="14" fill="#f4f9f2"/>
+  <text x="210" y="36" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#2d5a27" text-anchor="middle">Air dulu, lalu A, aduk, baru B</text>
+
+  <!-- botol A -->
+  <g transform="translate(52 60)">
+    <rect x="14" y="0" width="16" height="14" rx="4" fill="#31414a"/>
+    <path d="M6 14 H38 a8 8 0 0 1 8 8 V78 a8 8 0 0 1 -8 8 H6 a8 8 0 0 1 -8 -8 V22 a8 8 0 0 1 8 -8 Z" fill="#2d5a27"/>
+    <text x="22" y="58" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" text-anchor="middle">A</text>
+    <circle cx="42" cy="12" r="15" fill="#a7c957"/>
+    <text x="42" y="18" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f3f1c" text-anchor="middle">1</text>
+  </g>
+  <path d="M96 150 q14 20 30 30" fill="none" stroke="#2d5a27" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- botol B -->
+  <g transform="translate(316 60)">
+    <rect x="14" y="0" width="16" height="14" rx="4" fill="#31414a"/>
+    <path d="M6 14 H38 a8 8 0 0 1 8 8 V78 a8 8 0 0 1 -8 8 H6 a8 8 0 0 1 -8 -8 V22 a8 8 0 0 1 8 -8 Z" fill="#2b6f88"/>
+    <text x="22" y="58" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" text-anchor="middle">B</text>
+    <circle cx="-2" cy="12" r="15" fill="#a7c957"/>
+    <text x="-2" y="18" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f3f1c" text-anchor="middle">2</text>
+  </g>
+  <path d="M324 150 q-14 20 -30 30" fill="none" stroke="#2b6f88" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- tandon -->
+  <path d="M118 168 H302 L292 262 a10 10 0 0 1 -10 9 H138 a10 10 0 0 1 -10 -9 Z" fill="#e6ece8"/>
+  <path d="M126 192 H294 L285 256 a8 8 0 0 1 -8 7 H143 a8 8 0 0 1 -8 -7 Z" fill="url(#air5)"/>
+  <path d="M126 192 q17 -9 34 0 t34 0 t34 0 t34 0" fill="none" stroke="#cdeaf4" stroke-width="5" stroke-linecap="round"/>
+  <path d="M118 168 H302 L292 262 a10 10 0 0 1 -10 9 H138 a10 10 0 0 1 -10 -9 Z" fill="none" stroke="#31414a" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="110" y="156" width="200" height="18" rx="9" fill="#31414a"/>
+  <text x="210" y="234" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#ffffff" text-anchor="middle">TANDON</text>
+
+  <text x="210" y="290" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">A dan B tidak pernah bertemu saat masih pekat</text>
+</svg>

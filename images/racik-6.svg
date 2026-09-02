@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="j6 d6">
+  <title id="j6">Ukur lalu catat</title>
+  <desc id="d6">EC dan pH diukur setelah larutan tercampur rata, lalu hasilnya dicatat
+    supaya bisa dibandingkan dari minggu ke minggu.</desc>
+  <rect width="420" height="300" rx="14" fill="#f4f9f2"/>
+  <text x="210" y="36" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#2d5a27" text-anchor="middle">Ukur EC dan pH, lalu catat</text>
+
+  <!-- alat ukur -->
+  <g transform="translate(58 48)">
+    <rect width="104" height="150" rx="16" fill="#31414a"/>
+    <rect x="12" y="14" width="80" height="52" rx="8" fill="#c9e8b8"/>
+    <text x="52" y="42" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#1f3f1c" text-anchor="middle">EC</text>
+    <text x="52" y="60" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" fill="#2d5a27" text-anchor="middle">1.8</text>
+    <g fill="#5b6b74"><rect x="16" y="80" width="30" height="18" rx="5"/><rect x="58" y="80" width="30" height="18" rx="5"/>
+      <rect x="16" y="106" width="30" height="18" rx="5"/><rect x="58" y="106" width="30" height="18" rx="5"/></g>
+    <rect x="42" y="150" width="20" height="66" rx="7" fill="#5b6b74"/>
+    <rect x="46" y="206" width="12" height="22" rx="5" fill="#a7c957"/>
+  </g>
+
+  <!-- air -->
+  <path d="M40 232 H196 a8 8 0 0 1 8 8 v18 a8 8 0 0 1 -8 8 H40 a8 8 0 0 1 -8 -8 v-18 a8 8 0 0 1 8 -8 Z" fill="#5fa8bf" opacity=".55"/>
+  <path d="M36 236 q16 -8 32 0 t32 0 t32 0 t32 0" fill="none" stroke="#cdeaf4" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- buku catatan -->
+  <g transform="translate(232 74)">
+    <rect width="150" height="176" rx="12" fill="#ffffff" stroke="#d7e2cc" stroke-width="4"/>
+    <rect x="0" y="0" width="18" height="176" rx="9" fill="#7fb069"/>
+    <g stroke="#cfd9c8" stroke-width="4" stroke-linecap="round">
+      <path d="M38 38 H128"/><path d="M38 66 H128"/><path d="M38 94 H128"/><path d="M38 122 H108"/>
+    </g>
+    <g fill="#2d5a27">
+      <circle cx="30" cy="38" r="4"/><circle cx="30" cy="66" r="4"/><circle cx="30" cy="94" r="4"/><circle cx="30" cy="122" r="4"/>
+    </g>
+    <text x="84" y="160" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" fill="#4c5b45" text-anchor="middle">catatan harian</text>
+  </g>
+  <path d="M392 60 L330 128" stroke="#e0a83c" stroke-width="10" stroke-linecap="round"/>
+  <path d="M336 122 l-12 14 18 -6 Z" fill="#31414a"/>
+
+  <text x="210" y="290" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Catatan mingguan mengalahkan ingatan</text>
+</svg>

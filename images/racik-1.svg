@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img"
+     aria-labelledby="j1 d1">
+  <title id="j1">Dua tangki terpisah</title>
+  <desc id="d1">Dua ember diberi label A dan B, masing-masing diisi air bersih sekitar tiga
+    perempat penuh, diletakkan berjauhan agar tidak tertukar.</desc>
+  <defs>
+    <linearGradient id="air1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd0e4"/><stop offset="1" stop-color="#4e9cb8"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="300" rx="14" fill="#f4f9f2"/>
+
+  <!-- ember A -->
+  <g>
+    <path d="M56 96 H186 L172 244 a10 10 0 0 1 -10 9 H80 a10 10 0 0 1 -10 -9 Z" fill="#e6ece8"/>
+    <path d="M64 148 H178 L169 238 a8 8 0 0 1 -8 7 H81 a8 8 0 0 1 -8 -7 Z" fill="url(#air1)"/>
+    <path d="M64 148 q14 -8 28 0 t28 0 t28 0 t30 0" fill="none" stroke="#cdeaf4" stroke-width="5" stroke-linecap="round"/>
+    <path d="M56 96 H186 L172 244 a10 10 0 0 1 -10 9 H80 a10 10 0 0 1 -10 -9 Z" fill="none" stroke="#31414a" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="48" y="84" width="146" height="18" rx="9" fill="#31414a"/>
+    <circle cx="121" cy="192" r="26" fill="#2d5a27"/>
+    <text x="121" y="202" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="30"
+          font-weight="700" fill="#ffffff" text-anchor="middle">A</text>
+  </g>
+
+  <!-- ember B -->
+  <g>
+    <path d="M234 96 H364 L350 244 a10 10 0 0 1 -10 9 H258 a10 10 0 0 1 -10 -9 Z" fill="#e6ece8"/>
+    <path d="M242 148 H356 L347 238 a8 8 0 0 1 -8 7 H259 a8 8 0 0 1 -8 -7 Z" fill="url(#air1)"/>
+    <path d="M242 148 q14 -8 28 0 t28 0 t28 0 t30 0" fill="none" stroke="#cdeaf4" stroke-width="5" stroke-linecap="round"/>
+    <path d="M234 96 H364 L350 244 a10 10 0 0 1 -10 9 H258 a10 10 0 0 1 -10 -9 Z" fill="none" stroke="#31414a" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="226" y="84" width="146" height="18" rx="9" fill="#31414a"/>
+    <circle cx="299" cy="192" r="26" fill="#2b6f88"/>
+    <text x="299" y="202" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="30"
+          font-weight="700" fill="#ffffff" text-anchor="middle">B</text>
+  </g>
+
+  <!-- garis batas isi -->
+  <g stroke="#7fb069" stroke-width="3" stroke-dasharray="9 7" stroke-linecap="round">
+    <path d="M40 148 H62"/><path d="M180 148 H240"/><path d="M358 148 H382"/>
+  </g>
+  <text x="210" y="42" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="21"
+        font-weight="600" fill="#2d5a27" text-anchor="middle">Isi air 3/4 penuh</text>
+  <text x="210" y="68" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="17"
+        fill="#6b7280" text-anchor="middle">Beri label, jangan sampai tertukar</text>
+
+  <!-- tanda jangan dicampur -->
+  <g transform="translate(210 196)">
+    <circle r="19" fill="#fbe4e4" stroke="#c0392b" stroke-width="4"/>
+    <path d="M-9 -9 L9 9 M9 -9 L-9 9" stroke="#c0392b" stroke-width="4.5" stroke-linecap="round"/>
+  </g>
+</svg>
