@@ -2230,3 +2230,418 @@ a.cta-button {
         font-size: 2rem;
     }
 }
+
+/* ==========================================================================
+   Keterbacaan di ponsel.
+   Blok ini sengaja ditaruh paling bawah agar menimpa media query di atasnya.
+   Sasaran: ukuran huruf yang wajar, jarak antarbagian yang tidak berlebihan,
+   teks panjang rata kiri, tabel yang menumpuk, dan diagram yang bisa digeser.
+   ========================================================================== */
+
+img {
+    max-width: 100%;
+}
+
+/* Diagram lebar tetap terbaca: digeser ke samping, bukan diperkecil */
+.diagram-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scroll-hint {
+    display: none;
+}
+
+@media (max-width: 760px) {
+    .diagram {
+        padding: 1rem;
+    }
+
+    .diagram-scroll img {
+        min-width: 620px;
+    }
+
+    .scroll-hint {
+        display: block;
+        margin-top: 0.4rem;
+        color: var(--accent-color);
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        line-height: 1.7;
+    }
+
+    /* --- skala judul --- */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.45rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Hero setinggi layar penuh membuat foto lanskap terpotong sangat rapat
+       dan tampak buram di ponsel. Dipendekkan supaya rasio potongnya wajar. */
+    .hero {
+        height: 72vh;
+        height: 72svh;
+        min-height: 440px;
+        max-height: 620px;
+    }
+
+    .hero-content h1,
+    .hero-content h2 {
+        font-size: 1.85rem;
+        line-height: 1.25;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 0.85rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .page-header {
+        padding: 100px 0 50px;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+        line-height: 1.25;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.9rem;
+    }
+
+    .breadcrumb span {
+        margin: 0 6px;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.45rem;
+        line-height: 1.3;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+
+    /* --- paragraf panjang lebih enak dibaca rata kiri --- */
+    .content-lead {
+        text-align: left;
+        font-size: 1rem;
+        margin-bottom: 1.75rem;
+    }
+
+    /* --- jarak antarbagian dipadatkan --- */
+    .about,
+    .technology,
+    .products-preview,
+    .products-detail,
+    .quality-assurance,
+    .contact-section,
+    .sitemap-section {
+        padding: 52px 0;
+    }
+
+    .stats,
+    .cta-section,
+    .faq-section,
+    .technology-showcase {
+        padding: 48px 0;
+    }
+
+    .content-block {
+        padding: 48px 0;
+    }
+
+    .quick-contact {
+        padding: 40px 0;
+    }
+
+    .product-section {
+        margin-bottom: 3rem;
+    }
+
+    /* --- statistik tetap dua kolom supaya tidak terlalu panjang --- */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2.1rem;
+    }
+
+    .stat-item p {
+        font-size: 0.92rem;
+    }
+
+    /* --- kartu dan daftar --- */
+    .feature-item,
+    .quality-item,
+    .value-item,
+    .tool-card,
+    .link-card {
+        padding: 1.4rem;
+    }
+
+    .steps-list li {
+        padding: 3rem 1.25rem 1.25rem;
+    }
+
+    .check-list li {
+        padding-left: 1.75rem;
+    }
+
+    .price-box {
+        padding: 1.1rem 1.25rem;
+    }
+
+    .price-box .price-value {
+        font-size: 1.35rem;
+    }
+
+    .figure figcaption,
+    .diagram figcaption {
+        font-size: 0.95rem;
+    }
+
+    .credit-list li {
+        font-size: 0.92rem;
+    }
+
+    .notice-banner h3 {
+        font-size: 1.1rem;
+    }
+
+    /* --- target sentuh yang lebih lega --- */
+    .nav-menu {
+        padding: 1rem 0;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 0.9rem 1rem;
+        font-size: 1.05rem;
+    }
+
+    .faq-question {
+        padding: 1.1rem 1.25rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1.02rem;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .submit-btn,
+    .quick-action {
+        padding: 0.95rem 1.25rem;
+    }
+
+    /* --- footer --- */
+    .footer {
+        padding: 48px 0 20px;
+    }
+
+    .footer-content {
+        margin-bottom: 2rem;
+    }
+
+    /* --- tabel berubah jadi kartu bertumpuk --- */
+    .table-wrap {
+        overflow-x: visible;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .data-table {
+        min-width: 0;
+        background: transparent;
+        display: block;
+    }
+
+    .data-table caption {
+        display: block;
+        padding: 0 0 1rem;
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    .data-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .data-table tbody,
+    .data-table tr,
+    .data-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .data-table tbody tr,
+    .data-table tbody tr:nth-child(even) {
+        background: var(--white);
+        border: 1px solid #e3eee5;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        margin-bottom: 1rem;
+        padding: 0.4rem 1.15rem 0.9rem;
+    }
+
+    .data-table td {
+        border-bottom: 1px solid #eef4ef;
+        padding: 0.7rem 0;
+    }
+
+    .data-table tr td:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .data-table td::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--secondary-color);
+        margin-bottom: 0.15rem;
+    }
+
+    .data-table td:first-child {
+        padding-top: 0.85rem;
+        font-size: 1.08rem;
+        color: var(--primary-color);
+    }
+
+    .data-table td:first-child::before {
+        display: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    .hero-content h1,
+    .hero-content h2 {
+        font-size: 1.65rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.32rem;
+    }
+
+    .nav-logo h2 {
+        font-size: 1.05rem;
+    }
+
+    .stat-item h3 {
+        font-size: 1.9rem;
+    }
+}
+
+/* Bagian selada memakai .product-detail.reverse, yang specificity-nya lebih
+   tinggi daripada .product-detail. Tanpa penyebutan eksplisit di sini, aturan
+   satu kolom untuk ponsel kalah, blok itu tetap dua kolom, thumbnail meluber,
+   lalu browser ponsel memperkecil seluruh halaman agar muat. */
+@media (max-width: 768px) {
+    .product-detail,
+    .product-detail.reverse {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .thumbnail-images {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    /* spec-item ditumpuk: label di atas, nilai di bawah, supaya tidak
+       terjepit jadi dua kolom sempit yang sama-sama terpotong */
+    .spec-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.15rem;
+        padding: 0.85rem 1rem;
+    }
+
+    .spec-item strong {
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--secondary-color);
+    }
+
+    /* ikon daftar tetap sejajar baris pertama saat teksnya membungkus */
+    .product-features li {
+        align-items: flex-start;
+    }
+
+    .product-features i {
+        margin-top: 0.42em;
+        flex-shrink: 0;
+    }
+
+    .varieties-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    /* kotak centang lebih mudah disentuh dan teksnya tidak terlalu tebal */
+    .checkbox-label {
+        gap: 0.7rem;
+        font-size: 0.95rem;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-top: 0.1rem;
+        flex-shrink: 0;
+        accent-color: var(--primary-color);
+    }
+}
