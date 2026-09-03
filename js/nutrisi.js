@@ -847,6 +847,33 @@
     b.addEventListener('click', function () { pilihTab(b.dataset.panel); });
   });
 
+  /* Bagian langkah ikut tersembunyi bersama tabnya, jadi tautan yang menunjuk
+     ke sana dari luar tab harus membuka tabnya lebih dulu. Tanpa ini, tautan
+     "#langkah-meracik" melompat ke elemen yang sedang hidden dan tidak
+     terjadi apa-apa. */
+  var TAB_UNTUK_TUJUAN = {
+    'langkah-meracik': 'panel-racik',
+    'panel-racik': 'panel-racik',
+    'langkah-abmix': 'panel-siap',
+    'panel-siap': 'panel-siap'
+  };
+
+  function ikutiTujuan() {
+    var panel = TAB_UNTUK_TUJUAN[(location.hash || '').replace('#', '')];
+    if (!panel) return;
+    pilihTab(panel);
+    var tujuan = el((location.hash || '').replace('#', ''));
+    if (tujuan) tujuan.scrollIntoView();
+  }
+
+  window.addEventListener('hashchange', ikutiTujuan);
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest && ev.target.closest('a[href^="#"]');
+    if (!a) return;
+    var panel = TAB_UNTUK_TUJUAN[a.getAttribute('href').slice(1)];
+    if (panel) pilihTab(panel);
+  });
+
   /* =====================================================================
      Pemasangan pendengar dan nilai awal
      ===================================================================== */
@@ -871,5 +898,6 @@
     hitungSiapPakai();
     isiPilihanResep('selada');
     muatResep();
+    ikutiTujuan();          /* hormati tautan langsung ke salah satu mode */
   })();
 })();
