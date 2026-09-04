@@ -4331,16 +4331,8 @@ img {
     font-weight: 600;
 }
 
-.nav-link.active::after {
-    content: "";
-    position: absolute;
-    left: 0.7rem;
-    right: 0.7rem;
-    bottom: 0.22rem;
-    height: 2px;
-    border-radius: 2px;
-    background: var(--primary-color);
-}
+/* Garis bawah tautan aktif dimatikan di css/animations.css, tempat aturan
+   aslinya berada. Penanda halaman aktif cukup kotak hijau di atas. */
 
 /* Layar sedang: rapatkan sebelum sempat berdesakan */
 @media (max-width: 1240px) {
@@ -4429,10 +4421,6 @@ img {
         padding: 0.9rem 1rem;
         font-size: 1.05rem;
         border-radius: 0;
-    }
-
-    .nav-link.active::after {
-        display: none;
     }
 
     .nav-punya-sub {

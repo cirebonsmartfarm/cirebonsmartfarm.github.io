@@ -399,8 +399,10 @@
     transition: width 0.3s ease;
 }
 
-.nav-link:hover::before,
-.nav-link.active::before {
+/* Garis bawah hanya muncul sebagai isyarat sesaat saat kursor lewat.
+   Halaman yang sedang dibuka sudah ditandai kotak hijau, jadi garisnya
+   tidak ikut dipasang supaya penandanya tidak dobel. */
+.nav-link:not(.active):hover::before {
     width: 100%;
 }
 
