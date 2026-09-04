@@ -4013,3 +4013,266 @@ img {
         justify-content: center;
     }
 }
+
+/* =====================================================================
+   Pelatihan Gratis
+   Kartu modul di halaman indeks, bilah keterangan di tiap modul, dan
+   navigasi antarmodul. Menambah modul baru tidak menuntut CSS baru.
+   ===================================================================== */
+
+/* Ikon polos di dalam kartu, disamakan tampilannya dengan kotak ikon */
+.tool-card > i {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #e6f1e2;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+/* --- bilah keterangan modul --- */
+.modul-meta {
+    background: #eef5ec;
+    border-bottom: 1px solid #dbe9dc;
+}
+
+.modul-meta-baris {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.modul-meta-baris i {
+    color: var(--accent-color);
+    margin-right: 0.4rem;
+}
+
+/* --- kartu modul --- */
+.modul-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.75rem;
+}
+
+.modul-kartu {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid #e3eee5;
+    border-radius: var(--border-radius);
+    padding: 1.75rem;
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.modul-kartu::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--light-green));
+}
+
+.modul-kartu:hover,
+.modul-kartu:focus-visible {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
+}
+
+.modul-kartu-kop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.modul-nomor {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #d7e7d2;
+    letter-spacing: -0.02em;
+}
+
+.modul-kartu-kop i {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #e6f1e2;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.modul-kartu h3 {
+    font-size: 1.22rem;
+    color: var(--primary-color);
+    margin-bottom: 0.55rem;
+    line-height: 1.35;
+}
+
+.modul-kartu > p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1.1rem;
+}
+
+.modul-topik {
+    list-style: none;
+    display: grid;
+    gap: 0.4rem;
+    margin: 0 0 1.35rem;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.modul-topik li {
+    position: relative;
+    padding-left: 1.4rem;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.modul-topik li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0.05rem;
+    font-size: 0.72rem;
+    color: var(--accent-color);
+}
+
+.modul-kartu-kaki {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eef4ef;
+}
+
+.modul-chip {
+    background: #e6f1e2;
+    color: var(--primary-color);
+    border-radius: 999px;
+    padding: 0.28rem 0.75rem;
+    font-size: 0.76rem;
+    font-weight: 600;
+}
+
+.modul-chip.halus {
+    background: #f2f6f2;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.modul-buka {
+    margin-left: auto;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    white-space: nowrap;
+}
+
+.modul-buka i {
+    transition: var(--transition);
+    margin-left: 0.25rem;
+}
+
+.modul-kartu:hover .modul-buka i {
+    transform: translateX(4px);
+}
+
+/* --- navigasi antarmodul --- */
+.modul-antar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+.modul-lompat {
+    display: block;
+    background: var(--white);
+    border: 1px solid #e3eee5;
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.modul-lompat:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
+}
+
+.modul-lompat.sesudah {
+    text-align: right;
+}
+
+.modul-lompat-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 0.3rem;
+}
+
+.modul-lompat strong {
+    color: var(--primary-color);
+    font-size: 1.05rem;
+}
+
+.modul-antar-catatan {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--text-light);
+    font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+    .modul-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modul-meta-baris {
+        gap: 0.5rem 1.25rem;
+        font-size: 0.83rem;
+    }
+
+    .modul-kartu {
+        padding: 1.35rem;
+    }
+
+    .modul-nomor {
+        font-size: 1.65rem;
+    }
+
+    .modul-buka {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 0.35rem;
+    }
+
+    .modul-lompat.sesudah {
+        text-align: left;
+    }
+}
