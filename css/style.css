@@ -4276,3 +4276,212 @@ img {
         text-align: left;
     }
 }
+
+/* =====================================================================
+   Perapian bilah navigasi
+   Nama merek sebelumnya membungkus menjadi dua sampai tiga baris begitu
+   menu penuh, karena h2 boleh patah dan lebar wadah dibatasi 1200px.
+   Blok ini mengunci nama merek pada satu baris, merapatkan jarak menu
+   secukupnya, dan memindahkan ambang menu ponsel ke 980px supaya tidak
+   ada lebar layar yang membuat menu berdesakan.
+   ===================================================================== */
+
+.nav-container {
+    gap: 1.5rem;
+}
+
+.nav-logo {
+    flex-shrink: 0;
+}
+
+/* Nama merek tidak boleh pernah patah menjadi dua baris */
+.nav-logo h2 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    letter-spacing: -0.01em;
+}
+
+.nav-menu {
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.nav-link,
+.nav-sub-tombol {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.97rem;
+    line-height: 1.4;
+    position: relative;
+}
+
+/* Penanda halaman aktif: latar hijau lembut dengan garis tipis di bawah,
+   menggantikan kotak putih yang nyaris tak terlihat di atas bilah putih. */
+.nav-link:hover,
+.nav-sub-tombol:hover,
+.nav-sub-tombol.aktif {
+    background-color: #eef5ec;
+    color: var(--primary-color);
+}
+
+.nav-link.active {
+    background-color: #e6f1e2;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0.7rem;
+    right: 0.7rem;
+    bottom: 0.22rem;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--primary-color);
+}
+
+/* Layar sedang: rapatkan sebelum sempat berdesakan */
+@media (max-width: 1240px) {
+    .nav-container {
+        gap: 1rem;
+    }
+
+    .nav-logo h2 {
+        font-size: 1.25rem;
+    }
+
+    .nav-logo img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .nav-menu {
+        gap: 0.35rem;
+    }
+
+    .nav-link,
+    .nav-sub-tombol {
+        padding: 0.45rem 0.55rem;
+        font-size: 0.92rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    .nav-logo h2 {
+        font-size: 1.15rem;
+    }
+
+    .nav-menu {
+        gap: 0.2rem;
+    }
+
+    .nav-link,
+    .nav-sub-tombol {
+        padding: 0.42rem 0.45rem;
+        font-size: 0.88rem;
+    }
+}
+
+/* Ambang menu ponsel dinaikkan dari 768px ke 980px. Di bawah lebar itu
+   tujuh butir menu tidak lagi muat tanpa memperkecil huruf sampai sulit
+   dibaca, jadi lebih baik dilipat ke tombol. */
+@media (max-width: 980px) {
+    .nav-container {
+        gap: 1rem;
+    }
+
+    .nav-logo h2 {
+        font-size: 1.3rem;
+    }
+
+    .nav-logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        align-items: stretch;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow);
+        padding: 1.5rem 0;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-link,
+    .nav-sub-tombol {
+        padding: 0.9rem 1rem;
+        font-size: 1.05rem;
+        border-radius: 0;
+    }
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+    .nav-punya-sub {
+        position: static;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-sub-tombol {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-sub {
+        position: static;
+        transform: none;
+        min-width: 0;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: var(--light-bg);
+        padding: 0.25rem 0.75rem 0.75rem;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: none;
+    }
+
+    .nav-sub::before {
+        display: none;
+    }
+
+    .nav-punya-sub.terbuka .nav-sub {
+        display: block;
+        transform: none;
+    }
+
+    .nav-punya-sub:hover .nav-sub {
+        display: none;
+    }
+
+    .nav-punya-sub.terbuka:hover .nav-sub {
+        display: block;
+    }
+
+    .nav-sub-link {
+        text-align: left;
+        padding: 0.7rem 0.5rem;
+    }
+}
