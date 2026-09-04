@@ -4473,3 +4473,52 @@ img {
         padding: 0.7rem 0.5rem;
     }
 }
+
+/* Kartu jalur pelatihan di halaman induk. Bentuknya sama dengan kartu modul,
+   hanya lebih lapang karena isinya seluruh daftar modul di jalur itu. */
+.jalur-grid {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+}
+
+.jalur-kartu {
+    padding: 2rem;
+}
+
+.jalur-kartu h3 {
+    font-size: 1.45rem;
+}
+
+.jalur-kartu .modul-nomor {
+    color: var(--accent-color);
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+}
+
+.jalur-modul {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-light);
+}
+
+.jalur-kartu .modul-kartu-kop i {
+    width: 54px;
+    height: 54px;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    .jalur-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jalur-kartu {
+        padding: 1.5rem;
+    }
+
+    .jalur-kartu h3 {
+        font-size: 1.22rem;
+    }
+}

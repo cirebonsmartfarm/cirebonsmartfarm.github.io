@@ -150,44 +150,58 @@ function initSalinKutipan() {
 // Di layar lebar panel terbuka lewat hover, yang diurus CSS. Fungsi ini
 // mengurus klik dan sentuh, karena perangkat sentuh tidak punya hover.
 function initMenuKalkulator() {
-    const bungkus = document.getElementById('menu-kalkulator');
-    if (!bungkus) return;
+    /* Menangani seluruh menu turun di navigasi, bukan hanya satu. Sejak jalur
+       pelatihan dibagi dua, ada dua menu turun yang harus saling menutup. */
+    const semua = Array.from(document.querySelectorAll('.nav-punya-sub'));
+    if (!semua.length) return;
 
-    const tombol = bungkus.querySelector('.nav-sub-tombol');
-    if (!tombol) return;
+    const daftar = [];
 
-    function setel(terbuka) {
-        bungkus.classList.toggle('terbuka', terbuka);
-        tombol.setAttribute('aria-expanded', terbuka ? 'true' : 'false');
-    }
+    semua.forEach((bungkus) => {
+        const tombol = bungkus.querySelector('.nav-sub-tombol');
+        if (!tombol) return;
 
-    tombol.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        setel(!bungkus.classList.contains('terbuka'));
+        function setel(terbuka) {
+            bungkus.classList.toggle('terbuka', terbuka);
+            tombol.setAttribute('aria-expanded', terbuka ? 'true' : 'false');
+        }
+        daftar.push({ bungkus, tombol, setel });
+
+        tombol.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const buka = !bungkus.classList.contains('terbuka');
+            daftar.forEach((x) => x.setel(false));
+            setel(buka);
+        });
+
+        // Setelah memilih salah satu tautan, menu ponsel ikut ditutup.
+        bungkus.querySelectorAll('.nav-sub-link').forEach((tautan) => {
+            tautan.addEventListener('click', () => {
+                setel(false);
+                const menu = document.getElementById('nav-menu');
+                const toggle = document.getElementById('nav-toggle');
+                if (menu) menu.classList.remove('active');
+                if (toggle) toggle.classList.remove('active');
+            });
+        });
     });
 
     // Menutup saat menyentuh di luar menu.
     document.addEventListener('click', (e) => {
-        if (!bungkus.contains(e.target)) setel(false);
+        daftar.forEach((x) => {
+            if (!x.bungkus.contains(e.target)) x.setel(false);
+        });
     });
 
     // Menutup dengan tombol Escape, lalu fokus kembali ke tombolnya.
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && bungkus.classList.contains('terbuka')) {
-            setel(false);
-            tombol.focus();
-        }
-    });
-
-    // Setelah memilih salah satu kalkulator, menu mobile ikut ditutup.
-    bungkus.querySelectorAll('.nav-sub-link').forEach((tautan) => {
-        tautan.addEventListener('click', () => {
-            setel(false);
-            const menu = document.getElementById('nav-menu');
-            const toggle = document.getElementById('nav-toggle');
-            if (menu) menu.classList.remove('active');
-            if (toggle) toggle.classList.remove('active');
+        if (e.key !== 'Escape') return;
+        daftar.forEach((x) => {
+            if (x.bungkus.classList.contains('terbuka')) {
+                x.setel(false);
+                x.tombol.focus();
+            }
         });
     });
 }
