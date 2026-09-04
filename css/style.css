@@ -896,6 +896,10 @@ a {
     border-left: 4px solid #1877f2;
 }
 
+.social-link.tiktok {
+    border-left: 4px solid #010101;
+}
+
 .social-link i {
     font-size: 1.5rem;
     width: 40px;
@@ -908,6 +912,10 @@ a {
 
 .social-link.facebook i {
     color: #1877f2;
+}
+
+.social-link.tiktok i {
+    color: #010101;
 }
 
 .social-info span {
