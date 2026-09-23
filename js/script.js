@@ -275,7 +275,18 @@ function initHeroSlider() {
     const totalSlides = slides.length;
     let slideInterval;
 
+    /* Latar slide selain yang pertama baru dipasang saat gilirannya tiba.
+       Tanpa ini keempat gambar terunduh sekaligus saat halaman dibuka,
+       padahal hanya satu yang terlihat. */
+    function pasangLatar(slide) {
+        if (!slide || !slide.dataset.latar) return;
+        slide.setAttribute('style', slide.dataset.latar);
+        delete slide.dataset.latar;
+    }
+
     function showSlide(index) {
+        pasangLatar(slides[index]);
+        pasangLatar(slides[(index + 1) % slides.length]);   // siapkan yang berikutnya
         // Remove active class from all slides and indicators
         slides.forEach(slide => slide.classList.remove('active'));
         indicators.forEach(indicator => indicator.classList.remove('active'));

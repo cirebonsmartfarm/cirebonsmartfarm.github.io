@@ -4536,3 +4536,183 @@ img {
         font-size: 1.22rem;
     }
 }
+
+/* =====================================================================
+   Perombakan tampilan beranda
+   Kartu yang rata tengah diganti rata kiri supaya lebih mudah dibaca,
+   ikon diberi kotak lembut, dan keterangan pada galeri teknologi kini
+   selalu terlihat. Sebelumnya keterangan itu hanya muncul saat kursor
+   menyentuhnya, sehingga di layar sentuh tidak pernah terbaca sama sekali.
+   ===================================================================== */
+
+/* Elemen picture ikut mengisi wadahnya seperti img biasa */
+picture {
+    display: block;
+    line-height: 0;
+}
+
+.product-image picture,
+.tech-gambar picture {
+    height: 100%;
+}
+
+.product-image picture img,
+.tech-gambar picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-image picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+/* --- label kecil di atas judul bagian --- */
+.kop-label {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
+}
+
+.section-header h2 {
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+/* --- kartu keunggulan: rata kiri, ikon berkotak --- */
+.feature-item {
+    text-align: left;
+    padding: 1.6rem 1.5rem;
+    border: 1px solid #e6efe7;
+    border-radius: 14px;
+    box-shadow: 0 1px 2px rgba(16, 40, 20, 0.04);
+}
+
+.feature-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(16, 40, 20, 0.10);
+    border-color: #cfe3d2;
+}
+
+.feature-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #e9f3e8;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.feature-item h4 {
+    font-size: 1.05rem;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    font-size: 0.94rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+/* --- galeri teknologi: keterangan selalu terlihat --- */
+.tech-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(16, 40, 20, 0.05);
+}
+
+.tech-gambar {
+    height: 300px;
+    overflow: hidden;
+}
+
+.tech-gambar img {
+    transition: transform 0.5s ease;
+}
+
+.tech-item:hover .tech-gambar img {
+    transform: scale(1.06);
+}
+
+.tech-overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+    transform: none;
+    background: linear-gradient(to top,
+                rgba(10, 30, 14, 0.92) 18%,
+                rgba(10, 30, 14, 0.70) 55%,
+                rgba(10, 30, 14, 0) 100%);
+    padding: 2.4rem 1.5rem 1.4rem;
+    color: var(--white);
+}
+
+.tech-item:hover .tech-overlay {
+    transform: none;
+}
+
+.tech-overlay h3 {
+    font-size: 1.12rem;
+    margin-bottom: 0.35rem;
+    color: var(--white);
+}
+
+.tech-overlay p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.88);
+    margin: 0;
+}
+
+/* --- kartu produk --- */
+.product-card {
+    border: 1px solid #e6efe7;
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgba(16, 40, 20, 0.04);
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(16, 40, 20, 0.12);
+}
+
+.product-image {
+    height: 260px;
+}
+
+/* --- angka capaian --- */
+.stat-item h3 {
+    letter-spacing: -0.03em;
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .feature-item {
+        padding: 1.3rem 1.25rem;
+    }
+
+    .tech-gambar {
+        height: 230px;
+    }
+
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+}

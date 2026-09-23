@@ -1,0 +1,458 @@
+{
+ "selada.jpg": {
+  "w": 2000,
+  "h": 2000,
+  "avif": [
+   {
+    "w": 480,
+    "h": 480,
+    "file": "images/r/selada-480.avif",
+    "bytes": 21408
+   },
+   {
+    "w": 768,
+    "h": 768,
+    "file": "images/r/selada-768.avif",
+    "bytes": 44329
+   },
+   {
+    "w": 1200,
+    "h": 1200,
+    "file": "images/r/selada-1200.avif",
+    "bytes": 85838
+   }
+  ],
+  "webp": [
+   {
+    "w": 480,
+    "h": 480,
+    "file": "images/r/selada-480.webp",
+    "bytes": 33358
+   },
+   {
+    "w": 768,
+    "h": 768,
+    "file": "images/r/selada-768.webp",
+    "bytes": 67412
+   },
+   {
+    "w": 1200,
+    "h": 1200,
+    "file": "images/r/selada-1200.webp",
+    "bytes": 123316
+   }
+  ]
+ },
+ "seeds.jpg": {
+  "w": 963,
+  "h": 607,
+  "avif": [
+   {
+    "w": 480,
+    "h": 303,
+    "file": "images/r/seeds-480.avif",
+    "bytes": 16275
+   },
+   {
+    "w": 768,
+    "h": 484,
+    "file": "images/r/seeds-768.avif",
+    "bytes": 34989
+   }
+  ],
+  "webp": [
+   {
+    "w": 480,
+    "h": 303,
+    "file": "images/r/seeds-480.webp",
+    "bytes": 28096
+   },
+   {
+    "w": 768,
+    "h": 484,
+    "file": "images/r/seeds-768.webp",
+    "bytes": 57194
+   }
+  ]
+ },
+ "akuaponik.jpg": {
+  "w": 1280,
+  "h": 853,
+  "avif": [
+   {
+    "w": 480,
+    "h": 320,
+    "file": "images/r/akuaponik-480.avif",
+    "bytes": 18502
+   },
+   {
+    "w": 768,
+    "h": 512,
+    "file": "images/r/akuaponik-768.avif",
+    "bytes": 41213
+   },
+   {
+    "w": 1200,
+    "h": 800,
+    "file": "images/r/akuaponik-1200.avif",
+    "bytes": 85727
+   }
+  ],
+  "webp": [
+   {
+    "w": 480,
+    "h": 320,
+    "file": "images/r/akuaponik-480.webp",
+    "bytes": 31728
+   },
+   {
+    "w": 768,
+    "h": 512,
+    "file": "images/r/akuaponik-768.webp",
+    "bytes": 68424
+   },
+   {
+    "w": 1200,
+    "h": 800,
+    "file": "images/r/akuaponik-1200.webp",
+    "bytes": 133224
+   }
+  ]
+ },
+ "slide3.jpg": {
+  "w": 3497,
+  "h": 1960,
+  "avif": [
+   {
+    "w": 480,
+    "h": 269,
+    "file": "images/r/slide3-480.avif",
+    "bytes": 16469
+   },
+   {
+    "w": 768,
+    "h": 430,
+    "file": "images/r/slide3-768.avif",
+    "bytes": 34455
+   },
+   {
+    "w": 1200,
+    "h": 673,
+    "file": "images/r/slide3-1200.avif",
+    "bytes": 69179
+   },
+   {
+    "w": 1920,
+    "h": 1076,
+    "file": "images/r/slide3-1920.avif",
+    "bytes": 150201
+   }
+  ],
+  "webp": [
+   {
+    "w": 480,
+    "h": 269,
+    "file": "images/r/slide3-480.webp",
+    "bytes": 32350
+   },
+   {
+    "w": 768,
+    "h": 430,
+    "file": "images/r/slide3-768.webp",
+    "bytes": 65884
+   },
+   {
+    "w": 1200,
+    "h": 673,
+    "file": "images/r/slide3-1200.webp",
+    "bytes": 131210
+   },
+   {
+    "w": 1920,
+    "h": 1076,
+    "file": "images/r/slide3-1920.webp",
+    "bytes": 260078
+   }
+  ]
+ },
+ "slide2.jpg": {
+  "w": 2907,
+  "h": 1960,
+  "avif": [
+   {
+    "w": 480,
+    "h": 324,
+    "file": "images/r/slide2-480.avif",
+    "bytes": 27385
+   },
+   {
+    "w": 768,
+    "h": 518,
+    "file": "images/r/slide2-768.avif",
+    "bytes": 62276
+   },
+   {
+    "w": 1200,
+    "h": 809,
+    "file": "images/r/slide2-1200.avif",
+    "bytes": 132576
+   },
+   {
+    "w": 1920,
+    "h": 1295,
+    "file": "images/r/slide2-1920.avif",
+    "bytes": 288631
+   }
+  ],
+  "webp": [
+   {
+    "w": 480,
+    "h": 324,
+    "file": "images/r/slide2-480.webp",
+    "bytes": 50344
+   },
+   {
+    "w": 768,
+    "h": 518,
+    "file": "images/r/slide2-768.webp",
+    "bytes": 112804
+   },
+   {
+    "w": 1200,
+    "h": 809,
+    "file": "images/r/slide2-1200.webp",
+    "bytes": 239386
+   },
+   {
+    "w": 1920,
+    "h": 1295,
+    "file": "images/r/slide2-1920.webp",
+    "bytes": 492900
+   }
+  ]
+ },
+ "slide1.webp": {
+  "w": 800,
+  "h": 534,
+  "avif": [
+   {
+    "w": 480,
+    "h": 320,
+    "file": "images/r/slide1-480.avif",
+    "bytes": 25079
+   },
+   {
+    "w": 768,
+    "h": 513,
+    "file": "images/r/slide1-768.avif",
+    "bytes": 57335
+   }
+  ],
+  "webp": [
+   {
+    "w": 480,
+    "h": 320,
+    "file": "images/r/slide1-480.webp",
+    "bytes": 50206
+   },
+   {
+    "w": 768,
+    "h": 513,
+    "file": "images/r/slide1-768.webp",
+    "bytes": 112866
+   }
+  ]
+ },
+ "bioflok-panen-nila.jpg": {
+  "w": 1280,
+  "h": 853,
+  "avif": [
+   {
+    "w": 480,
+    "h": 320,
+    "file": "images/r/bioflok-panen-nila-480.avif",
+    "bytes": 26213
+   },
+   {
+    "w": 768,
+    "h": 512,
+    "file": "images/r/bioflok-panen-nila-768.avif",
+    "bytes": 71779
+   },
+   {
+    "w": 1200,
+    "h": 800,
+    "file": "images/r/bioflok-panen-nila-1200.avif",
+    "bytes": 184209
+   }
+  ],
+  "webp": [
+   {
+    "w": 480,
+    "h": 320,
+    "file": "images/r/bioflok-panen-nila-480.webp",
+    "bytes": 48390
+   },
+   {
+    "w": 768,
+    "h": 512,
+    "file": "images/r/bioflok-panen-nila-768.webp",
+    "bytes": 134956
+   },
+   {
+    "w": 1200,
+    "h": 800,
+    "file": "images/r/bioflok-panen-nila-1200.webp",
+    "bytes": 351894
+   }
+  ]
+ },
+ "bioflok-fasilitas.jpg": {
+  "w": 960,
+  "h": 1280,
+  "avif": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "images/r/bioflok-fasilitas-480.avif",
+    "bytes": 38219
+   },
+   {
+    "w": 768,
+    "h": 1024,
+    "file": "images/r/bioflok-fasilitas-768.avif",
+    "bytes": 80704
+   }
+  ],
+  "webp": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "images/r/bioflok-fasilitas-480.webp",
+    "bytes": 66344
+   },
+   {
+    "w": 768,
+    "h": 1024,
+    "file": "images/r/bioflok-fasilitas-768.webp",
+    "bytes": 141568
+   }
+  ]
+ },
+ "selada2.webp": {
+  "w": 1588,
+  "h": 1080,
+  "avif": [
+   {
+    "w": 480,
+    "h": 326,
+    "file": "images/r/selada2-480.avif",
+    "bytes": 18203
+   },
+   {
+    "w": 768,
+    "h": 522,
+    "file": "images/r/selada2-768.avif",
+    "bytes": 37002
+   },
+   {
+    "w": 1200,
+    "h": 816,
+    "file": "images/r/selada2-1200.avif",
+    "bytes": 70051
+   }
+  ],
+  "webp": [
+   {
+    "w": 480,
+    "h": 326,
+    "file": "images/r/selada2-480.webp",
+    "bytes": 30546
+   },
+   {
+    "w": 768,
+    "h": 522,
+    "file": "images/r/selada2-768.webp",
+    "bytes": 58222
+   },
+   {
+    "w": 1200,
+    "h": 816,
+    "file": "images/r/selada2-1200.webp",
+    "bytes": 99892
+   }
+  ]
+ },
+ "melon.webp": {
+  "w": 681,
+  "h": 844,
+  "avif": [
+   {
+    "w": 480,
+    "h": 595,
+    "file": "images/r/melon-480.avif",
+    "bytes": 19233
+   }
+  ],
+  "webp": [
+   {
+    "w": 480,
+    "h": 595,
+    "file": "images/r/melon-480.webp",
+    "bytes": 28690
+   }
+  ]
+ },
+ "packaging.jpg": {
+  "w": 1000,
+  "h": 1000,
+  "avif": [
+   {
+    "w": 480,
+    "h": 480,
+    "file": "images/r/packaging-480.avif",
+    "bytes": 11061
+   },
+   {
+    "w": 768,
+    "h": 768,
+    "file": "images/r/packaging-768.avif",
+    "bytes": 22429
+   }
+  ],
+  "webp": [
+   {
+    "w": 480,
+    "h": 480,
+    "file": "images/r/packaging-480.webp",
+    "bytes": 16064
+   },
+   {
+    "w": 768,
+    "h": 768,
+    "file": "images/r/packaging-768.webp",
+    "bytes": 30810
+   }
+  ]
+ },
+ "irisanmelon.webp": {
+  "w": 500,
+  "h": 500,
+  "avif": [
+   {
+    "w": 480,
+    "h": 480,
+    "file": "images/r/irisanmelon-480.avif",
+    "bytes": 30229
+   }
+  ],
+  "webp": [
+   {
+    "w": 480,
+    "h": 480,
+    "file": "images/r/irisanmelon-480.webp",
+    "bytes": 53058
+   }
+  ]
+ }
+}

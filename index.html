@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preload" as="image" href="images/slide3.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="images/r/slide3-1920.avif" type="image/avif" fetchpriority="high">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/style.css">
@@ -182,28 +182,28 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-slider">
-            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/slide3.webp')">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/r/slide3-1920.webp'); background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-set(url('images/r/slide3-1920.avif') type('image/avif'), url('images/r/slide3-1920.webp') type('image/webp'))">
                 <div class="hero-content">
                     <h1 class="animate-fade-in">Melon Premium &amp; Sayuran Hidroponik Segar Berkualitas Ekspor</h1>
                     <p class="animate-slide-up">Langsung dari greenhouse modern di Cirebon dengan teknologi microbubble</p>
                     <a href="contact.html" class="cta-button animate-bounce">Hubungi Kami</a>
                 </div>
             </div>
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/slide1.webp')">
+            <div class="slide" data-latar="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/r/slide1-768.webp'); background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-set(url('images/r/slide1-768.avif') type('image/avif'), url('images/r/slide1-768.webp') type('image/webp'))" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4))">
                 <div class="hero-content">
                     <h2 class="animate-fade-in">Revolusi Pertanian Hidroponik Modern di Cirebon</h2>
                     <p class="animate-slide-up">Teknologi canggih dengan sistem otomatis untuk hasil panen terbaik</p>
                     <a href="about.html" class="cta-button animate-bounce">Jelajahi Teknologi Kami</a>
                 </div>
             </div>
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/slide2.jpg')">
+            <div class="slide" data-latar="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/r/slide2-1920.webp'); background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-set(url('images/r/slide2-1920.avif') type('image/avif'), url('images/r/slide2-1920.webp') type('image/webp'))" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4))">
                 <div class="hero-content">
                     <h2 class="animate-fade-in">Smart Farming untuk Masa Depan Berkelanjutan</h2>
                     <p class="animate-slide-up">Greenhouse otomatis dengan kontrol kelembaban dan nutrisi presisi</p>
                     <a href="product.html" class="cta-button animate-bounce">Lihat Produk Premium</a>
                 </div>
             </div>
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/bioflok-panen-nila.jpg')">
+            <div class="slide" data-latar="background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/r/bioflok-panen-nila-1200.webp'); background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), image-set(url('images/r/bioflok-panen-nila-1200.avif') type('image/avif'), url('images/r/bioflok-panen-nila-1200.webp') type('image/webp'))" style="background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45))">
                 <div class="hero-content">
                     <h2 class="animate-fade-in">Segera Hadir: Budidaya Ikan Nila Sistem Bioflok</h2>
                     <p class="animate-slide-up">Kolam padat tebar tinggi, hemat air, tersambung ke greenhouse hidroponik kami</p>
@@ -227,6 +227,7 @@
     <section class="about" id="about">
         <div class="container">
             <div class="section-header">
+                <span class="kop-label">Tentang Kami</span>
                 <h2>Tentang Cirebon Smart Farm</h2>
                 <p>Pelopor teknologi hidroponik modern di Cirebon dengan sistem otomatisasi terdepan</p>
             </div>
@@ -274,7 +275,12 @@
                     </p>
                 </div>
                 <div class="about-image">
-                    <img src="images/tekno4.png" alt="Teknologi hidroponik modern Cirebon Smart Farm" class="animate-scale" loading="lazy" decoding="async">
+                    <picture>
+                            <source type="image/avif" srcset="images/r/selada-480.avif 480w, images/r/selada-768.avif 768w, images/r/selada-1200.avif 1200w" sizes="(max-width: 900px) 92vw, 46vw">
+                            <source type="image/webp" srcset="images/r/selada-480.webp 480w, images/r/selada-768.webp 768w, images/r/selada-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 46vw">
+                            <img src="images/r/selada-1200.webp" alt="Selada hidroponik dipanen lengkap dengan akarnya di greenhouse Cirebon Smart Farm" width="1200" height="1200" class="animate-scale" loading="lazy"
+                                 decoding="async">
+                        </picture>
                 </div>
             </div>
         </div>
@@ -284,31 +290,53 @@
     <section class="technology">
         <div class="container">
             <div class="section-header">
+                <span class="kop-label">Cara Kerja</span>
                 <h2>Teknologi Greenhouse Otomatis</h2>
                 <p>Sistem canggih untuk produktivitas maksimal dan kualitas terjamin</p>
             </div>
             <div class="tech-gallery">
-                <div class="tech-item animate-on-scroll">
-                    <img src="images/tekno2.png" alt="Peralatan pertanian modern otomatis" loading="lazy" decoding="async">
-                    <div class="tech-overlay">
-                        <h3>Sistem Irigasi Otomatis</h3>
-                        <p>Pengairan presisi dengan timer dan sensor kelembaban tanah</p>
+                <article class="tech-item animate-on-scroll">
+                    <div class="tech-gambar">
+                        <picture>
+                            <source type="image/avif" srcset="images/r/slide3-480.avif 480w, images/r/slide3-768.avif 768w, images/r/slide3-1200.avif 1200w, images/r/slide3-1920.avif 1920w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw">
+                            <source type="image/webp" srcset="images/r/slide3-480.webp 480w, images/r/slide3-768.webp 768w, images/r/slide3-1200.webp 1200w, images/r/slide3-1920.webp 1920w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw">
+                            <img src="images/r/slide3-1920.webp" alt="Bagian dalam greenhouse Cirebon Smart Farm dengan barisan tanaman hidroponik" width="1920" height="1076" loading="lazy"
+                                 decoding="async">
+                        </picture>
                     </div>
-                </div>
-                <div class="tech-item animate-on-scroll">
-                    <img src="images/tekno1.png" alt="Otomatisasi greenhouse smart farming" loading="lazy" decoding="async">
                     <div class="tech-overlay">
-                        <h3>Smart Control System</h3>
-                        <p>Panel kontrol digital untuk monitoring seluruh sistem greenhouse</p>
+                        <h3>Greenhouse Terkontrol</h3>
+                        <p>Suhu, kelembapan, dan sirkulasi udara diatur, bukan dibiarkan mengikuti cuaca</p>
                     </div>
-                </div>
-                <div class="tech-item animate-on-scroll">
-                    <img src="images/tekno3.png" alt="Teknologi smart farming automation" loading="lazy" decoding="async">
+                </article>
+                <article class="tech-item animate-on-scroll">
+                    <div class="tech-gambar">
+                        <picture>
+                            <source type="image/avif" srcset="images/r/akuaponik-480.avif 480w, images/r/akuaponik-768.avif 768w, images/r/akuaponik-1200.avif 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw">
+                            <source type="image/webp" srcset="images/r/akuaponik-480.webp 480w, images/r/akuaponik-768.webp 768w, images/r/akuaponik-1200.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw">
+                            <img src="images/r/akuaponik-1200.webp" alt="Instalasi fertigasi dan bak air yang tersambung ke talang tanaman" width="1200" height="800" loading="lazy"
+                                 decoding="async">
+                        </picture>
+                    </div>
                     <div class="tech-overlay">
-                        <h3>Sensor Network</h3>
-                        <p>Jaringan sensor IoT untuk monitoring kondisi tanaman 24/7</p>
+                        <h3>Fertigasi Terukur</h3>
+                        <p>Nutrisi dialirkan dengan takaran dan jadwal, bukan disiram kira-kira</p>
                     </div>
-                </div>
+                </article>
+                <article class="tech-item animate-on-scroll">
+                    <div class="tech-gambar">
+                        <picture>
+                            <source type="image/avif" srcset="images/r/seeds-480.avif 480w, images/r/seeds-768.avif 768w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw">
+                            <source type="image/webp" srcset="images/r/seeds-480.webp 480w, images/r/seeds-768.webp 768w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw">
+                            <img src="images/r/seeds-768.webp" alt="Bibit muda di tray persemaian dengan media tanam lembap" width="768" height="484" loading="lazy"
+                                 decoding="async">
+                        </picture>
+                    </div>
+                    <div class="tech-overlay">
+                        <h3>Persemaian Terukur</h3>
+                        <p>EC dinaikkan bertahap sampai bibit siap pindah tanam</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -317,13 +345,19 @@
     <section class="products-preview">
         <div class="container">
             <div class="section-header">
+                <span class="kop-label">Hasil Panen</span>
                 <h2>Produk Premium Kami</h2>
                 <p>Hasil panen berkualitas ekspor langsung dari greenhouse modern</p>
             </div>
             <div class="products-grid">
                 <div class="product-card animate-on-scroll">
                     <div class="product-image">
-                        <img src="images/melon.webp" alt="Hami melon premium hidroponik Cirebon" loading="lazy" decoding="async">
+                        <picture>
+                            <source type="image/avif" srcset="images/r/melon-480.avif 480w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw">
+                            <source type="image/webp" srcset="images/r/melon-480.webp 480w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw">
+                            <img src="images/r/melon-480.webp" alt="Hami melon premium hidroponik Cirebon" width="480" height="595" loading="lazy"
+                                 decoding="async">
+                        </picture>
                     </div>
                     <div class="product-info">
                         <h3>Hami Melon Premium</h3>
@@ -333,7 +367,12 @@
                 </div>
                 <div class="product-card animate-on-scroll">
                     <div class="product-image">
-                        <img src="images/selada.jpg" alt="Selada hidroponik segar organik Cirebon" loading="lazy" decoding="async">
+                        <picture>
+                            <source type="image/avif" srcset="images/r/selada-480.avif 480w, images/r/selada-768.avif 768w, images/r/selada-1200.avif 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw">
+                            <source type="image/webp" srcset="images/r/selada-480.webp 480w, images/r/selada-768.webp 768w, images/r/selada-1200.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw">
+                            <img src="images/r/selada-1200.webp" alt="Selada hidroponik segar organik Cirebon" width="1200" height="1200" loading="lazy"
+                                 decoding="async">
+                        </picture>
                     </div>
                     <div class="product-info">
                         <h3>Selada Hidroponik Segar</h3>
@@ -343,7 +382,12 @@
                 </div>
                 <div class="product-card animate-on-scroll">
                     <div class="product-image">
-                        <img src="images/bioflok-panen-nila.jpg" alt="Panen ikan nila dari kolam bioflok terpal bundar" loading="lazy" decoding="async">
+                        <picture>
+                            <source type="image/avif" srcset="images/r/bioflok-panen-nila-480.avif 480w, images/r/bioflok-panen-nila-768.avif 768w, images/r/bioflok-panen-nila-1200.avif 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw">
+                            <source type="image/webp" srcset="images/r/bioflok-panen-nila-480.webp 480w, images/r/bioflok-panen-nila-768.webp 768w, images/r/bioflok-panen-nila-1200.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw">
+                            <img src="images/r/bioflok-panen-nila-1200.webp" alt="Panen ikan nila dari kolam bioflok terpal bundar" width="1200" height="800" loading="lazy"
+                                 decoding="async">
+                        </picture>
                     </div>
                     <div class="product-info">
                         <div class="product-badge">
@@ -386,6 +430,7 @@
     <section class="content-block">
         <div class="container">
             <div class="section-header">
+                <span class="kop-label">Gratis</span>
                 <h2>Panduan Terbuka dari Kebun Kami</h2>
                 <p>Takaran nutrisi, ukuran kolam, dan harga panen, kami buka apa adanya untuk petani dan calon mitra</p>
             </div>
