@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydroponic Nutrient Calculator - AB Mix Dose, EC and PPM per Crop | Cirebon Smart Farm</title>
+    <meta name="description" content="Free hydroponic nutrient calculator. Work out AB Mix stock doses for your reservoir, target EC and PPM for each crop, correct a running tank, or blend your own from single fertilizers. No sign-up, nothing stored.">
+    <meta name="keywords" content="hydroponic nutrient calculator, ab mix calculator, hydroponic nutrient chart for vegetables ppm, hydroponic lettuce ec and ph, how to measure nutrients in hydroponics, nutrient solution formula calculator, hydroponic ppm chart, free hydroponic calculator">
+    <meta name="author" content="Cirebon Smart Farm">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#2d5a27">
+    <meta name="geo.region" content="ID-JB">
+    <meta name="geo.placename" content="Cirebon, West Java, Indonesia">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cirebon Smart Farm">
+    <meta property="og:title" content="Hydroponic Nutrient Calculator">
+    <meta property="og:description" content="Free hydroponic nutrient calculator. Work out AB Mix stock doses for your reservoir, target EC and PPM for each crop, correct a running tank, or blend your own from single fertilizers. No si">
+    <meta property="og:url" content="https://www.cirebonsmartfarm.com/en/kalkulator-nutrisi-ab-mix.html">
+    <meta property="og:image" content="https://www.cirebonsmartfarm.com/images/tekno4.png">
+    <meta property="og:image:alt" content="Cirebon Smart Farm hydroponic nutrient setup">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hydroponic Nutrient Calculator">
+    <meta name="twitter:description" content="Free hydroponic nutrient calculator. Work out AB Mix stock doses for your reservoir, target EC and PPM for each crop, correct a running tank, or blend your own from single fertilizers. No si">
+    <meta name="twitter:image" content="https://www.cirebonsmartfarm.com/images/tekno4.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.cirebonsmartfarm.com/en/kalkulator-nutrisi-ab-mix.html">
+
+    <!-- Ikon Situs -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data --> <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.cirebonsmartfarm.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Products",
+                        "item": "https://www.cirebonsmartfarm.com/en/product.html"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "AB Mix Nutrient Calculator",
+                        "item": "https://www.cirebonsmartfarm.com/en/kalkulator-nutrisi-ab-mix.html"
+                    }
+                ]
+            },
+            {
+                "@type": "WebApplication",
+                "name": "Kalkulator Nutrisi AB Mix Hidroponik",
+                "url": "https://www.cirebonsmartfarm.com/en/kalkulator-nutrisi-ab-mix.html",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "Semua peramban modern",
+                "inLanguage": "en",
+                "description": "Menghitung takaran pekatan AB Mix untuk volume tandon berdasarkan EC sasaran tiap tanaman, mengoreksi larutan yang sedang berjalan, dan menyusun racikan dari pupuk tunggal seperti Kalsium Nitrat, KNO3, MKP, dan Magnesium Sulfat.",
+                "browserRequirements": "Membutuhkan JavaScript",
+                "isAccessibleForFree": true,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "IDR"
+                },
+                "featureList": [
+                    "Takaran pekatan A dan B per volume tandon",
+                    "Rentang EC, PPM, dan pH untuk 16 jenis tanaman",
+                    "Konversi PPM skala 500, 640, dan 700",
+                    "Koreksi EC tandon yang sedang berjalan",
+                    "Racikan dari pupuk tunggal dengan pemisahan Tangki A dan B",
+                    "Perbandingan sasaran unsur hara terhadap hasil racikan"
+                ],
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Cirebon Smart Farm",
+                    "url": "https://www.cirebonsmartfarm.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.cirebonsmartfarm.com/images/logo.png",
+                        "width": 512,
+                        "height": 512
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How much AB Mix for 1 liter of water?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Untuk pekatan AB Mix yang lazim dijual di Indonesia, takaran umumnya 5 mililiter larutan A ditambah 5 mililiter larutan B per 1 liter air. Angka pastinya bergantung pada kepekatan produk dan EC sasaran tanaman. Ukur EC hasil pengenceran memakai alat, lalu sesuaikan takarannya."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why can solutions A and B not be mixed directly?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Larutan A mengandung kalsium, sedangkan larutan B mengandung sulfat dan fosfat. Dalam keadaan pekat, kalsium akan bereaksi menjadi kalsium sulfat dan kalsium fosfat yang mengendap dan tidak bisa diserap tanaman. Karena itu A dan B hanya boleh bertemu setelah masing-masing diencerkan ke dalam air tandon."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Berapa EC dan PPM yang tepat untuk selada hidroponik?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Selada tumbuh baik pada EC 0,8 sampai 1,2 mS per sentimeter. Pada TDS meter skala 500 itu setara 400 sampai 600 ppm, sedangkan pada skala 700 setara 560 sampai 840 ppm. Nilai pH yang dianjurkan 5,5 sampai 6,5."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why does the PPM on my meter differ from the guide?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "TDS meter tidak mengukur ppm secara langsung, melainkan menghitungnya dari nilai EC dengan sebuah faktor konversi. Alat murah biasanya memakai skala 500, sedangkan sebagian merek lain memakai skala 640 atau 700. EC yang sama bisa terbaca 1000 ppm di satu alat dan 1400 ppm di alat lain. Selalu catat EC, bukan hanya ppm."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Bagaimana cara menurunkan EC yang terlanjur terlalu tinggi?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "EC yang terlalu tinggi hanya bisa diturunkan dengan menambah air tawar, bukan dengan menambah pupuk. Hitung selisihnya, tambahkan air secara bertahap, aduk, lalu ukur ulang. Menambah air berarti volume tandon ikut naik, jadi pastikan kapasitas tandon masih cukup."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Apa saja pupuk tunggal untuk meracik AB Mix sendiri di Indonesia?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Bahan utamanya Kalsium Nitrat, Kalium Nitrat atau KNO3, MKP atau Mono Kalium Fosfat, dan Magnesium Sulfat yang dikenal sebagai garam Inggris. Penyeimbangnya Kalium Sulfat dan kadang Amonium Sulfat atau ZA. Untuk hara mikro dipakai Fe-EDTA, Mangan Sulfat, Seng Sulfat, Tembaga Sulfat, Borax, dan Natrium Molibdat."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Pupuk mana yang masuk Tangki A dan mana yang Tangki B?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Tangki A berisi Kalsium Nitrat, Kalium Nitrat, dan besi dalam bentuk kelat. Tangki B berisi MKP, Magnesium Sulfat, Kalium Sulfat, serta hara mikro selain besi. Pemisahan ini mencegah kalsium bertemu sulfat dan fosfat dalam keadaan pekat."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much AB Mix for 2 liters of water?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Kalikan dua takaran per liter. Untuk selada dengan EC sasaran 0,8 sampai 1,2 mS per sentimeter, 2 liter air membutuhkan sekitar 3,3 sampai 5 mililiter pekatan A ditambah 3,3 sampai 5 mililiter pekatan B. Untuk kangkung atau sawi sekitar 6,3 sampai 8,3 mililiter masing-masing. Ukur dengan suntikan tanpa jarum, karena selisih setengah mililiter pada volume sekecil ini sudah menggeser EC."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is hydroponic AB Mix made of?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "AB Mix adalah dua larutan pekat berisi garam pupuk. Larutan A berisi Kalsium Nitrat, Kalium Nitrat, dan besi dalam bentuk kelat seperti Fe-EDTA. Larutan B berisi MKP, Magnesium Sulfat atau garam Inggris, Kalium Sulfat, serta hara mikro berupa Mangan Sulfat, Seng Sulfat, Tembaga Sulfat, Borax, dan Natrium Molibdat. Tidak ada bahan rahasia, yang membedakan antarmerek hanya perbandingan bahan dan kemurnian pupuknya."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much AB Mix for water spinach, mustard greens, and pak choi?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Kangkung, sawi, dan pakcoy adalah sayuran daun cepat tumbuh dengan EC sasaran 1,5 sampai 2,0 mS per sentimeter, setara 750 sampai 1000 ppm pada TDS meter skala 500. Takarannya sekitar 3,1 sampai 4,2 mililiter pekatan A ditambah 3,1 sampai 4,2 mililiter pekatan B untuk tiap liter air. Mulai dari batas bawah saat bibit baru pindah tanam, lalu naikkan bertahap."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What PPM for romaine, green leaf, and red leaf lettuce?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Semua jenis selada dipelihara pada rentang yang sama, yaitu EC 0,8 sampai 1,2 mS per sentimeter. Pada TDS meter skala 500 itu 400 sampai 600 ppm, pada skala 700 menjadi 560 sampai 840 ppm. Romaine, selada hijau, selada keriting, dan selada merah tidak menuntut angka berbeda. Yang berbeda adalah kepekaannya terhadap suhu. Kalau daun mulai terasa pahit, turunkan EC ke batas bawah."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What source water PPM is still safe for hydroponics?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Air baku sebaiknya di bawah 200 ppm pada skala 500, atau EC di bawah 0,4 mS per sentimeter. Air sumur umumnya 100 sampai 300 ppm dan air PAM sering lebih tinggi. Di atas 400 ppm ruang untuk pupuk menjadi sempit, terutama untuk selada. EC air baku sudah terhitung sebelum pupuk masuk, jadi kurangkan dari EC sasaran. Kalau terlalu tinggi, saring dengan RO atau campur dengan air hujan bersih."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I make my own hydroponic nutrients from natural materials?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Bisa, tetapi hasilnya bukan AB Mix dan tidak bisa dihitung dengan kalkulator ini. Pupuk organik cair memberi hara dalam bentuk yang masih harus diurai bakteri, kadarnya berubah tiap batch, dan tidak terbaca TDS meter sebagai hara tersedia. Kalau tujuannya menekan biaya, jalan yang lebih terukur adalah meracik sendiri dari pupuk tunggal berupa garam mineral, yang harganya jauh lebih murah per liter larutan dan setiap unsurnya bisa dihitung sampai ppm."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html">
+    <link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/kalkulator-nutrisi-ab-mix.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html">
+</head>
+<body>
+    <a class="skip-link" href="#konten">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/en/index.html" class="nav-logo" aria-label="Cirebon Smart Farm, back to home">
+                <img src="/images/logo.png" alt="Cirebon Smart Farm logo" width="38" height="38">
+                <h2>Cirebon Smart Farm</h2>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="/en/index.html" class="nav-link">Home</a>
+                <a href="/en/about.html" class="nav-link">About</a>
+                <a href="/en/product.html" class="nav-link">Products</a>
+                 <div class="nav-punya-sub" id="menu-pelatihan">
+                    <button type="button" class="nav-sub-tombol" aria-expanded="false">
+                        Free Training <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="nav-sub">
+                        <a href="/en/pelatihan-hidroponik.html" class="nav-sub-link">
+                            <i class="fas fa-seedling" aria-hidden="true"></i>
+                            <span><strong>Hydroponics Training</strong>Systems, sowing, nutrients, pests, harvest</span>
+                        </a>
+                        <a href="/en/pelatihan-ikan.html" class="nav-sub-link">
+                            <i class="fas fa-fish" aria-hidden="true"></i>
+                            <span><strong>Fish Farming Training</strong>Water quality, biofloc, feed, disease</span>
+                        </a>
+                        <a href="/en/pelatihan.html" class="nav-sub-link">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            <span><strong>All Modules</strong>The complete list for both tracks</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="/en/budidaya-ikan-bioflok.html" class="nav-link">Biofloc</a>
+                <div class="nav-punya-sub" id="menu-kalkulator">
+                    <button type="button" class="nav-sub-tombol aktif" aria-expanded="false">
+                        Calculators <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="nav-sub">
+                        <a href="/en/kalkulator-nutrisi-ab-mix.html" class="nav-sub-link">
+                            <i class="fas fa-flask" aria-hidden="true"></i>
+                            <span><strong>AB Mix Nutrients</strong>Stock doses, EC, PPM, fertilizer recipes</span>
+                        </a>
+                        <a href="/en/kalkulator-bioflok.html" class="nav-sub-link">
+                            <i class="fas fa-calculator" aria-hidden="true"></i>
+                            <span><strong>Biofloc Pond</strong>Volume, fingerlings, feed, harvest estimate</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="/en/contact.html" class="nav-link">Contact</a>
+                <a href="/kalkulator-nutrisi-ab-mix.html" class="nav-bahasa" hreflang="id" aria-label="Ganti ke bahasa Indonesia">ID</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Hydroponic AB Mix Calculator</h1>
+            <p>Work out the AB Mix dose per liter for each crop, or make your own AB Mix from single fertilizers. Free, no sign-up.</p>
+            <div class="breadcrumb">
+                <a href="/en/index.html">Home</a> <span>/</span>
+                <a href="/en/product.html">Products</a> <span>/</span> <span>Nutrient Calculator</span>
+            </div>
+        </div>
+    </section>
+
+    <main id="konten">
+
+    <section class="content-block">
+        <div class="container">
+            <p class="content-lead">
+                Two ways to feed, two calculator modes. If you use ready-made AB Mix, use the first mode to work out the stock solution dose for your reservoir volume. If you blend your own from single fertilizers, the second mode works out the grams of each ingredient and shows how many ppm of each nutrient element you actually get.
+            </p>
+
+            <div id="kalkulator-nutrisi">
+
+                <div class="tabs" role="tablist" aria-label="Choose calculator mode">
+                    <button type="button" class="tab-btn aktif" role="tab" aria-selected="true"
+                            data-panel="panel-siap">
+                        <i class="fas fa-flask" aria-hidden="true"></i> Ready-Made AB Mix
+                    </button>
+                    <button type="button" class="tab-btn" role="tab" aria-selected="false"
+                            data-panel="panel-racik">
+                        <i class="fas fa-vials" aria-hidden="true"></i> Blend Single Fertilizers
+                    </button>
+                </div>
+
+                <!-- ============ MODE A ============ -->
+                <div class="tab-panel" id="panel-siap" role="tabpanel">
+                    <div class="calc-wrap">
+                        <form class="calc-form" novalidate>
+                            <h2 class="calc-title">Reservoir &amp; Crop</h2>
+
+                            <div class="calc-field">
+                                <label for="n-volume">Reservoir volume (liters)</label>
+                                <input type="number" id="n-volume" value="200" min="1" max="100000" step="1" inputmode="numeric">
+                                <small>The water actually in it, not the reservoir's maximum capacity.</small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="n-tanaman">Crop</label>
+                                <select id="n-tanaman"></select>
+                                <small id="n-target-info">&nbsp;</small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="n-ec-target">Target EC (mS/cm)</label>
+                                <input type="number" id="n-ec-target" value="1.0" min="0.1" max="6" step="0.05" inputmode="decimal">
+                                <small>Filled in automatically at the middle of the crop range. You can change it.</small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="n-skala">Your TDS meter scale</label>
+                                <select id="n-skala">
+                                    <option value="500" selected>500 scale (NaCl) &mdash; most common</option>
+                                    <option value="640">640 scale (EC x 640)</option>
+                                    <option value="700">700 scale (KCl / 442)</option>
+                                </select>
+                                <small>Only affects the ppm figure shown, not the dose.</small>
+                            </div>
+
+                            <h2 class="calc-title">Your Product Strength</h2>
+
+                            <div class="calc-field">
+                                <label for="n-dosis-acuan">Reference dose (ml per liter)</label>
+                                <input type="number" id="n-dosis-acuan" value="5" min="0.1" max="50" step="0.1" inputmode="decimal">
+                                <small>The dose printed on the package. Usually 5 ml A + 5 ml B per liter.</small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="n-ec-acuan">EC at the reference dose (mS/cm)</label>
+                                <input type="number" id="n-ec-acuan" value="2.4" min="0.1" max="10" step="0.05" inputmode="decimal">
+                                <small>
+                                    This is the key to accuracy. Mix at the reference dose, measure the EC, then enter the result here. One calibration holds from then on as long as the product stays the same.
+                                </small>
+                            </div>
+
+                            <h2 class="calc-title">Running Reservoir Correction</h2>
+
+                            <div class="calc-field">
+                                <label for="n-k-volume">Water left in the reservoir (liters)</label>
+                                <input type="number" id="n-k-volume" value="150" min="0" max="100000" step="1" inputmode="numeric">
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="n-k-ec">EC measured now (mS/cm)</label>
+                                <input type="number" id="n-k-ec" value="0.7" min="0" max="10" step="0.05" inputmode="decimal">
+                            </div>
+                        </form>
+
+                        <div class="calc-output cetak-area" id="cetak-wrap-a">
+                            <div class="cetak-kop cetak-only">
+                                <img src="/images/logo.png" alt="" width="56" height="56">
+                                <div class="cetak-nama">
+                                    <strong>Cirebon Smart Farm</strong>
+                                    <span>Hydroponic Nutrient Dose</span>
+                                </div>
+                                <div class="cetak-tanggal" id="cetak-a-tanggal"></div>
+                            </div>
+                            <h2 class="cetak-only cetak-judul" id="cetak-a-judul"></h2>
+                            <dl class="calc-results cetak-only" id="cetak-a-param"></dl>
+
+                            <div class="hasil-kop layar-only">
+                                <h2 class="calc-title">Filling Dose</h2>
+                                <button type="button" class="btn-primary btn-cetak" id="n-cetak">
+                                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Save PDF
+                                </button>
+                            </div>
+
+                            <div class="calc-badge" id="n-status">
+                                <span class="calc-badge-label">EC match</span>
+                                <strong id="n-out-ml">-</strong>
+                                <span class="calc-badge-note" id="n-status-teks">-</span>
+                            </div>
+
+                            <dl class="calc-results">
+                                <div class="calc-row"><dt>Reservoir volume</dt><dd id="n-out-volume">-</dd></div>
+                                <div class="calc-row calc-row-strong"><dt>Stock solution A</dt><dd id="n-out-a">-</dd></div>
+                                <div class="calc-row calc-row-strong"><dt>Stock solution B</dt><dd id="n-out-b">-</dd></div>
+                                <div class="calc-row"><dt>Estimated TDS reading</dt><dd id="n-out-ppm">-</dd></div>
+                                <div class="calc-row"><dt>Recommended pH</dt><dd id="n-out-ph">-</dd></div>
+                            </dl>
+
+                            <p class="calc-note">
+                                <i class="fas fa-circle-info" aria-hidden="true"></i>
+                                The order: fill the reservoir with water, pour in stock solution A, stir until even, then pour in stock solution B. Never pour A and B side by side while they are still concentrated.
+                            </p>
+
+                            <h3 class="calc-subtitle">Running Solution Correction</h3>
+                            <dl class="calc-results" id="n-koreksi-hasil"></dl>
+
+                            <p class="calc-note layar-only">
+                                The Save PDF button opens the print dialog. Choose the destination
+                                <strong>Save as PDF</strong>, and the file is saved on your own device. Nothing is stored on this website.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ MODE B ============ -->
+                <div class="tab-panel" id="panel-racik" role="tabpanel" hidden>
+                    <div class="calc-wrap">
+                        <form class="calc-form" novalidate>
+                            <h2 class="calc-title">Recipe</h2>
+
+                            <div class="calc-field">
+                                <label for="r-resep">Choose a recipe</label>
+                                <select id="r-resep"></select>
+                                <small id="r-target-info">&nbsp;</small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="r-konsentrasi">Concentration (%)</label>
+                                <input type="number" id="r-konsentrasi" value="100" min="10" max="200" step="5" inputmode="numeric">
+                                <small>Lower it to 50 percent for the nursery stage, or in very hot weather.</small>
+                            </div>
+
+                            <div class="hara-grid">
+                                <div class="calc-field"><label for="r-N">N (ppm)</label>
+                                    <input type="number" id="r-N" value="150" min="0" max="400" step="1" inputmode="numeric"></div>
+                                <div class="calc-field"><label for="r-P">P (ppm)</label>
+                                    <input type="number" id="r-P" value="45" min="0" max="150" step="1" inputmode="numeric"></div>
+                                <div class="calc-field"><label for="r-K">K (ppm)</label>
+                                    <input type="number" id="r-K" value="200" min="0" max="500" step="1" inputmode="numeric"></div>
+                                <div class="calc-field"><label for="r-Ca">Ca (ppm)</label>
+                                    <input type="number" id="r-Ca" value="150" min="0" max="350" step="1" inputmode="numeric"></div>
+                                <div class="calc-field"><label for="r-Mg">Mg (ppm)</label>
+                                    <input type="number" id="r-Mg" value="45" min="0" max="150" step="1" inputmode="numeric"></div>
+                                <div class="calc-field"><label for="r-S">S (ppm)</label>
+                                    <input type="number" id="r-S" value="55" min="0" max="250" step="1" inputmode="numeric"></div>
+                            </div>
+
+                            <details class="lipat">
+                                <summary>Micronutrient target</summary>
+                                <div class="hara-grid" style="margin-top:1rem">
+                                    <div class="calc-field"><label for="r-m-Fe">Fe (ppm)</label>
+                                        <input type="number" id="r-m-Fe" value="3" min="0" max="15" step="0.1" inputmode="decimal"></div>
+                                    <div class="calc-field"><label for="r-m-Mn">Mn (ppm)</label>
+                                        <input type="number" id="r-m-Mn" value="0.5" min="0" max="5" step="0.01" inputmode="decimal"></div>
+                                    <div class="calc-field"><label for="r-m-Zn">Zn (ppm)</label>
+                                        <input type="number" id="r-m-Zn" value="0.25" min="0" max="5" step="0.01" inputmode="decimal"></div>
+                                    <div class="calc-field"><label for="r-m-B">B (ppm)</label>
+                                        <input type="number" id="r-m-B" value="0.5" min="0" max="5" step="0.01" inputmode="decimal"></div>
+                                    <div class="calc-field"><label for="r-m-Cu">Cu (ppm)</label>
+                                        <input type="number" id="r-m-Cu" value="0.05" min="0" max="2" step="0.01" inputmode="decimal"></div>
+                                    <div class="calc-field"><label for="r-m-Mo">Mo (ppm)</label>
+                                        <input type="number" id="r-m-Mo" value="0.05" min="0" max="2" step="0.01" inputmode="decimal"></div>
+                                </div>
+                            </details>
+
+                            <h2 class="calc-title">Stock Solution to Make</h2>
+
+                            <div class="calc-field">
+                                <label for="r-vol-stok">Volume of each stock tank (liters)</label>
+                                <input type="number" id="r-vol-stok" value="5" min="0.25" max="500" step="0.25" inputmode="decimal">
+                                <small>Tank A and Tank B are made at the same volume. Enter 5 to make 5 liters of A and 5 liters of B.</small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="r-faktor">Concentration factor</label>
+                                <select id="r-faktor">
+                                    <option value="100">100x &mdash; used later at 10 ml/L</option>
+                                    <option value="200" selected>200x &mdash; used later at 5 ml/L</option>
+                                    <option value="250">250x &mdash; used later at 4 ml/L</option>
+                                    <option value="400">400x &mdash; used later at 2.5 ml/L</option>
+                                </select>
+                                <small>The more concentrated, the less space it takes, but the higher the risk of precipitation.</small>
+                            </div>
+
+                            <h2 class="calc-title">Micronutrient Source</h2>
+
+                            <div class="calc-field">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="r-mikro-campuran">
+                                    Use a ready-made micro mix, not separate salts
+                                </label>
+                                <small>
+                                    If you use a ready-made micro product, enter its analysis below. The dose is locked to iron, so the other elements follow the product's own ratios.
+                                </small>
+                            </div>
+
+                            <div class="hara-grid" id="r-campuran-kolom" hidden>
+                                <div class="calc-field"><label for="r-c-Fe">Fe (%)</label>
+                                    <input type="number" id="r-c-Fe" value="7" min="0" max="100" step="0.01" inputmode="decimal"></div>
+                                <div class="calc-field"><label for="r-c-Mn">Mn (%)</label>
+                                    <input type="number" id="r-c-Mn" value="3" min="0" max="100" step="0.01" inputmode="decimal"></div>
+                                <div class="calc-field"><label for="r-c-Zn">Zn (%)</label>
+                                    <input type="number" id="r-c-Zn" value="0.6" min="0" max="100" step="0.01" inputmode="decimal"></div>
+                                <div class="calc-field"><label for="r-c-B">B (%)</label>
+                                    <input type="number" id="r-c-B" value="1.2" min="0" max="100" step="0.01" inputmode="decimal"></div>
+                                <div class="calc-field"><label for="r-c-Cu">Cu (%)</label>
+                                    <input type="number" id="r-c-Cu" value="0.4" min="0" max="100" step="0.01" inputmode="decimal"></div>
+                                <div class="calc-field"><label for="r-c-Mo">Mo (%)</label>
+                                    <input type="number" id="r-c-Mo" value="0.1" min="0" max="100" step="0.01" inputmode="decimal"></div>
+                            </div>
+
+                            <div class="calc-field">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="r-pakai-za">
+                                    Allow ammonium sulfate if nitrogen is short
+                                </label>
+                                <small>
+                                    Ammonium sulfate covers a nitrogen shortfall when potassium is already full, but it adds ammonium. The calculator warns you if ammonium goes above 15 percent of total nitrogen.
+                                </small>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="r-preset">Fertilizer brand or analysis source</label>
+                                <select id="r-preset">
+                                    <option value="umum" selected>Common Indonesian trade labels</option>
+                                    <option value="petro">Petrokimia Gresik, for ZA and ZK</option>
+                                    <option value="yara">Pure salts, Yara technical tables</option>
+                                    <option value="sendiri">Enter my own from my bag</option>
+                                </select>
+                                <small>
+                                    Already have the fertilizer? Pick the closest match, then check the figures against your own bag in the section below.
+                                </small>
+                            </div>
+
+                            <details class="lipat">
+                                <summary>Your own fertilizer analyses</summary>
+                                <p class="lipat-catatan">
+                                    The default figures follow Yara and Petrokimia Gresik publications. If your bag differs, change it here and the whole calculation adjusts with it.
+                                </p>
+                                <div class="kadar-grid">
+                                    <div><span>Calcium Nitrate</span>
+                                        <label>N %<input type="number" id="k-kalnit-N" value="15.5" min="0" max="100" step="0.1"></label>
+                                        <label>Ca %<input type="number" id="k-kalnit-Ca" value="19" min="0" max="100" step="0.1"></label></div>
+                                    <div><span>Potassium Nitrate</span>
+                                        <label>N %<input type="number" id="k-kno3-N" value="13" min="0" max="100" step="0.1"></label>
+                                        <label>K %<input type="number" id="k-kno3-K" value="38.2" min="0" max="100" step="0.1"></label></div>
+                                    <div><span>MKP</span>
+                                        <label>P %<input type="number" id="k-mkp-P" value="22.7" min="0" max="100" step="0.1"></label>
+                                        <label>K %<input type="number" id="k-mkp-K" value="28.2" min="0" max="100" step="0.1"></label></div>
+                                    <div><span>Magnesium Sulfate</span>
+                                        <label>Mg %<input type="number" id="k-mgso4-Mg" value="9.7" min="0" max="100" step="0.1"></label>
+                                        <label>S %<input type="number" id="k-mgso4-S" value="13" min="0" max="100" step="0.1"></label></div>
+                                    <div><span>Potassium Sulfate (ZK)</span>
+                                        <label>K %<input type="number" id="k-k2so4-K" value="41.5" min="0" max="100" step="0.1"></label>
+                                        <label>S %<input type="number" id="k-k2so4-S" value="17" min="0" max="100" step="0.1"></label></div>
+                                    <div><span>Ammonium Sulfate (ZA)</span>
+                                        <label>N %<input type="number" id="k-za-N" value="20.8" min="0" max="100" step="0.1"></label>
+                                        <label>S %<input type="number" id="k-za-S" value="23.8" min="0" max="100" step="0.1"></label></div>
+                                </div>
+                            </details>
+                        </form>
+
+                        <div class="calc-output cetak-area" id="cetak-wrap">
+                            <div class="cetak-kop cetak-only">
+                                <img src="/images/logo.png" alt="" width="56" height="56">
+                                <div class="cetak-nama">
+                                    <strong>Cirebon Smart Farm</strong>
+                                    <span>Hydroponic Nutrient Recipe</span>
+                                </div>
+                                <div class="cetak-tanggal" id="cetak-tanggal"></div>
+                            </div>
+                            <h2 class="cetak-only cetak-judul" id="cetak-judul"></h2>
+                            <dl class="calc-results cetak-only" id="cetak-param"></dl>
+
+                            <div class="hasil-kop layar-only">
+                                <h2 class="calc-title">Blend Result</h2>
+                                <button type="button" class="btn-primary btn-cetak" id="r-cetak">
+                                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Save PDF
+                                </button>
+                            </div>
+
+                            <div class="calc-badge" id="r-skor-badge">
+                                <span class="calc-badge-label">Match to recipe</span>
+                                <strong id="r-out-skor">-</strong>
+                                <span class="calc-badge-note" id="r-skor-teks">-</span>
+                            </div>
+
+                            <dl class="calc-results">
+                                <div class="calc-row"><dt>Volume per tank</dt><dd id="r-out-stok">-</dd></div>
+                                <div class="calc-row calc-row-strong"><dt>Enough for</dt><dd id="r-out-cukup">-</dd></div>
+                                <div class="calc-row"><dt>Dose when used</dt><dd id="r-out-dosis">-</dd></div>
+                                <div class="calc-row"><dt>Fertilizer weight, tank A</dt><dd id="r-out-berat-a">-</dd></div>
+                                <div class="calc-row"><dt>Fertilizer weight, tank B</dt><dd id="r-out-berat-b">-</dd></div>
+                                <div class="calc-row calc-row-strong"><dt>Total fertilizer weight</dt><dd id="r-out-berat">-</dd></div>
+                            </dl>
+
+                            <div class="notice-banner" id="r-catatan" style="display:none;margin:1.25rem 0"></div>
+
+                            <h3 class="calc-subtitle">Shopping List</h3>
+                            <div class="table-wrap">
+                                <table class="data-table racik">
+                                    <thead>
+                                        <tr><th scope="col">Fertilizer</th><th scope="col">Needed</th>
+                                            <th scope="col">Prepare</th></tr>
+                                    </thead>
+                                    <tbody id="r-tabel-belanja"></tbody>
+                                </table>
+                            </div>
+                            <p class="calc-note">
+                                Column <strong>Prepare</strong> rounded up to sensible purchase units. Single fertilizers are usually sold by the kilogram at farm supply shops and online marketplaces, while micronutrients come in small packs.
+                            </p>
+
+                            <h3 class="calc-subtitle">Tank A <span class="tangki-tanda a">calcium</span></h3>
+                            <div class="table-wrap">
+                                <table class="data-table racik">
+                                    <thead>
+                                        <tr><th scope="col">Fertilizer</th><th scope="col">Type</th><th scope="col">Weight</th></tr>
+                                    </thead>
+                                    <tbody id="r-tabel-a"></tbody>
+                                    <tfoot><tr><td><strong>Total</strong></td><td></td><td id="r-total-a">-</td></tr></tfoot>
+                                </table>
+                            </div>
+
+                            <h3 class="calc-subtitle">Tank B <span class="tangki-tanda b">sulfate &amp; phosphate</span></h3>
+                            <div class="table-wrap">
+                                <table class="data-table racik">
+                                    <thead>
+                                        <tr><th scope="col">Fertilizer</th><th scope="col">Type</th><th scope="col">Weight</th></tr>
+                                    </thead>
+                                    <tbody id="r-tabel-b"></tbody>
+                                    <tfoot><tr><td><strong>Total</strong></td><td></td><td id="r-total-b">-</td></tr></tfoot>
+                                </table>
+                            </div>
+
+                            <h3 class="calc-subtitle">Nutrient Comparison</h3>
+                            <div class="table-wrap">
+                                <table class="data-table racik">
+                                    <thead>
+                                        <tr><th scope="col">Element</th><th scope="col">Target PPM</th>
+                                            <th scope="col">Result PPM</th><th scope="col">Difference</th></tr>
+                                    </thead>
+                                    <tbody id="r-tabel-cek"></tbody>
+                                </table>
+                            </div>
+
+                            <p class="calc-note">
+                                <i class="fas fa-circle-info" aria-hidden="true"></i>
+                                The weights above are for <strong>one stock tank</strong>, not for the reservoir water. Dissolve tank A and tank B separately, then use them at the dose given in the summary.
+                            </p>
+
+                            <p class="calc-note layar-only">
+                                The Save PDF button opens the print dialog. Choose the destination
+                                <strong>Save as PDF</strong>, and the file is saved on your own device. It holds this dose along with the blending order and its illustrations. Nothing is stored on this website.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara memakai AB Mix siap pakai -->
+    <section class="content-block" id="langkah-abmix" data-untuk="panel-siap">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Use Ready-Made AB Mix</h2>
+                <p>Five steps from an empty reservoir to a solution ready to circulate</p>
+            </div>
+
+            <ol class="steps-list">
+                <li>
+                    <div class="step-teks">
+                        <h3>Fill the reservoir with water first</h3>
+                        <p>
+                            Write down how many liters actually go in, because that number is the basis of every dose. Do not pour the stock solution into an empty reservoir and add the water afterwards, because undiluted stock solution can damage roots if the pump draws it in.
+                        </p>
+                    </div>
+                    <img class="step-gambar" src="/images/abmix-1.svg" width="420" height="300" decoding="async"
+                         alt="Reservoir filled with water to the two hundred liter mark before the stock solution is poured in">
+                </li>
+                <li>
+                    <div class="step-teks">
+                        <h3>Pour in stock solution A, then stir</h3>
+                        <p>
+                            Pour slowly while the water is stirred, not all in one spot. Wait until the color is even before going on. Rushing this step is the most common cause of precipitate.
+                        </p>
+                    </div>
+                    <img class="step-gambar" src="/images/abmix-2.svg" width="420" height="300" decoding="async"
+                         alt="Bottle of stock solution A poured into the reservoir while the water is stirred with a wooden paddle">
+                </li>
+                <li>
+                    <div class="step-teks">
+                        <h3>Only then pour in stock solution B</h3>
+                        <p>
+                            Once A is fully dissolved, B goes in. Never pour the two at the same time, and never mix them first in a small bucket. While concentrated, calcium from A meets sulfate from B and settles out as white grains the plants cannot take up.
+                        </p>
+                    </div>
+                    <img class="step-gambar" src="/images/abmix-3.svg" width="420" height="300" decoding="async"
+                         alt="Bottle of stock solution B poured in next, with a sign warning against mixing A and B while concentrated">
+                </li>
+                <li>
+                    <div class="step-teks">
+                        <h3>Measure EC and pH</h3>
+                        <p>
+                            Give the solution a short while to circulate, do not measure right after pouring. Compare the reading with your crop range in the reference table. If the EC is off, the correction fields in the calculator work out the adjustment.
+                        </p>
+                    </div>
+                    <img class="step-gambar" src="/images/abmix-4.svg" width="420" height="300" decoding="async"
+                         alt="Two meters reading EC one point zero and pH six point zero above the surface of the solution">
+                </li>
+                <li>
+                    <div class="step-teks">
+                        <h3>Check again every day</h3>
+                        <p>
+                            Water evaporates all day while the fertilizer salts stay behind. The solution concentrates on its own and the EC rises even though you added nothing. What you add to bring it down is fresh water, not fertilizer.
+                        </p>
+                    </div>
+                    <img class="step-gambar" src="/images/abmix-5.svg" width="420" height="300" decoding="async"
+                         alt="The sun evaporates water from the reservoir so the level drops and the EC reading rises">
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Cara pakai -->
+    <section class="content-block alt" id="langkah-meracik" data-untuk="panel-racik" hidden>
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Make Your Own AB Mix: The Right Blending Order</h2>
+                <p>The step most often skipped, and the white precipitate at the bottom of the tank that follows</p>
+            </div>
+
+            <ol class="steps-list">
+                <li>
+                    <div class="step-teks">
+                        <h3>Set up two separate tanks</h3>
+                    <p>
+                        Label them A and B so they do not get swapped. Fill each with clean water to about three quarters of its final volume. Hard well water is better settled or filtered first.
+                    </p>
+                    </div>
+                    <img class="step-gambar" src="/images/racik-1.svg"
+                         alt="Two buckets labeled A and B filled three quarters full with water, kept apart" width="420" height="300" decoding="async">
+                </li>
+                <li>
+                    <div class="step-teks">
+                        <h3>Dissolve one at a time, not all at once</h3>
+                    <p>
+                        Add the first fertilizer, stir until it is fully dissolved and the water is clear again, then add the next. Dumping everything in at once leaves part of it settled out and the dose off.
+                    </p>
+                    </div>
+                    <img class="step-gambar" src="/images/racik-2.svg"
+                         alt="Fertilizers added to the bucket one at a time, stirred until clear" width="420" height="300" decoding="async">
+                </li>
+                <li>
+                    <div class="step-teks">
+                        <h3>Dissolve micronutrients first in a small glass</h3>
+                    <p>
+                        The amounts are very small, so dissolve them in a glass of warm water until clear, then pour into tank B. Chelated iron goes into tank A so it does not meet phosphate.
+                    </p>
+                    </div>
+                    <img class="step-gambar" src="/images/racik-3.svg"
+                         alt="Micronutrients dissolved first in a glass of warm water before being poured in" width="420" height="300" decoding="async">
+                </li>
+                <li>
+                    <div class="step-teks">
+                        <h3>Top up to volume, do not guess</h3>
+                    <p>
+                        Once everything is dissolved, add water up to exactly the volume you planned. Topping up at the start makes the last fertilizer hard to dissolve.
+                    </p>
+                    </div>
+                    <img class="step-gambar" src="/images/racik-4.svg"
+                         alt="Water added up to exactly the five liter volume mark" width="420" height="300" decoding="async">
+                </li>
+                <li>
+                    <div class="step-teks">
+                        <h3>When using, dilute one after the other</h3>
+                    <p>
+                        Reservoir water first, then stock solution A, stir, then stock solution B. Calcium from A and sulfate from B are only safe to meet once both are diluted.
+                    </p>
+                    </div>
+                    <img class="step-gambar" src="/images/racik-5.svg"
+                         alt="Reservoir filled with water, then stock solution A poured in and stirred, then stock solution B" width="420" height="300" decoding="async">
+                </li>
+                <li>
+                    <div class="step-teks">
+                        <h3>Measure, then write it down</h3>
+                    <p>
+                        Measure EC and pH after the solution is evenly mixed, not right after pouring. Write the readings down. A weekly record is far more useful than trying to remember.
+                    </p>
+                    </div>
+                    <img class="step-gambar" src="/images/racik-6.svg"
+                         alt="EC meter dipped into the solution and the reading written in a notebook" width="420" height="300" decoding="async">
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Tabel rujukan -->
+    <section class="content-block alt" id="takaran-per-tanaman">
+        <div class="container">
+            <div class="section-header">
+                <h2>AB Mix Dose per Liter of Water for Each Crop</h2>
+                <p>The most common question, answered with numbers</p>
+            </div>
+
+            <p class="content-lead">
+                Every figure below is the dose of stock solution A <strong>and</strong> stock solution B, that much of each. For 1 liter of water on lettuce, that means 1.7 to 2.5 ml of solution A plus 1.7 to 2.5 ml of solution B. Not split in half, and not mixed together first.
+            </p>
+
+            <div class="table-wrap">
+                <table class="data-table">
+                    <caption>
+                        Worked out from each crop's target EC, assuming your stock solution gives EC 2.4 mS/cm at a dose of 5 ml per liter. That is the most common strength on the Indonesian market. If your product differs, change the calibration figure in the calculator and the dose adjusts with it.
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Crop</th>
+                            <th scope="col">Target EC (mS/cm)</th>
+                            <th scope="col">A and B dose per 1 liter</th>
+                            <th scope="col">Per 2 liters</th>
+                            <th scope="col">Per 10 liters</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Crop"><strong>Sowing / seedlings</strong></td>
+                            <td data-label="Target EC">0.5 - 0.8</td>
+                            <td data-label="A and B dose per 1 liter">1 - 1.7</td>
+                            <td data-label="Per 2 liters">2 - 3.3</td>
+                            <td data-label="Per 10 liters">10 - 17</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Crop"><strong>Lettuce</strong></td>
+                            <td data-label="Target EC">0.8 - 1.2</td>
+                            <td data-label="A and B dose per 1 liter">1.7 - 2.5</td>
+                            <td data-label="Per 2 liters">3.3 - 5</td>
+                            <td data-label="Per 10 liters">17 - 25</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Crop"><strong>Basil</strong></td>
+                            <td data-label="Target EC">1.0 - 1.6</td>
+                            <td data-label="A and B dose per 1 liter">2.1 - 3.3</td>
+                            <td data-label="Per 2 liters">4.2 - 6.7</td>
+                            <td data-label="Per 10 liters">21 - 33</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Crop"><strong>Strawberry</strong></td>
+                            <td data-label="Target EC">1.4 - 2.0</td>
+                            <td data-label="A and B dose per 1 liter">2.9 - 4.2</td>
+                            <td data-label="Per 2 liters">5.8 - 8.3</td>
+                            <td data-label="Per 10 liters">29 - 42</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Crop"><strong>Pak choi / mustard greens</strong></td>
+                            <td data-label="Target EC">1.5 - 2.0</td>
+                            <td data-label="A and B dose per 1 liter">3.1 - 4.2</td>
+                            <td data-label="Per 2 liters">6.3 - 8.3</td>
+                            <td data-label="Per 10 liters">31 - 42</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Crop"><strong>Water spinach</strong></td>
+                            <td data-label="Target EC">1.5 - 2.0</td>
+                            <td data-label="A and B dose per 1 liter">3.1 - 4.2</td>
+                            <td data-label="Per 2 liters">6.3 - 8.3</td>
+                            <td data-label="Per 10 liters">31 - 42</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Crop"><strong>Cucumber</strong></td>
+                            <td data-label="Target EC">1.7 - 2.5</td>
+                            <td data-label="A and B dose per 1 liter">3.5 - 5.2</td>
+                            <td data-label="Per 2 liters">7.1 - 10.4</td>
+                            <td data-label="Per 10 liters">35 - 52</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Crop"><strong>Spinach</strong></td>
+                            <td data-label="Target EC">1.8 - 2.3</td>
+                            <td data-label="A and B dose per 1 liter">3.8 - 4.8</td>
+                            <td data-label="Per 2 liters">7.5 - 9.6</td>
+                            <td data-label="Per 10 liters">38 - 48</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Crop"><strong>Melon, vegetative stage</strong></td>
+                            <td data-label="Target EC">1.8 - 2.2</td>
+                            <td data-label="A and B dose per 1 liter">3.8 - 4.6</td>
+                            <td data-label="Per 2 liters">7.5 - 9.2</td>
+                            <td data-label="Per 10 liters">38 - 46</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Crop"><strong>Celery</strong></td>
+                            <td data-label="Target EC">1.8 - 2.4</td>
+                            <td data-label="A and B dose per 1 liter">3.8 - 5</td>
+                            <td data-label="Per 2 liters">7.5 - 10</td>
+                            <td data-label="Per 10 liters">38 - 50</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Crop"><strong>Tomato, vegetative stage</strong></td>
+                            <td data-label="Target EC">2.0 - 2.5</td>
+                            <td data-label="A and B dose per 1 liter">4.2 - 5.2</td>
+                            <td data-label="Per 2 liters">8.3 - 10.4</td>
+                            <td data-label="Per 10 liters">42 - 52</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Crop"><strong>Chili</strong></td>
+                            <td data-label="Target EC">2.0 - 3.0</td>
+                            <td data-label="A and B dose per 1 liter">4.2 - 6.3</td>
+                            <td data-label="Per 2 liters">8.3 - 12.5</td>
+                            <td data-label="Per 10 liters">42 - 63</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Crop"><strong>Melon, generative stage</strong></td>
+                            <td data-label="Target EC">2.4 - 3.0</td>
+                            <td data-label="A and B dose per 1 liter">5 - 6.3</td>
+                            <td data-label="Per 2 liters">10 - 12.5</td>
+                            <td data-label="Per 10 liters">50 - 63</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="notice-banner">
+                <i class="fas fa-circle-info" aria-hidden="true"></i>
+                <div>
+                    <h3>The Table Is a Starting Point, Not the Final Word</h3>
+                    <p>
+                        AB Mix strength differs between brands, and your source water already carries its own EC before any fertilizer goes in. So the right dose for your reservoir is always decided by the meter, not by a table. Use this table for the first pour, then measure the EC you get and adjust. The calculator at the top of the page does that adjustment for you, including subtracting the source water EC from the target.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="calc-subtitle" style="margin-top:2.5rem">If You Want to Blend Your Own</h3>
+            <p>
+                Buying ready-made AB Mix is the easiest route, but the cost per liter of solution drops a long way once you blend from single fertilizers. The ingredients are Calcium Nitrate, KNO3, MKP, Magnesium Sulfate, Potassium Sulfate, and six micronutrients, all sold openly in Indonesian farm supply shops. The <em>Blend Single Fertilizers</em> mode in the calculator works out the grams of each ingredient for the stock volume you want, splits them into Tank A and Tank B, then shows how many ppm of each nutrient element you actually get against the target. The working order is in the
+                <a href="#langkah-meracik">guide to making your own AB Mix</a> on this page.
+            </p>
+        </div>
+    </section>
+
+    <section class="content-block">
+        <div class="container">
+            <div class="section-header">
+                <h2>Reference Tables</h2>
+                <p>The figures the calculator above uses, opened up so you can check them</p>
+            </div>
+
+            <h3 class="calc-subtitle">EC, PPM, and pH per Crop</h3>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <caption>Working ranges commonly used in hydroponic growing</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Crop</th>
+                            <th scope="col">EC (mS/cm)</th>
+                            <th scope="col">PPM, 500 scale</th>
+                            <th scope="col">PPM, 700 scale</th>
+                            <th scope="col">pH</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabel-tanaman"></tbody>
+                </table>
+            </div>
+
+            <h3 class="calc-subtitle" style="margin-top:2.5rem">Single Fertilizers Sold in Indonesia</h3>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <caption>Analyses follow the manufacturers' publications. Check your own bag, every brand differs</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Fertilizer</th>
+                            <th scope="col">Formula</th>
+                            <th scope="col">Trade label</th>
+                            <th scope="col">Elements counted</th>
+                            <th scope="col">Tank</th>
+                            <th scope="col">Source of figures</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabel-pupuk"></tbody>
+                </table>
+            </div>
+
+            <div class="notice-banner">
+                <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+                <div>
+                    <h3>Check the Label on Your Bag</h3>
+                    <p>
+                        Fertilizer analyses differ between brands and between factories. Greenhouse grade calcium nitrate is usually 15.5 percent N, but technical grade can be lower. Compare the figures in this table with the bag you buy. If they differ a lot, the blend result shifts with them.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Asumsi -->
+    <section class="content-block alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Assumptions and Limits</h2>
+                <p>So you know exactly where this tool can be trusted, and where it cannot</p>
+            </div>
+
+            <div class="split">
+                <div>
+                    <ul class="check-list">
+                        <li><strong>EC is proportional to the dose.</strong> The first mode assumes twice the dose gives twice the EC. That assumption is accurate over the normal hydroponic working range, and starts to drift on very concentrated solutions.</li>
+                        <li><strong>Source water is assumed clean.</strong> The calculator starts from zero EC. If your well water is already 0.3 mS/cm before any fertilizer, subtract that from the target EC, and remember that the calcium it already carries adds to the total.</li>
+                        <li><strong>Temperature is not accounted for.</strong> An EC meter without temperature compensation reads higher when the solution is warm. Measure at the same time every day.</li>
+                        <li><strong>pH is not calculated.</strong> Raising or lowering pH takes a separate acid or base, and the amount depends on the buffering capacity of your water.</li>
+                        <li><strong>The blend follows a fixed order.</strong> Calcium is set first, then phosphorus, magnesium, nitrogen, and potassium last. That is why the comparison table is shown, so any remaining gap is visible instead of hidden.</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="notice-banner" style="margin-top:0">
+                        <i class="fas fa-circle-info" aria-hidden="true"></i>
+                        <div>
+                            <h3>The Meter Still Decides</h3>
+                            <p>
+                                The calculator gives you a sensible starting point. What decides is still your EC meter and pH meter, and both need regular calibration with standard solutions. A meter that is never calibrated makes every calculation on this page worthless.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="price-box" style="margin-top:1.25rem">
+                        <span class="price-label">Quick conversion</span>
+                        <span class="price-value">EC 1.0 mS/cm</span>
+                        <span class="price-note">
+                            = 500 ppm on the 500 scale<br>
+                            = 640 ppm on the 640 scale<br>
+                            = 700 ppm on the 700 scale<br>
+                            The meter scale is stated in its manual. If in doubt, just use EC.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tautkan -->
+    <section class="content-block">
+        <div class="container">
+            <div class="section-header">
+                <h2>Free to Use and Share</h2>
+                <p>Free for anyone. If it helps, just include a link back to the source</p>
+            </div>
+
+            <div class="split">
+                <div>
+                    <p>
+                        Use this calculator to teach, to put together training material, or to train farmer groups. There is no need to ask permission. We only hope your readers can find the original source.
+                    </p>
+                    <div class="contact-action">
+                        <a href="/en/kalkulator-bioflok.html" class="btn-primary">
+                            <i class="fas fa-calculator" aria-hidden="true"></i> Biofloc Pond Calculator
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="cite-box">
+                        <div class="cite-head">
+                            <span>Plain link</span>
+                            <button type="button" class="cite-copy" data-copy="cite-plain">
+                                <i class="fas fa-copy" aria-hidden="true"></i> Copy
+                            </button>
+                        </div>
+                        <code id="cite-plain">AB Mix Nutrient Calculator - Cirebon Smart Farm https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html</code>
+                    </div>
+
+                    <div class="cite-box">
+                        <div class="cite-head">
+                            <span>HTML code</span>
+                            <button type="button" class="cite-copy" data-copy="cite-html">
+                                <i class="fas fa-copy" aria-hidden="true"></i> Copy
+                            </button>
+                        </div>
+                        <code id="cite-html">&lt;a href="https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html"&gt;AB Mix Nutrient Calculator&lt;/a&gt; by Cirebon Smart Farm</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions About Nutrients</h2>
+                <p>What hydroponic beginners ask most</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much AB Mix for 1 liter of water?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            For the AB Mix stock solutions commonly sold in Indonesia, the dose is usually 5 ml of solution A plus 5 ml of solution B per 1 liter of water. The exact figure depends on the product strength and the crop target EC. Measure the EC of the diluted solution with a meter, then enter the result in the calibration field in the calculator so the dose is right for your product.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Why can solutions A and B not be mixed directly?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Solution A contains calcium, solution B contains sulfate and phosphate. While concentrated, the calcium reacts into calcium sulfate and calcium phosphate, which settle out and cannot be taken up by plants. White precipitate at the bottom of the tank almost always comes from this mistake. The two may only meet once each of them is diluted in the reservoir.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What EC and PPM are right for lettuce?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Lettuce grows well at EC 0.8 to 1.2 mS/cm. On a 500 scale TDS meter that is 400 to 600 ppm, while on the 700 scale it is 560 to 840 ppm. The recommended pH is 5.5 to 6.5. Ranges for other crops are in the reference table on this page.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Why does the PPM on my meter differ from the guide?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            A TDS meter does not measure ppm directly. It measures EC and multiplies it by a factor. Cheap meters usually use the 500 scale, some other brands use 640 or 700. The same solution can read 1000 ppm on one meter and 1400 ppm on another when the contents are exactly the same. So record EC, not just ppm.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I bring down an EC that has gone too high?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Only by adding fresh water, never by adding any fertilizer. The correction fields in the calculator work out how many liters of water to add. Remember that the reservoir volume rises too, so make sure there is still capacity. Add it in stages, stir, then measure again.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Which single fertilizers do I need to blend my own?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            The main ingredients are Calcium Nitrate, Potassium Nitrate or KNO3, MKP or Mono Potassium Phosphate, and Magnesium Sulfate, known as Epsom salt. The balancer is Potassium Sulfate, sometimes with ammonium sulfate added. For micronutrients you use Fe-EDTA, Manganese Sulfate, Zinc Sulfate, Copper Sulfate, Borax, and Sodium Molybdate. All of them are available at farm supply shops and domestic online marketplaces.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Which fertilizers go in Tank A and which in Tank B?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Tank A holds Calcium Nitrate, Potassium Nitrate, and chelated iron. Tank B holds MKP, Magnesium Sulfate, Potassium Sulfate, and the micronutrients other than iron. This split keeps calcium from meeting sulfate and phosphate while they are still concentrated. The calculator already separates them in the result table.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much AB Mix for 2 liters of water?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Double the per-liter dose. For lettuce with a target EC of 0.8 to 1.2 mS/cm, 2 liters of water needs about 3.3 to 5 ml of stock solution A plus 3.3 to 5 ml of stock solution B. For hungrier water spinach or mustard greens, about 6.3 to 8.3 ml of each.
+                        </p>
+                        <p>
+                            That dose holds if your stock solution gives EC 2.4 mS/cm at 5 ml per liter, which is the most common on the market. A volume as small as 2 liters is hard to measure with a kitchen cup, so use a 10 ml needleless syringe. Half a milliliter off at this volume already shifts the EC a fair way.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is hydroponic AB Mix made of?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            AB Mix is two concentrated solutions of fertilizer salts dissolved in water. Solution A holds Calcium Nitrate as the source of calcium and nitrogen, Potassium Nitrate, and iron in chelated form such as Fe-EDTA. Solution B holds MKP as the source of phosphorus, Magnesium Sulfate or Epsom salt, Potassium Sulfate, and micronutrients in the form of Manganese Sulfate, Zinc Sulfate, Copper Sulfate, Borax, and Sodium Molybdate.
+                        </p>
+                        <p>
+                            There is nothing secret in it. What separates one brand from another is only the ratio of each ingredient and the purity of the fertilizers. That is why you can make AB Mix yourself, and the whole composition is laid open in the calculator on this page.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much AB Mix for water spinach, mustard greens, and pak choi?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            All three are fast-growing leafy greens that tolerate a fairly concentrated solution. The target EC is 1.5 to 2.0 mS/cm, equal to 750 to 1000 ppm on a 500 scale TDS meter. The dose is about 3.1 to 4.2 ml of stock solution A plus 3.1 to 4.2 ml of stock solution B for each liter of water.
+                        </p>
+                        <p>
+                            Start at the lower limit when the seedlings have just been transplanted, then raise it in stages once the roots push through the media. Water spinach that is harvested several times usually wants the EC a little higher each time new shoots appear.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What PPM for romaine, green leaf, and red leaf lettuce?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Every type of lettuce is kept in the same range, EC 0.8 to 1.2 mS/cm. On a 500 scale TDS meter that is 400 to 600 ppm, on the 700 scale it becomes 560 to 840 ppm. Romaine, green leaf, curly leaf, and red leaf lettuce do not ask for different figures.
+                        </p>
+                        <p>
+                            What really differs between types is their sensitivity to temperature, not the nutrient strength. Red leaf lettuce holds its color better on cold nights, and romaine turns bitter faster if the solution is left too concentrated in hot weather. If the leaves start to taste bitter, lower the EC to the bottom of the range, not the other way around.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What source water PPM is still safe for hydroponics?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Source water is best below 200 ppm on the 500 scale, or EC below 0.4 mS/cm. Well water in many areas sits at 100 to 300 ppm, and municipal tap water is often higher. Above 400 ppm the room left for fertilizer gets narrow, especially for lettuce, whose target is low.
+                        </p>
+                        <p>
+                            The thing to understand is that the source water EC is already counted before a single drop of fertilizer goes in. The calculator on this page subtracts the source water EC from the target EC, so the dose it gives already accounts for it. If your water is very high, filter it with RO or blend it with rainwater collected clean.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I make my own hydroponic nutrients from natural materials?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            You can, but the result is not AB Mix and cannot be worked out with this calculator. Liquid organic fertilizer from livestock manure, leachate, or fermented kitchen waste supplies nutrients in a form that bacteria still have to break down first. The content changes from batch to batch and a TDS meter does not read it as available nutrients.
+                        </p>
+                        <p>
+                            If your aim is to cut costs, the more measurable route is blending your own from single fertilizers. The ingredients are still mineral salts, as in factory AB Mix, the price per liter of solution is far lower, and every element can be worked out down to ppm. That is what the Blend Single Fertilizers mode on this page does.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are the figures I enter saved?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            No. All the calculation runs in your browser. This website is a static page with no database, so no numbers are sent or stored anywhere.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tautan terkait -->
+    <section class="content-block alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Other Tools and Guides</h2>
+                <p>All free and open</p>
+            </div>
+            <div class="link-cards">
+                <a href="/en/kalkulator-bioflok.html" class="link-card">
+                    <i class="fas fa-calculator" aria-hidden="true"></i>
+                    <h3>Biofloc Pond Calculator</h3>
+                    <p>Pond volume, number of fingerlings, feed needs, and fish density at harvest.</p>
+                </a>
+                <a href="/en/budidaya-ikan-bioflok.html" class="link-card">
+                    <i class="fas fa-fish" aria-hidden="true"></i>
+                    <h3>Biofloc Guide</h3>
+                    <p>The nitrogen cycle, C:N ratio, equipment list, and the stages of setting up a pond.</p>
+                </a>
+                <a href="/en/product.html" class="link-card">
+                    <i class="fas fa-seedling" aria-hidden="true"></i>
+                    <h3>Our Products</h3>
+                    <p>Hami melon and hydroponic lettuce grown with measured nutrients like these.</p>
+                </a>
+                <a href="/en/contact.html" class="link-card">
+                    <i class="fas fa-comments" aria-hidden="true"></i>
+                    <h3>Ask Us</h3>
+                    <p>Is there a figure that does not match your experience? We are glad to be corrected.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Cirebon Smart Farm</h3>
+                    <p>A modern hydroponic farm in Cirebon, West Java, growing premium produce through measurement, automation and steady improvement.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/cirebonsmartfarm/" target="_blank" rel="noopener" aria-label="Cirebon Smart Farm on Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61593826659793" target="_blank" rel="noopener" aria-label="Cirebon Smart Farm on Facebook">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@cirebonsmartfarm" target="_blank" rel="noopener" aria-label="Cirebon Smart Farm on TikTok">
+                            <i class="fab fa-tiktok" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:cirebonsmartfarm@gmail.com" aria-label="Email Cirebon Smart Farm">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/en/index.html">Home</a></li>
+                        <li><a href="/en/about.html">About Us</a></li>
+                        <li><a href="/en/product.html">Products</a></li>
+                                                <li><a href="/en/pelatihan-hidroponik.html">Hydroponics Training</a></li>
+                        <li><a href="/en/pelatihan-ikan.html">Fish Farming Training</a></li>
+                        <li><a href="/en/budidaya-ikan-bioflok.html">Biofloc Fish Farming</a></li>
+                        <li><a href="/en/kalkulator-bioflok.html">Biofloc Calculator</a></li>
+                        <li><a href="/en/kalkulator-nutrisi-ab-mix.html">AB Mix Nutrient Calculator</a></li>
+                        <li><a href="/en/contact.html">Contact</a></li>
+                        <li><a href="/en/sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="/en/product.html#melon">Premium Hami Melon</a></li>
+                        <li><a href="/en/product.html#lettuce">Hydroponic Lettuce</a></li>
+                        <li><a href="/en/budidaya-ikan-bioflok.html">Biofloc Tilapia</a></li>
+                        <li><a href="/en/product.html#technology">Greenhouse Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> cirebonsmartfarm@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Cirebon, West Java, Indonesia</li>
+                        <li><i class="fas fa-clock" aria-hidden="true"></i> Monday to Saturday, 8am to 5pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="js-year">2026</span> Cirebon Smart Farm. All rights reserved. | Modern hydroponic farming in Cirebon</p>
+                <p class="footer-legal">
+                    <a href="/en/privacy.html">Privacy Policy</a> &middot;
+                    <a href="/en/terms.html">Terms &amp; Conditions</a> &middot;
+                    <a href="/en/sitemap.html">Sitemap</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Wadah sementara saat mencetak. Kosong selama halaman dibaca. -->
+    <div id="area-cetak" aria-hidden="true">
+        <p class="cetak-only cetak-kaki">
+            Calculated with the free calculator at cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html
+        </p>
+    </div>
+
+    <!-- JavaScript --> <script src="/js/script.js"></script> <script src="/js/nutrisi.js"></script>
+</body>
+</html>

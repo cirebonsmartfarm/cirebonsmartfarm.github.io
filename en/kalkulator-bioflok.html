@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biofloc Pond Calculator - Volume, Stocking, Feed and Harvest | Cirebon Smart Farm</title>
+    <meta name="description" content="Free biofloc pond calculator. Enter your pond size and get water volume, how many fingerlings fit, daily feed and molasses, and an estimated harvest. Works for tilapia and catfish. No sign-up.">
+    <meta name="keywords" content="biofloc calculator, biofloc pond calculator, tilapia stocking density calculator, fish pond volume calculator, biofloc feed calculator, molasses dose biofloc">
+    <meta name="author" content="Cirebon Smart Farm">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#2d5a27">
+    <meta name="geo.region" content="ID-JB">
+    <meta name="geo.placename" content="Cirebon, West Java, Indonesia">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cirebon Smart Farm">
+    <meta property="og:title" content="Biofloc Pond Calculator">
+    <meta property="og:description" content="Free biofloc pond calculator. Enter your pond size and get water volume, how many fingerlings fit, daily feed and molasses, and an estimated harvest. Works for tilapia and catfish. No sign-u">
+    <meta property="og:url" content="https://www.cirebonsmartfarm.com/en/kalkulator-bioflok.html">
+    <meta property="og:image" content="https://www.cirebonsmartfarm.com/images/bioflok-panen-nila.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="853">
+    <meta property="og:image:alt" content="Round tarpaulin biofloc pond for tilapia farming">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Biofloc Pond Calculator">
+    <meta name="twitter:description" content="Free biofloc pond calculator. Enter your pond size and get water volume, how many fingerlings fit, daily feed and molasses, and an estimated harvest. Works for tilapia and catfish. No sign-u">
+    <meta name="twitter:image" content="https://www.cirebonsmartfarm.com/images/bioflok-panen-nila.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.cirebonsmartfarm.com/en/kalkulator-bioflok.html">
+
+    <!-- Ikon Situs -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data --> <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.cirebonsmartfarm.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Budidaya Ikan Nila Bioflok",
+                        "item": "https://www.cirebonsmartfarm.com/en/budidaya-ikan-bioflok.html"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Biofloc Pond Calculator",
+                        "item": "https://www.cirebonsmartfarm.com/en/kalkulator-bioflok.html"
+                    }
+                ]
+            },
+            {
+                "@type": "WebApplication",
+                "name": "Biofloc Pond Calculator",
+                "url": "https://www.cirebonsmartfarm.com/en/kalkulator-bioflok.html",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "Semua peramban modern",
+                "inLanguage": "en",
+                "description": "Kalkulator untuk menghitung volume air kolam bioflok bundar, jumlah benih berdasarkan padat tebar, kebutuhan pakan dan molase, perkiraan hasil panen, serta kepadatan akhir ikan.",
+                "browserRequirements": "Membutuhkan JavaScript",
+                "isAccessibleForFree": true,
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "IDR"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Cirebon Smart Farm",
+                    "url": "https://www.cirebonsmartfarm.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.cirebonsmartfarm.com/images/logo.png",
+                        "width": 512,
+                        "height": 512
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How do you calculate the water volume of a round biofloc pond?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The water volume of a round pond is calculated as pi times the radius squared times the water depth. The radius is half the diameter. For a pond 3 meters in diameter with a water depth of 0.8 meters, the volume is about 5.65 cubic meters. What counts is the water depth, not the height of the pond wall."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Berapa jumlah benih untuk kolam bioflok diameter 3 meter?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Dengan volume air sekitar 5,65 meter kubik dan padat tebar 100 sampai 150 ekor per meter kubik, kolam diameter 3 meter dengan tinggi air 0,8 meter menampung sekitar 565 sampai 850 ekor benih ikan nila. Angka ini hanya aman bila aerasi berjalan 24 jam."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Bagaimana cara menghitung kebutuhan pakan bioflok?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Kebutuhan pakan sepanjang satu siklus diperkirakan dari bobot panen dikali nilai FCR atau rasio konversi pakan. Bila panen 200 kilogram dengan FCR 1,3, maka pakan yang dibutuhkan sekitar 260 kilogram. Pada sistem bioflok yang sehat, FCR biasanya lebih rendah daripada kolam biasa karena ikan juga memakan flok."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Berapa banyak molase yang dibutuhkan kolam bioflok?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Sumber karbon seperti molase umumnya diberikan sekitar setengah dari berat pakan harian untuk menjaga rasio karbon terhadap nitrogen di kisaran 15 sampai 20 banding 1. Takaran pastinya menyesuaikan kadar protein pakan dan hasil pengukuran amonia di kolam."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Berapa kepadatan akhir ikan yang masih aman di kolam bioflok?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Biomass density at harvest in a biofloc tarpaulin pond is usually in the range of 15 to 35 kilograms per cubic meter. Above 35 kilograms per cubic meter, oxygen demand rises sharply, so aeration, daily measurement, and backup power have to be genuinely ready."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/kalkulator-bioflok.html">
+    <link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/kalkulator-bioflok.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/kalkulator-bioflok.html">
+</head>
+<body>
+    <a class="skip-link" href="#konten">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/en/index.html" class="nav-logo" aria-label="Cirebon Smart Farm, back to home">
+                <img src="/images/logo.png" alt="Cirebon Smart Farm logo" width="38" height="38">
+                <h2>Cirebon Smart Farm</h2>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="/en/index.html" class="nav-link">Home</a>
+                <a href="/en/about.html" class="nav-link">About</a>
+                <a href="/en/product.html" class="nav-link">Products</a>
+                 <div class="nav-punya-sub" id="menu-pelatihan">
+                    <button type="button" class="nav-sub-tombol" aria-expanded="false">
+                        Free Training <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="nav-sub">
+                        <a href="/en/pelatihan-hidroponik.html" class="nav-sub-link">
+                            <i class="fas fa-seedling" aria-hidden="true"></i>
+                            <span><strong>Hydroponics Training</strong>Systems, sowing, nutrients, pests, harvest</span>
+                        </a>
+                        <a href="/en/pelatihan-ikan.html" class="nav-sub-link">
+                            <i class="fas fa-fish" aria-hidden="true"></i>
+                            <span><strong>Fish Farming Training</strong>Water quality, biofloc, feed, disease</span>
+                        </a>
+                        <a href="/en/pelatihan.html" class="nav-sub-link">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            <span><strong>All Modules</strong>The complete list for both tracks</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="/en/budidaya-ikan-bioflok.html" class="nav-link">Biofloc</a>
+                <div class="nav-punya-sub" id="menu-kalkulator">
+                    <button type="button" class="nav-sub-tombol aktif" aria-expanded="false">
+                        Calculators <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="nav-sub">
+                        <a href="/en/kalkulator-nutrisi-ab-mix.html" class="nav-sub-link">
+                            <i class="fas fa-flask" aria-hidden="true"></i>
+                            <span><strong>AB Mix Nutrients</strong>Stock doses, EC, PPM, fertilizer recipes</span>
+                        </a>
+                        <a href="/en/kalkulator-bioflok.html" class="nav-sub-link">
+                            <i class="fas fa-calculator" aria-hidden="true"></i>
+                            <span><strong>Biofloc Pond</strong>Volume, fingerlings, feed, harvest estimate</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="/en/contact.html" class="nav-link">Contact</a>
+                <a href="/kalkulator-bioflok.html" class="nav-bahasa" hreflang="id" aria-label="Ganti ke bahasa Indonesia">ID</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header with-photo">
+        <div class="container">
+            <h1>Biofloc Pond Calculator</h1>
+            <p>Calculate the volume, fingerling count, feed, and harvest estimate. Free, no sign-up.</p>
+            <div class="breadcrumb">
+                <a href="/en/index.html">Home</a> <span>/</span>
+                <a href="/en/budidaya-ikan-bioflok.html">Biofloc</a> <span>/</span> <span>Calculators</span>
+            </div>
+        </div>
+    </section>
+
+    <main id="konten">
+
+    <!-- Kalkulator -->
+    <section class="content-block">
+        <div class="container">
+            <p class="content-lead">
+                Fill in your pond size and harvest target, and the numbers are worked out automatically. We keep this calculator open to anyone planning a biofloc pond, including farmers outside Cirebon. Every calculation runs in your own browser and we store no data.
+            </p>
+
+            <div class="calc-wrap">
+                <form class="calc-form" id="biofloc-calc" novalidate>
+                    <h2 class="calc-title">Pond Size</h2>
+
+                    <div class="calc-field">
+                        <label for="diameter">Pond diameter (meters)</label>
+                        <input type="number" id="diameter" value="3" min="0.5" max="20" step="0.1" inputmode="decimal">
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="tinggiAir">Water depth (meters)</label>
+                        <input type="number" id="tinggiAir" value="0.8" min="0.2" max="3" step="0.05" inputmode="decimal">
+                        <small>The water level, not the height of the pond wall.</small>
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="jumlahKolam">Number of ponds</label>
+                        <input type="number" id="jumlahKolam" value="1" min="1" max="200" step="1" inputmode="numeric">
+                    </div>
+
+                    <h2 class="calc-title">Production Target</h2>
+
+                    <div class="calc-field">
+                        <label for="padatTebar">Stocking density (fish per m<sup>3</sup>)</label>
+                        <input type="number" id="padatTebar" value="125" min="10" max="400" step="5" inputmode="numeric">
+                        <small>Common reference for tilapia biofloc: 100 - 150 fish per m<sup>3</sup>.</small>
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="bobotPanen">Harvest weight per fish (grams)</label>
+                        <input type="number" id="bobotPanen" value="300" min="50" max="1500" step="10" inputmode="numeric">
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="sr">Survival rate / SR (percent)</label>
+                        <input type="number" id="sr" value="85" min="30" max="100" step="1" inputmode="numeric">
+                        <small>What percent of the fingerlings are expected to survive to harvest.</small>
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="fcr">FCR (feed conversion ratio)</label>
+                        <input type="number" id="fcr" value="1.3" min="0.6" max="3" step="0.05" inputmode="decimal">
+                        <small>Kilograms of feed to produce 1 kg of fish.</small>
+                    </div>
+
+                    <h2 class="calc-title">Costs &amp; Prices</h2>
+
+                    <div class="calc-field">
+                        <label for="hargaPakan">Feed price (Rp per kg)</label>
+                        <input type="number" id="hargaPakan" value="13000" min="0" step="500" inputmode="numeric">
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="hargaBenih">Fingerling price (Rp per fish)</label>
+                        <input type="number" id="hargaBenih" value="500" min="0" step="50" inputmode="numeric">
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="hargaJual">Fish selling price (Rp per kg)</label>
+                        <input type="number" id="hargaJual" value="30000" min="0" step="1000" inputmode="numeric">
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="rasioMolase">Molasses to feed ratio</label>
+                        <input type="number" id="rasioMolase" value="0.5" min="0" max="2" step="0.05" inputmode="decimal">
+                        <small>Usually about 0.5 kg molasses per 1 kg feed.</small>
+                    </div>
+
+                    <div class="calc-actions">
+                        <button type="reset" class="btn-secondary" id="calcReset">
+                            <i class="fas fa-rotate-left" aria-hidden="true"></i> Reset Values
+                        </button>
+                    </div>
+                </form>
+
+                <div class="calc-output" id="calcOutput" aria-live="polite">
+                    <h2 class="calc-title">Results</h2>
+
+                    <div class="calc-badge" id="outDensityBadge">
+                        <span class="calc-badge-label">Density at harvest</span>
+                        <strong id="outDensity">-</strong>
+                        <span class="calc-badge-note" id="outDensityNote">-</span>
+                    </div>
+
+                    <dl class="calc-results">
+                        <div class="calc-row">
+                            <dt>Water volume per pond</dt>
+                            <dd id="outVolume">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Total water volume</dt>
+                            <dd id="outVolumeTotal">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Fingerlings stocked</dt>
+                            <dd id="outBenih">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Fish surviving to harvest</dt>
+                            <dd id="outHidup">-</dd>
+                        </div>
+                        <div class="calc-row calc-row-strong">
+                            <dt>Estimated harvest</dt>
+                            <dd id="outPanen">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Feed needed</dt>
+                            <dd id="outPakan">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Molasses needed</dt>
+                            <dd id="outMolase">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Suggested aeration points</dt>
+                            <dd id="outAerasi">-</dd>
+                        </div>
+                    </dl>
+
+                    <h3 class="calc-subtitle">Rough Cost Estimate</h3>
+                    <dl class="calc-results">
+                        <div class="calc-row">
+                            <dt>Fingerling cost</dt>
+                            <dd id="outBiayaBenih">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Feed cost</dt>
+                            <dd id="outBiayaPakan">-</dd>
+                        </div>
+                        <div class="calc-row">
+                            <dt>Estimated revenue</dt>
+                            <dd id="outOmzet">-</dd>
+                        </div>
+                        <div class="calc-row calc-row-strong">
+                            <dt>Revenue minus fingerlings &amp; feed</dt>
+                            <dd id="outSelisih">-</dd>
+                        </div>
+                    </dl>
+
+                    <p class="calc-note">
+                        <i class="fas fa-circle-info" aria-hidden="true"></i>
+                        The figure above <strong>does not yet</strong> account for electricity, depreciation of the pond and blower, labor, probiotics, medicine, or transport. Treat this number as an upper bound, not net profit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara membaca -->
+    <section class="content-block alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Read the Results</h2>
+                <p>The formulas this calculator uses, so you can check them yourself</p>
+            </div>
+
+            <div class="table-wrap">
+                <table class="data-table">
+                    <caption>The formula behind each number</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Result</th>
+                            <th scope="col">Formula</th>
+                            <th scope="col">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Result"><strong>Water volume</strong></td>
+                            <td data-label="Formula">3.14159 x (diameter / 2)<sup>2</sup> x water depth</td>
+                            <td data-label="Note">Uses the water depth, not the height of the pond wall</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Result"><strong>Fingerling count</strong></td>
+                            <td data-label="Formula">water volume x stocking density</td>
+                            <td data-label="Note">A high stocking density is only safe with 24-hour aeration</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Result"><strong>Fish at harvest</strong></td>
+                            <td data-label="Formula">fingerling count x SR</td>
+                            <td data-label="Note">A reasonable SR for biofloc tilapia is 80 - 90 percent</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Result"><strong>Harvest yield</strong></td>
+                            <td data-label="Formula">fish at harvest x weight per fish</td>
+                            <td data-label="Note">Market weight for tilapia is usually 250 - 350 grams</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Result"><strong>Harvest density</strong></td>
+                            <td data-label="Formula">harvest yield / water volume</td>
+                            <td data-label="Note">The most important number for judging aeration capacity</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Result"><strong>Feed needed</strong></td>
+                            <td data-label="Formula">harvest yield x FCR</td>
+                            <td data-label="Note">A healthy biofloc FCR is usually 1.1 - 1.4</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Result"><strong>Molasses needed</strong></td>
+                            <td data-label="Formula">feed needed x molasses ratio</td>
+                            <td data-label="Note">To keep the C:N ratio in the range of 15 - 20 to 1</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Result"><strong>Aeration points</strong></td>
+                            <td data-label="Formula">1 point per m<sup>3</sup>, at least 4 per pond</td>
+                            <td data-label="Note">A rough reference, adjust it to your blower capacity</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="notice-banner">
+                <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+                <div>
+                    <h3>This Is a Planning Tool, Not a Guarantee</h3>
+                    <p>
+                        The real results depend on fingerling quality, daily water temperature, feed quality, floc stability, and how consistently you keep records. Use the numbers here to draw up an initial plan and budget, then keep correcting them with data from your own pond.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tautkan halaman ini -->
+    <section class="content-block">
+        <div class="container">
+            <div class="section-header">
+                <h2>Free to Use and Share</h2>
+                <p>This calculator is free. If it helps, just include a link to the source</p>
+            </div>
+
+            <div class="split">
+                <div>
+                    <p>
+                        Feel free to use this calculator to teach, write a proposal, write an article, or train a group of farmers. You do not need to ask permission. We only hope your readers can find the original source, so include a link back to this page.
+                    </p>
+                    <p>
+                        Copy one of the snippets beside this and paste it into your article, training material, or post description.
+                    </p>
+                    <div class="contact-action">
+                        <a href="/en/budidaya-ikan-bioflok.html" class="btn-primary">
+                            <i class="fas fa-book-open" aria-hidden="true"></i> Read the Complete Biofloc Guide
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="cite-box">
+                        <div class="cite-head">
+                            <span>Plain link</span>
+                            <button type="button" class="cite-copy" data-copy="cite-plain">
+                                <i class="fas fa-copy" aria-hidden="true"></i> Copy
+                            </button>
+                        </div>
+                        <code id="cite-plain">Biofloc Pond Calculator - Cirebon Smart Farm https://www.cirebonsmartfarm.com/kalkulator-bioflok.html</code>
+                    </div>
+
+                    <div class="cite-box">
+                        <div class="cite-head">
+                            <span>HTML code</span>
+                            <button type="button" class="cite-copy" data-copy="cite-html">
+                                <i class="fas fa-copy" aria-hidden="true"></i> Copy
+                            </button>
+                        </div>
+                        <code id="cite-html">&lt;a href="https://www.cirebonsmartfarm.com/kalkulator-bioflok.html"&gt;Biofloc Pond Calculator&lt;/a&gt; by Cirebon Smart Farm</code>
+                    </div>
+
+                    <div class="cite-box">
+                        <div class="cite-head">
+                            <span>Citation for written work</span>
+                            <button type="button" class="cite-copy" data-copy="cite-apa">
+                                <i class="fas fa-copy" aria-hidden="true"></i> Copy
+                            </button>
+                        </div>
+                        <code id="cite-apa">Cirebon Smart Farm. (2026). Biofloc Pond Calculator. Retrieved from https://www.cirebonsmartfarm.com/kalkulator-bioflok.html</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions About the Calculations</h2>
+                <p>What people ask most often when planning a pond</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do you calculate the water volume of a round biofloc pond?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            The water volume of a round pond is calculated as pi times the radius squared times the water depth. The radius is half the diameter. For a pond 3 meters in diameter with a water depth of 0.8 meters, the volume is about 5.65 cubic meters. What counts is the water depth, not the height of the pond wall.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How many fingerlings for a pond 3 meters in diameter?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            With a water volume of about 5.65 cubic meters and a stocking density of 100 to 150 fish per cubic meter, that pond holds about 565 to 850 tilapia fingerlings. This figure is only safe if aeration runs a full 24 hours and there is backup power.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do you calculate the feed needed?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            The feed needed over one cycle is estimated from the harvest weight times the FCR value. For a 200 kilogram harvest with an FCR of 1.3, the feed needed is about 260 kilograms. In a healthy biofloc system the FCR is usually lower than in an ordinary pond because the fish also eat the floc.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much molasses is needed?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            A carbon source such as molasses is usually given at about half the weight of the feed, to keep the carbon to nitrogen ratio in the range of 15 to 20 to 1. The exact dose depends on the protein content of the feed and the ammonia readings in the pond.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What final density is still safe?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Biomass density at harvest in a biofloc tarpaulin pond is usually in the range of 15 to 35 kilograms per cubic meter. Above 35 kilograms per cubic meter, oxygen demand rises sharply, so aeration, daily measurement, and backup power have to be genuinely ready.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is the data I enter stored?</h3>
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            No. Every calculation runs in your own browser. This website is a static page with no database, so no numbers are sent or stored anywhere.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tautan terkait -->
+    <section class="content-block alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Where to Go Next</h2>
+                <p>Once the numbers make sense, here are the next steps</p>
+            </div>
+            <div class="link-cards">
+                <a href="/en/budidaya-ikan-bioflok.html" class="link-card">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <h3>Complete Biofloc Guide</h3>
+                    <p>How the nitrogen cycle works, the equipment list, and the seven steps to set up a pond.</p>
+                </a>
+                <a href="/en/product.html" class="link-card">
+                    <i class="fas fa-seedling" aria-hidden="true"></i>
+                    <h3>Our Products</h3>
+                    <p>Hami melon and hydroponic lettuce already growing and available to order today.</p>
+                </a>
+                <a href="/en/about.html" class="link-card">
+                    <i class="fas fa-tractor" aria-hidden="true"></i>
+                    <h3>About Our Farm</h3>
+                    <p>Why we measure every parameter, and how that changes the certainty of a harvest.</p>
+                </a>
+                <a href="/en/contact.html" class="link-card">
+                    <i class="fas fa-comments" aria-hidden="true"></i>
+                    <h3>Talk With Us</h3>
+                    <p>Have a question about the numbers above, or want to build a pond of your own?</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Cirebon Smart Farm</h3>
+                    <p>A modern hydroponic farm in Cirebon, West Java, growing premium produce through measurement, automation and steady improvement.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/cirebonsmartfarm/" target="_blank" rel="noopener" aria-label="Cirebon Smart Farm on Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61593826659793" target="_blank" rel="noopener" aria-label="Cirebon Smart Farm on Facebook">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@cirebonsmartfarm" target="_blank" rel="noopener" aria-label="Cirebon Smart Farm on TikTok">
+                            <i class="fab fa-tiktok" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:cirebonsmartfarm@gmail.com" aria-label="Email Cirebon Smart Farm">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/en/index.html">Home</a></li>
+                        <li><a href="/en/about.html">About Us</a></li>
+                        <li><a href="/en/product.html">Products</a></li>
+                                                <li><a href="/en/pelatihan-hidroponik.html">Hydroponics Training</a></li>
+                        <li><a href="/en/pelatihan-ikan.html">Fish Farming Training</a></li>
+                        <li><a href="/en/budidaya-ikan-bioflok.html">Biofloc Fish Farming</a></li>
+                        <li><a href="/en/kalkulator-bioflok.html">Biofloc Calculator</a></li>
+                        <li><a href="/en/kalkulator-nutrisi-ab-mix.html">AB Mix Nutrient Calculator</a></li>
+                        <li><a href="/en/contact.html">Contact</a></li>
+                        <li><a href="/en/sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="/en/product.html#melon">Premium Hami Melon</a></li>
+                        <li><a href="/en/product.html#lettuce">Hydroponic Lettuce</a></li>
+                        <li><a href="/en/budidaya-ikan-bioflok.html">Biofloc Tilapia</a></li>
+                        <li><a href="/en/product.html#technology">Greenhouse Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> cirebonsmartfarm@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Cirebon, West Java, Indonesia</li>
+                        <li><i class="fas fa-clock" aria-hidden="true"></i> Monday to Saturday, 8am to 5pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="js-year">2026</span> Cirebon Smart Farm. All rights reserved. | Modern hydroponic farming in Cirebon</p>
+                <p class="footer-legal">
+                    <a href="/en/privacy.html">Privacy Policy</a> &middot;
+                    <a href="/en/terms.html">Terms &amp; Conditions</a> &middot;
+                    <a href="/en/sitemap.html">Sitemap</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript --> <script src="/js/script.js"></script>
+</body>
+</html>

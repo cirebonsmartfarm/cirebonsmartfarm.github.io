@@ -3,11 +3,42 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://www.cirebonsmartfarm.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/about.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/budidaya-ikan-bioflok.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/budidaya-ikan-bioflok.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/budidaya-ikan-bioflok.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/budidaya-ikan-bioflok.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.cirebonsmartfarm.com/images/bioflok-panen-nila.jpg</image:loc>
+      <image:title>Panen ikan nila dari kolam bioflok</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/contact.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
     <loc>https://www.cirebonsmartfarm.com/</loc>
     <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/"/>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
     <image:image>
@@ -16,66 +47,164 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.cirebonsmartfarm.com/product.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <loc>https://www.cirebonsmartfarm.com/kalkulator-bioflok.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/kalkulator-bioflok.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/kalkulator-bioflok.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/kalkulator-bioflok.html"/>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
-    <image:image>
-      <image:loc>https://www.cirebonsmartfarm.com/images/melon.webp</image:loc>
-      <image:title>Hami melon premium hidroponik</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.cirebonsmartfarm.com/images/selada.jpg</image:loc>
-      <image:title>Selada hidroponik segar</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/budidaya-ikan-bioflok.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-    <image:image>
-      <image:loc>https://www.cirebonsmartfarm.com/images/bioflok-panen-nila.jpg</image:loc>
-      <image:title>Panen ikan nila dari kolam bioflok</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.cirebonsmartfarm.com/images/bioflok-kolam.jpg</image:loc>
-      <image:title>Instalasi kolam bioflok terpal bundar</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/kalkulator-bioflok.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/kalkulator-nutrisi-ab-mix.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-bunga-konsumsi.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-bunga-konsumsi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-bunga-konsumsi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-bunga-konsumsi.html"/>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.cirebonsmartfarm.com/about.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-hama-penyakit.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-hama-penyakit.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-hama-penyakit.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-hama-penyakit.html"/>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.cirebonsmartfarm.com/contact.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-hidroponik.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-hidroponik.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-hidroponik.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-hidroponik.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://www.cirebonsmartfarm.com/sitemap.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-aerasi.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-aerasi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-aerasi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-aerasi.html"/>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.40</priority>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-benih.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-benih.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-benih.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-benih.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-kualitas-air.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-kualitas-air.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-kualitas-air.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-kualitas-air.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-pakan.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-pakan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-pakan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-pakan.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-panen.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-panen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-panen.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-panen.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-penyakit.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-penyakit.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-penyakit.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-penyakit.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-siklus-nitrogen.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-siklus-nitrogen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-siklus-nitrogen.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-siklus-nitrogen.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-nutrisi-fertigasi.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-nutrisi-fertigasi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-nutrisi-fertigasi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-nutrisi-fertigasi.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-perawatan-tanaman.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-perawatan-tanaman.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-perawatan-tanaman.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-perawatan-tanaman.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-persemaian.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-persemaian.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-persemaian.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-persemaian.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/pelatihan-sistem-hidroponik.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-sistem-hidroponik.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-sistem-hidroponik.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-sistem-hidroponik.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.cirebonsmartfarm.com/pelatihan.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan.html"/>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
@@ -84,106 +213,71 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-sistem-hidroponik.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-persemaian.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-nutrisi-fertigasi.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-perawatan-tanaman.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-hama-penyakit.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-bunga-konsumsi.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-hidroponik.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-kualitas-air.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-siklus-nitrogen.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-aerasi.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-benih.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-pakan.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-penyakit.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cirebonsmartfarm.com/pelatihan-ikan-panen.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://www.cirebonsmartfarm.com/privacy.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/privacy.html"/>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/product.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/product.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/product.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/product.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.cirebonsmartfarm.com/images/melon.webp</image:loc>
+      <image:title>Hami melon premium hidroponik</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/sitemap.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/sitemap.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/sitemap.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/sitemap.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.40</priority>
   </url>
   <url>
     <loc>https://www.cirebonsmartfarm.com/terms.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/terms.html"/>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/about.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/budidaya-ikan-bioflok.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/budidaya-ikan-bioflok.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/budidaya-ikan-bioflok.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/budidaya-ikan-bioflok.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/contact.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://www.cirebonsmartfarm.com/en/index.html</loc>
@@ -192,6 +286,204 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/"/>
     <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/kalkulator-bioflok.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/kalkulator-bioflok.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/kalkulator-bioflok.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/kalkulator-bioflok.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/kalkulator-nutrisi-ab-mix.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/kalkulator-nutrisi-ab-mix.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/kalkulator-nutrisi-ab-mix.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-bunga-konsumsi.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-bunga-konsumsi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-bunga-konsumsi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-bunga-konsumsi.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-hama-penyakit.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-hama-penyakit.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-hama-penyakit.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-hama-penyakit.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-hidroponik.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-hidroponik.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-hidroponik.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-hidroponik.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-ikan-aerasi.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-aerasi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-aerasi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-aerasi.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-ikan-benih.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-benih.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-benih.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-benih.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-ikan-kualitas-air.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-kualitas-air.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-kualitas-air.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-kualitas-air.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-ikan-pakan.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-pakan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-pakan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-pakan.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-ikan-panen.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-panen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-panen.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-panen.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-ikan-penyakit.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-penyakit.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-penyakit.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-penyakit.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-ikan-siklus-nitrogen.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-siklus-nitrogen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan-siklus-nitrogen.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan-siklus-nitrogen.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-ikan.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-ikan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-ikan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-ikan.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-nutrisi-fertigasi.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-nutrisi-fertigasi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-nutrisi-fertigasi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-nutrisi-fertigasi.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-perawatan-tanaman.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-perawatan-tanaman.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-perawatan-tanaman.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-perawatan-tanaman.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-persemaian.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-persemaian.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-persemaian.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-persemaian.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan-sistem-hidroponik.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan-sistem-hidroponik.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan-sistem-hidroponik.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan-sistem-hidroponik.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/pelatihan.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/pelatihan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/pelatihan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/pelatihan.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/privacy.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/product.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/product.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/product.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/product.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/sitemap.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/sitemap.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/sitemap.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/sitemap.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.40</priority>
+  </url>
+  <url>
+    <loc>https://www.cirebonsmartfarm.com/en/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.cirebonsmartfarm.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cirebonsmartfarm.com/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cirebonsmartfarm.com/terms.html"/>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
   </url>
 </urlset>
