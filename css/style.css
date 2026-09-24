@@ -4716,3 +4716,41 @@ picture {
         margin-bottom: 2.5rem;
     }
 }
+
+/* =====================================================================
+   Tombol ganti bahasa
+   Ditaruh paling kanan di bilah navigasi. Sengaja dibuat ringkas dua huruf
+   supaya tidak memakan lebar yang sudah sempit.
+   ===================================================================== */
+.nav-bahasa {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    padding: 0.34rem 0.6rem;
+    margin-left: 0.3rem;
+    border: 1px solid #cfe0d1;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--secondary-color);
+    background: #f4f9f4;
+    transition: var(--transition);
+}
+
+.nav-bahasa:hover,
+.nav-bahasa:focus-visible {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+}
+
+@media (max-width: 980px) {
+    .nav-bahasa {
+        margin: 0.6rem auto 0;
+        min-width: 72px;
+        padding: 0.6rem 1rem;
+        font-size: 0.95rem;
+    }
+}
